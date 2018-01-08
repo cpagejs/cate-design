@@ -1,0 +1,8 @@
+@mixin flex-justify($justify:center){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: $justify;
+}
+
+$input-disabled: #dcdcdc;

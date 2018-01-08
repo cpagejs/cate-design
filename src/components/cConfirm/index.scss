@@ -1,0 +1,123 @@
+@import '../../common/css/mixin';
+$orange: 'orange';
+$red: 'red';
+
+.c-confirm-container {     
+    .confirm-wrapper {
+        @include flex-justify();
+        width: 100%;
+        background: transparent;
+        z-index: 998;
+        &.confirm-fade-enter-active {
+            animation: confirm-fadein 0.3s;
+            .confirm-content {
+                animation: confirm-zoom 0.3s;
+            }
+        }
+        .confirm-content {
+            color: #757575;
+            .confirm-inner {
+                margin: 0 auto;
+                width: 600px;
+                border-radius: 12px;
+                padding: 20px 20px 0 20px;
+                background: #fff;
+                .confirm-content-body {
+                    @include flex-justify();
+                    padding: 19px 15px;
+                    line-height: 22px;
+                    text-align: center;
+                    font-size: 40px;
+                    height: 300px;
+                }
+                .confirm-content-footer {
+                    @include flex-justify();
+                    height: 8px;
+                    text-align: center;
+                    font-size: 40px;
+                    border-top: 1px solid #e0e0e0;
+                    .operate-btn {
+                        flex: 1;
+                        line-height: 30px;
+                        padding: 10px 0;
+                        &.left {
+                            border-right: 1px solid #e0e0e0;
+                        }
+                    }
+                }
+            }
+        }  
+        .confirm-content2 {
+            .confirm-header {
+                text-align: center;
+            }
+            .confirm-inner {
+                padding-bottom: 20px;
+                .confirm-content-footer2 {
+                    @include flex-justify();
+                    height: 88px;
+                    text-align: center;
+                    font-size: 40px;
+                    margin: 20px;
+                    .operate-btn {
+                        flex: 1;
+                        padding: 10px 0;
+                        color: #fff;
+                        background: $orange;
+                        margin-right: 20px;
+                        border-radius:10px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                    .right {
+                        background: $red;
+                    }
+                }
+            }
+            
+        }
+        .confirm-content3 {
+            .confirm-close {
+                text-align: center;
+                img {
+                    width: 60px;
+                    height: 60px;
+                    text-align: center;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+    .confirm-bg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.4);
+        overflow: hidden;
+        z-index: 997;
+    }
+}
+
+
+@keyframes confirm-fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes confirm-zoom {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

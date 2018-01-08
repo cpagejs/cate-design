@@ -1,0 +1,60 @@
+@import '../../common/css/mixin';
+
+.c-tabs-container {
+    width: 100%;
+    .tab-title {
+        @include flex-justify();
+        width: 100%;
+        font-size: 30px;
+        background: #fff;
+        &.tab-pos-normal {
+            position: relative;
+        }
+        &.tab-pos-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 201;
+        }
+        &.tab-pos-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 201;
+        }
+        li {
+            flex: 1;
+            padding: 5px 0;
+            &.tab-is-active {
+                color: #ff6e4e;
+                border-bottom: 3px solid #ff6e4e;
+            }
+            .tab-inner {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 50px;
+                line-height: 50px;
+                .top-icon {
+                    margin-bottom: 5px;
+                }
+                .tab-title-info {
+                    @include flex-justify();
+                    line-height: 100%;
+                }
+                &.border-right {
+                    border-right: 1px solid #E0E0E0;
+                }
+            }
+            &:last-child {
+                .tab-inner {
+                    border-right: none;
+                }
+            }
+        }
+    }
+}
