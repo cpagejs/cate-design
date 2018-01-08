@@ -1,7 +1,7 @@
 {
-  "name": "ve-ui",
+  "name": "ui-vue",
   "version": "1.0.0",
-  "description": "ve-ui前端ui框架",
+  "description": "ui-vue前端ui框架",
   "author": "chenhaozhi",
   "main": "build/index/index.js",
   "private": false,
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:chenhaozhi/ve-ui.git"
+    "url": "git@github.com:chenhaozhi/ui-vue.git"
   },
   "keywords": [
-    "ve-ui",
+    "ui-vue",
     "ui",
     "Cpage.js",
     "js mvvm",

@@ -1,22 +1,22 @@
-# ve-ui前端UI框架
+# ui-vue前端UI框架
 
 框架基于vue2开发
 
 ## 安装
 ```
-npm install --save ve-ui
+npm install --save ui-vue
 
 全局引入
-import 've-ui/dist/css/index.css';
-import * as VEUI from 've-ui';
-Object.keys(VEUI.default).forEach(key=>{
-  Vue.use(VEUI.default[key]);
+import 'ui-vue/dist/css/index.css';
+import * as ui-vue from 'ui-vue';
+Object.keys(ui-vue.default).forEach(key=>{
+  Vue.use(ui-vue.default[key]);
 });
 ```
 
 ## 1，cBar 水平进度条组件
 ```
-import { cBar } from 'veui';
+import { cBar } from 'ui-vue';
 
 <c-bar percent='20' color="#f60"></c-bar>
 ```
@@ -27,7 +27,7 @@ import { cBar } from 'veui';
 
 ## 2，cButton 按钮组件
 ```
-import { cButton } from 'veui';
+import { cButton } from 'ui-vue';
 
 <c-button text="点击" @onClick="buttonClick"></c-button>
 ```
@@ -45,7 +45,7 @@ import { cButton } from 'veui';
 
 ## 3，cButtonFooter 底部按钮组件
 ```
-import { cButtonFooter } from 'veui';
+import { cButtonFooter } from 'ui-vue';
 
 <c-button-footer text="点击" @onClick="buttonClick"></c-button-footer>
 ```
@@ -63,7 +63,7 @@ import { cButtonFooter } from 'veui';
 
 ## 4，cCircle 水平进度条组件
 ```
-import { cCircle } from 'veui';
+import { cCircle } from 'ui-vue';
 
 <c-circle percent='100'></c-circle>
 ```
@@ -73,72 +73,72 @@ import { cCircle } from 'veui';
 
 ## 5，cConfirm 确认框组件
 ```
-import { cConfirm } from 'veui';
+import { cConfirm } from 'ui-vue';
 ```
 
 ## 6，cHeaderBack 顶部导航组件
 ```
-import { cHeaderBack } from 'veui';
+import { cHeaderBack } from 'ui-vue';
 ```
 
 ## 7，cInput 输入框组件
 ```
-import { cInput } from 'veui';
+import { cInput } from 'ui-vue';
 ```
 
 ## 8，cInputPassword 密码输入框组件（可显示密码）
 ```
-import { cInputPassword } from 'veui';
+import { cInputPassword } from 'ui-vue';
 ```
 
 ## 9，cItem 列表组件
 ```
-import { cItem } from 'veui';
+import { cItem } from 'ui-vue';
 ```
 
 ## 10，cLoading loading组件
 ```
-import { cLoading } from 'veui';
+import { cLoading } from 'ui-vue';
 ```
 
 ## 11，cScrollAble 页面scroll组件
 ```
-import { cScrollAble } from 'veui';
+import { cScrollAble } from 'ui-vue';
 ```
 
 ## 12，cScrollX 左右滚动组件
 ```
-import { cScrollX } from 'veui';
+import { cScrollX } from 'ui-vue';
 ```
 
 ## 13，cSlide 抽屉组件
 ```
-import { cSlide } from 'veui';
+import { cSlide } from 'ui-vue';
 ```
 
 ## 14，cSwiper 图片切换组件
 ```
-import { cSwiper } from 'veui';
+import { cSwiper } from 'ui-vue';
 ```
 
 ## 15，cSwitch 开关组件
 ```
-import { cSwitch } from 'veui';
+import { cSwitch } from 'ui-vue';
 ```
 
 ## 16，cTabs tab切换组件
 ```
-import { tabs, tabItem } from 'veui';
+import { tabs, tabItem } from 'ui-vue';
 ```
 
 ## 17，cTimeCircle 圆环倒计时组件
 ```
-import { cTimeCircle } from 'veui';
+import { cTimeCircle } from 'ui-vue';
 ```
 
 ## 18，cTimeCount 普通倒计时组件
 ```
-import { cTimeCount } from 'veui';
+import { cTimeCount } from 'ui-vue';
 ```
 
 ## 19，提示框组件
