@@ -4,7 +4,7 @@
   "description": "veui前端ui框架",
   "author": "chenhaozhi",
   "main": "build/index/index.js",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "node dev.js",
     "build": "webpack --config build.config.js --progress --colors",
