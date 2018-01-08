@@ -31,14 +31,14 @@ import { cButton } from 'veui';
 
 <c-button text="点击" @onClick="buttonClick"></c-button>
 ```
-属性
+### 属性
 | 属性 | 类型 | 作用 |
 | :------ | :------ | :------ |
 | text | 类型String  默认'' | 按钮文字 |
 | color | 类型String  默认'#448FF2' | 按钮颜色 |
 | disabled | 类型Boolean  默认false | 按钮是否允许点击 |
 
-事件
+### 事件
 | 属性 | 作用 |
 | :------ | :------ |
 | onClick | 返回按钮点击事件 |
@@ -49,14 +49,14 @@ import { cButtonFooter } from 'veui';
 
 <c-button-footer text="点击" @onClick="buttonClick"></c-button-footer>
 ```
-属性
+### 属性
 | 属性 | 类型 | 作用 |
 | :------ | :------ | :------ |
 | text | 类型String  默认'' | 按钮文字 |
 | color | 类型String  默认'#448FF2' | 按钮颜色 |
 | disabled | 类型Boolean  默认false | 按钮是否允许点击 |
 
-事件
+### 事件
 | 属性 | 作用 |
 | :------ | :------ |
 | onClick | 返回按钮点击事件 |
