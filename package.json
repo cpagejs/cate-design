@@ -1,7 +1,7 @@
 {
-  "name": "veui",
+  "name": "ve-ui",
   "version": "1.0.0",
-  "description": "veui前端ui框架",
+  "description": "ve-ui前端ui框架",
   "author": "chenhaozhi",
   "main": "build/index/index.js",
   "private": false,
@@ -10,6 +10,18 @@
     "build": "webpack --config build.config.js --progress --colors",
     "build-demo": "webpack --config dev.config.js --progress --colors"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chenhaozhi/ve-ui.git"
+  },
+  "keywords": [
+    "ve-ui",
+    "ui",
+    "Cpage.js",
+    "js mvvm",
+    "vue",
+    "css ui"
+  ],
   "dependencies": {
     "axios": "^0.17.0",
     "babel-polyfill": "^6.26.0",
