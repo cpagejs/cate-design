@@ -1,14 +1,14 @@
-# VEUI前端UI框架
+# ve-ui前端UI框架
 
 框架基于vue2开发
 
 ## 安装
 ```
-npm install --save veui
+npm install --save ve-ui
 
 全局引入
-import 'veui/dist/css/index.css';
-import * as VEUI from 'veui';
+import 've-ui/dist/css/index.css';
+import * as VEUI from 've-ui';
 Object.keys(VEUI.default).forEach(key=>{
   Vue.use(VEUI.default[key]);
 });
