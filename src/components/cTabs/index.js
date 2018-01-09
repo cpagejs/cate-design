@@ -1,12 +1,12 @@
 
-import tabItem from './tabItem';
-import tabs from './tabs';
+import cTabItem from './tabItem';
+import cTabs from './tabs';
 
 export default {
     install (Vue) {
-        Vue.component('tabItem', tabItem);
-        Vue.component('tabs', tabs);
+        Vue.component('cTabItem', cTabItem);
+        Vue.component('cTabs', cTabs);
     }
 }
 
-export { tabs, tabItem };
+export { cTabs, cTabItem };

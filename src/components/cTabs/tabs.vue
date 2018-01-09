@@ -32,7 +32,7 @@
 import { event } from 'common/js/event.js';
 
 export default {
-  name: "tabs",
+  name: "cTabs",
   props: {
     position: {
       type: String,
@@ -60,11 +60,11 @@ export default {
     },
     iconWidth: {
       type: String,
-      default: '0.4rem'
+      default: '40px'
     },
     iconHeight: {
       type: String,
-      default: '0.4rem'
+      default: '40px'
     }
   },
   data() {
@@ -106,5 +106,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./tab";
+  @import "./tab";
 </style>

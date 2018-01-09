@@ -14,7 +14,7 @@
 import { event } from 'common/js/event.js';
 
 export default {
-  name: "tabItem",
+  name: "cTabItem",
   props: {
     title: {
       type: String,

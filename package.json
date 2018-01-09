@@ -1,6 +1,6 @@
 {
   "name": "ui-vue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ui-vue前端ui框架",
   "author": "chenhaozhi",
   "main": "build/index/index.js",

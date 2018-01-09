@@ -27,7 +27,7 @@
         },
         methods: {
             back(){
-                this.$router.go(-1);
+                this.$router && this.$router.go(-1);
                 this.$emit('onBack');
             }
         }
