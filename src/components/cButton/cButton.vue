@@ -4,7 +4,7 @@
 <template>
     <h1 
         class="c-button" 
-        :class="[{'c-button-disabled': disabled}]"
+        :class="[{'c-button-disabled': disabled}, `c-button-${type}`]"
         :style="styleObj"  
         @click="buttonClick"
     >{{text}}</h1>
@@ -28,11 +28,15 @@
           },
           color: {
               type: String,
-              default: '#448FF2'
+              default: ''
           },
           disabled: {
               type: Boolean,
               default: false
+          },
+          type: {
+              type: String,
+              default: 'default'
           }
       },
       created(){
@@ -66,5 +70,16 @@
         font-size: 20px;
         text-align: center;
         border-radius: 6px;
+    }
+    .c-button-primary {
+        background-color: #448FF2;
+    }
+    .c-button-default {
+        color: #000;
+        background-color: #fff;
+        border: 1px solid rgba($color: #000000, $alpha: 0.08)
+    }
+    .c-button-warning {
+        background-color: #e94f4f;
     }
 </style>

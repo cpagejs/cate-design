@@ -29,7 +29,7 @@ import { cBar } from 'ui-vue';
 ```
 import { cButton } from 'ui-vue';
 
-<c-button text="点击" @onClick="buttonClick"></c-button>
+<c-button text="点击" @onClick="buttonClick" type="primary"></c-button>
 ```
 ### 属性
 | 属性 | 类型 | 作用 |
@@ -37,6 +37,7 @@ import { cButton } from 'ui-vue';
 | text | 类型String  默认'' | 按钮文字 |
 | color | 类型String  默认'#448FF2' | 按钮颜色 |
 | disabled | 类型Boolean  默认false | 按钮是否允许点击 |
+| type | default/primary/warning，默认default | 按钮类型 |
 
 ### 事件
 | 事件 | 作用 |
