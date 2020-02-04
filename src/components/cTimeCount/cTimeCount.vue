@@ -1,4 +1,4 @@
-/**@author chenhaozhi
+/**@author 夏小宅
 * 倒计时效果
  */
 <template>
@@ -25,7 +25,7 @@
         props: {
             date: {
                 type: String,
-                default: '2017-10-16 10:15:26'
+                default: '2019-10-16 10:15:26'
             }
         },
         methods: {

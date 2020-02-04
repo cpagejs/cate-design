@@ -1,5 +1,5 @@
 /**底部按钮组件
- * @author chenhaozhi
+ * @author 夏小宅
  */
 <template>
     <h1 

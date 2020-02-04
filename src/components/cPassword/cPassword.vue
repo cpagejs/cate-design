@@ -1,9 +1,16 @@
 /** 六位密码输入框组件
- * @author chenhaozhi
+ * @author 夏小宅
 */
 <template>
     <div class="c-password" @click="focus">
-        <input ref="pwd" type="tel" maxlength="6" class="password-style" v-model="value" :class="{'pwd-disabled': disabled}"/>
+        <input 
+            ref="pwd" 
+            type="tel" 
+            maxlength="6" 
+            class="password-style" 
+            v-model="value" 
+            :class="{'pwd-disabled': disabled}"
+        />
         <ul class="pwd-wraper" :class="{'pwd-disabled': disabled}">
             <li><i v-if="valueLength > 0"></i></li>
             <li><i v-if="valueLength > 1"></i></li>

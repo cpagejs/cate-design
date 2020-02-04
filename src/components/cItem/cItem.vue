@@ -1,4 +1,4 @@
-/**@author chenhaozhi
+/**@author 夏小宅
 item组件
 */
 <template>
@@ -36,7 +36,7 @@ item组件
             },
             leftText: {
                 type: String,
-                default: 'leftText'
+                default: ''
             },
             rightText: {
                 type: String,

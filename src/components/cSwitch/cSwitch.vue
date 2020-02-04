@@ -1,5 +1,5 @@
 /**开关组件
- * @author chenhaozhi
+ * @author 夏小宅
  */
 <template>
     <label class="c-switch-wrap"

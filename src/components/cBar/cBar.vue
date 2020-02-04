@@ -1,5 +1,5 @@
 /**条形进度条组件
- * @author chenhaozhi
+ * @author 夏小宅
  */
 <template>
     <div class="c-progress-bar">  

@@ -1,4 +1,4 @@
-/**@author chenhaozhi
+/**@author 夏小宅
 * 子元素class需要有item
 <div class="item"></div>
 */

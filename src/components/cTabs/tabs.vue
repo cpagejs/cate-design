@@ -1,5 +1,5 @@
 /**选项卡组件
- * @author chenhaozhi
+ * @author 夏小宅
  */
 <template>
   <section class="c-tabs-container">

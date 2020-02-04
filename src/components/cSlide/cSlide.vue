@@ -1,5 +1,5 @@
 /**
- * @author chenhaozhi
+ * @author 夏小宅
  * 侧滑组件
  */
 <template>

@@ -1,10 +1,10 @@
 /**
- * @author chenhaozhi
+ * @author 夏小宅
  * 提示框组件
  */
 <template>
   <transition :name="fadeIn">
-    <div class="alert-container" :class="position" v-show="show">
+    <div class="c-alert-container" :class="position" v-show="show">
       <div class="alert-mask" v-show="showBg"></div>
       <transition :name="translate">
         <div class="alert-box" :class="[`alert-shape-${shape}`]" v-show="show">

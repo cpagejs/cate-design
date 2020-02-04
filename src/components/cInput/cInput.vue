@@ -1,11 +1,11 @@
 /** 输入框，字数限制
- * @author chenhaozhi
+ * @author 夏小宅
 */
 
 <template>
     <div class="c-input-text" :class="{disabled: disabled}">
         <span>{{label}}</span>
-        <input type="text"
+        <input type="type"
             ref="input"
             v-bind:value="value"
             @input="parseText()"

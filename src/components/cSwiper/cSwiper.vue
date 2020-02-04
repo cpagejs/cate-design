@@ -1,5 +1,5 @@
 /**
- * @author chenhaozhi
+ * @author 夏小宅
  * 图片切换组件
  */
 <template>

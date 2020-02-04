@@ -5,8 +5,10 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
+    mode: 'development',
     entry :　path.resolve('./example/index.js'),
     output : {
         path: path.resolve(__dirname, 'build'),
@@ -49,6 +51,7 @@ module.exports = {
       new webpack.DefinePlugin({
         'process.env': '"development"'
       }),
+      new VueLoaderPlugin()
     ],
     stats: "errors-only",
     module: {
@@ -58,9 +61,6 @@ module.exports = {
             loader: 'vue-loader',
             exclude: /node_modules/,
             options: {
-              postcss: [require('autoprefixer')({
-                browsers: ['last 2 versions']
-              })],
               loaders: {
                   css: ExtractTextPlugin.extract({
                       use: ['css-loader'],
@@ -106,7 +106,14 @@ module.exports = {
           },
           {
             test: /\.css$/,
-            use: [ 'style-loader', 'css-loader' ]
+            use: [
+              'vue-style-loader',
+              {
+                loader: 'css-loader',
+                options: { importLoaders: 1 }
+              },
+              'postcss-loader'
+            ]
           }
         ]
     }

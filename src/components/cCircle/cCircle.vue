@@ -1,4 +1,4 @@
-/**@author chenhaozhi
+/**@author 夏小宅
  * 圆环进度条组件
  */
 <template>

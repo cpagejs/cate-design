@@ -1,5 +1,5 @@
 /**
- * @author chenhaozhi
+ * @author 夏小宅
  * 圆环倒计时组件
  */
 <template>

@@ -1,4 +1,4 @@
-/**@author chenhaozhi
+/**@author 夏小宅
  * 页面滚动组件
  */
 <template>

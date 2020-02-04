@@ -5,6 +5,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+
 const { resolve } = require("path");
 function r(path){
   return resolve(__dirname, path);
@@ -23,9 +25,10 @@ Object.assign(entrys, {
 });
 
 module.exports = {
+    mode: 'production',
     entry : entrys,
     output : {
-        library: 'kesuMobile',
+        library: 'ui-vue-h5',
         path: path.resolve(__dirname, 'dist'),
         libraryTarget: 'umd',
         filename: 'js/[name]/index.js'
@@ -59,9 +62,7 @@ module.exports = {
             NODE_ENV: '"production"'
           }
         }),
-        new UglifyJsPlugin({
-
-        })
+        new VueLoaderPlugin()
     ],
     module: {
         rules: [
@@ -70,9 +71,6 @@ module.exports = {
             loader: 'vue-loader',
             exclude: /node_modules/,
             options: {
-              postcss: [require('autoprefixer')({
-                browsers: ['last 2 versions']
-              })],
               loaders: {
                   css: ExtractTextPlugin.extract({
                       use: ['css-loader'],

@@ -1,43 +1,20 @@
-import cButtonFooter from './components/cButtonFooter';
-import cItem from './components/cItem';
-import cConfirm from './components/cConfirm';
-import cHeaderBack from './components/cHeaderBack';
-import cButton from './components/cButton';
-import cInputPassword from './components/cInputPassword';
-import cInput from './components/cInput';
-import cSwitch from './components/cSwitch';
-import cLoading from './components/cLoading';
-import cPassword from './components/cPassword';
-import cBar from './components/cBar';
-import cCircle from './components/cCircle';
-import cScrollAble from './components/cScrollAble';
-import cScrollX from './components/cScrollX';
-import cSlide from './components/cSlide';
-import cSwiper from './components/cSwiper';
-import cTabs from './components/cTabs';
-import cTimeCircle from './components/cTimeCircle';
-import cTimeCount from './components/cTimeCount';
-import cToast from './components/cToast';
-
-export default {
-    cButtonFooter,
-    cItem,
-    cConfirm,
-    cHeaderBack,
-    cButton,
-    cInputPassword,
-    cInput,
-    cSwitch,
-    cLoading,
-    cPassword,
-    cBar,
-    cCircle,
-    cScrollAble,
-    cScrollX,
-    cSlide,
-    cSwiper,
-    cTabs,
-    cTimeCircle,
-    cTimeCount,
-    cToast
-};
+export { default as cButtonFooter } from './components/cButtonFooter';
+export { default as cItem } from './components/cItem';
+export { default as cConfirm } from './components/cConfirm';
+export { default as cHeaderBack }from './components/cHeaderBack';
+export { default as cButton } from './components/cButton';
+export { default as cInputPassword } from './components/cInputPassword';
+export { default as cInput } from './components/cInput';
+export { default as cSwitch } from './components/cSwitch';
+export { default as cLoading } from './components/cLoading';
+export { default as cPassword } from './components/cPassword';
+export { default as cBar } from './components/cBar';
+export { default as cCircle } from './components/cCircle';
+export { default as cScrollAble } from './components/cScrollAble';
+export { default as cScrollX } from './components/cScrollX';
+export { default as cSlide } from './components/cSlide';
+export { default as cSwiper } from './components/cSwiper';
+export { default as cTabs } from './components/cTabs';
+export { default as cTimeCircle } from './components/cTimeCircle';
+export { default as cTimeCount } from './components/cTimeCount';
+export { default as cToast } from './components/cToast';
