@@ -2,7 +2,7 @@
  * @author 夏小宅
 */
 <template>
-    <div class="c-loading">
+    <div class="c-loading" :style="styleLoading">
         <div class="loading-container container1">
             <div class="circle1" :style="{backgroundColor:`${color}`}"></div>
             <div class="circle2" :style="{backgroundColor:`${color}`}"></div>
@@ -30,6 +30,12 @@
             color: {
                 type: String,
                 default: "#6284e2"
+            },
+            styleLoading: {
+                type: Object,
+                default(){
+                    return {}
+                }
             }
         }
     };

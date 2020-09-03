@@ -1,16 +1,18 @@
-# ui-vue前端UI框架
+# ui-vue 前端 UI 框架
 
-框架基于vue2开发
+框架基于 Vue2.x 开发
 
 ## 安装
 ```
 npm install --save ui-vue
 
-全局引入
-import 'ui-vue/dist/css/index.css';
-import * as ui-vue from 'ui-vue';
-Object.keys(ui-vue.default).forEach(key=>{
-  Vue.use(ui-vue.default[key]);
+然后全局引入css
+import 'ui-vue/dist/index.css';
+
+可以全局注入组件
+import * as uiVue from 'ui-vue';
+Object.keys(uiVue).forEach(key=>{
+  Vue.use(uiVue[key]);
 });
 ```
 
@@ -72,6 +74,7 @@ import { cCircle } from 'ui-vue';
 | :------ | :------ | :------ |
 | percent | 类型String  默认'' | 进度条的百分比 |
 | percent | 类型String  默认'' | 进度条的百分比 |
+
 ## 5，cConfirm 确认框组件
 ```
 import { cConfirm } from 'ui-vue';
@@ -131,7 +134,7 @@ import { cInput } from 'ui-vue';
 | placeholder | 类型String  默认'请输入' | placeholder值 |
 | value | 类型String  默认'' | 输入框默认值 |
 | label | 类型String  默认'' | label值 |
-| length | 类型Number  默认20 | 最多可输入的字符长度 |
+| length | 类型Number  默认200 | 最多可输入的字符长度 |
 | disabled | 类型Boolean  默认false | 是否禁止输入 |
 
 ### 事件
@@ -169,11 +172,11 @@ import { cItem } from 'ui-vue';
 ### 属性
 | 属性 | 类型 | 作用 |
 | :------ | :------ | :------ |
-| hasLeftIcon | 类型Boolean  默认true | 判断左侧是否有图标 |
-| hasRightIcon | 类型Boolean  默认true | 判断右侧是否有图标 |
-| leftIcon | 类型String  默认'' | 左侧图标，图标位置位于src/assets/img/icon/ |
-| leftText | 类型String  默认'' | 左侧文案 |
+| avatar | 类型String  默认'' | 左侧图标 |
+| title | 类型String  默认'' | 左侧文案 |
+| description | 类型String  默认'' | 列表元素的描述内容 |
 | rightText | 类型String  默认'' | 右侧文案 |
+| rightArrow | 类型Boolean  默认true | 判断右侧是否有图标 |
 
 ### 事件
 | 事件 | 作用 |
@@ -189,6 +192,7 @@ import { cLoading } from 'ui-vue';
 | 属性 | 类型 | 作用 |
 | :------ | :------ | :------ |
 | color | 类型String  默认'#6284e2' | loading颜色 |
+| styleLoading | 类型Object  默认{} | 自定义样式 |
 
 ## 11，cScrollAble 页面scroll组件
 ```

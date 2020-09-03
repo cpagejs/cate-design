@@ -5,4 +5,10 @@
     justify-content: $justify;
 }
 
+@mixin font($size:15px, $color:#000000, $weight:normal) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}
+
 $input-disabled: #dcdcdc;

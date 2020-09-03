@@ -13,7 +13,7 @@ export { default as cCircle } from './components/cCircle';
 export { default as cScrollAble } from './components/cScrollAble';
 export { default as cScrollX } from './components/cScrollX';
 export { default as cSlide } from './components/cSlide';
-export { default as cSwiper } from './components/cSwiper';
+// export { default as cSwiper } from './components/cSwiper';
 export { default as cTabs } from './components/cTabs';
 export { default as cTimeCircle } from './components/cTimeCircle';
 export { default as cTimeCount } from './components/cTimeCount';

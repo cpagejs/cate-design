@@ -1,18 +1,37 @@
 const path = require("path");
+const fs = require('fs');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-var MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+const { resolve } = require("path");
+function r(path){
+  return resolve(__dirname, path);
+}
+
+let entrys = {};
+fs.readdirSync( r('./src/components') )
+    .forEach(file=>{
+        const ds = fs.statSync(r('./src/components/' + file));
+        if(ds.isDirectory()) {
+            entrys[file] = r('./src/components/' + file + '/index.js')
+        }
+    })
+Object.assign(entrys, {
+  index: './src/index.js'
+});
 
 module.exports = {
     mode: 'production',
-    entry : path.resolve('./src/index.js'),
+    entry : entrys,
     output : {
-        library: 'ui-vue',
-        path: path.resolve(__dirname, 'dist'),
+        library: 'ui-vue-h5',
+        path: path.resolve(__dirname, 'build'),
         libraryTarget: 'umd',
-        filename: 'index.js'
+        filename: 'js/[name]/index.js'
     },
     resolve: {
         extensions: ['.js', '.vue', '.json', '.html'],
@@ -25,8 +44,9 @@ module.exports = {
         }
       },
     plugins : [
-        new MiniCssExtractPlugin({
-          filename: 'index.css'
+        new ExtractTextPlugin({
+          filename: 'css/[name].css',
+          allChunks: true
         }),
         new OptimizeCssAssetsPlugin(),
         new CleanWebpackPlugin(
@@ -50,6 +70,19 @@ module.exports = {
             test: /\.vue$/,
             loader: 'vue-loader',
             exclude: /node_modules/,
+            options: {
+              loaders: {
+                  css: ExtractTextPlugin.extract({
+                      use: ['css-loader'],
+                      fallback: 'vue-style-loader'
+                  }),
+                  scss: ExtractTextPlugin.extract({
+                    use: ['css-loader', 'sass-loader'],
+                    fallback: 'vue-style-loader'
+                  }),
+              },
+              sourceMap:true
+            }
           },
           {
             test: /\.js$/,
@@ -60,7 +93,6 @@ module.exports = {
               }
             },
             include: path.resolve(__dirname, "./src"),
-            exclude: /(node_modules|bower_components)/,
           },
           {
             test: /\.(png|jpe?g|gif|svg)(\?.*)?$/i,
@@ -82,11 +114,14 @@ module.exports = {
           },
           {
             test: /\.scss$/,
-            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+            use: ExtractTextPlugin.extract({
+              fallback: 'style-loader',
+              use: ['css-loader', 'sass-loader']
+            })
           },
           {
             test: /\.css$/,
-            use: [MiniCssExtractPlugin.loader, 'css-loader']
+            use: ExtractTextPlugin.extract([ 'css-loader', 'postcss-loader' ])
           }
         ]
     }

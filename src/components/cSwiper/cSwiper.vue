@@ -102,6 +102,6 @@
 </script>
 
 <style lang="scss">
-  @import '../../common/css/swiper.min.css';
+  // @import '../../common/css/swiper.min.css';
   @import './index';
 </style>

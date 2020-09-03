@@ -32,7 +32,7 @@
                 type: String
             },
             length: {
-                default: 20,
+                default: 200,
                 type: Number
             },
             placeholder: {
@@ -78,8 +78,8 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        height: 80px;
-        line-height: 80px;
+        height: 50px;
+        line-height: 50px;
         border-bottom: 1px solid #e0e0e0;
         background: #fff;
         &.disabled {
@@ -87,16 +87,18 @@
         }
         span {
             display: inline-block;
-            font-size: 30px;
+            font-size: 20px;
             color: #333333;
         }
         input {
             text-align: left;
             border: none;
-            font-size: 30px;
-            width: 300px;
+            font-size: 20px;
+            width: 100%;
             height: 30px;
-            padding: 25px 0;
+            padding: 20px 0;
+            box-sizing: border-box;
+            outline: none;
             &.disabled {
                 background: $input-disabled;
             }

@@ -1,11 +1,9 @@
 const path = require("path");
-const fs = require('fs');
-const glob = require('glob');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+var MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     mode: 'development',
@@ -31,13 +29,9 @@ module.exports = {
           template : './example/index.html',
           inject: true,
           minify : {
-              removeComments : true,
+              removeComments : false,
               collapseWhitespace : true
           }
-      }),
-      new ExtractTextPlugin({
-        filename: 'styles.css',
-        allChunks: true
       }),
       new webpack.HotModuleReplacementPlugin(),
       new CleanWebpackPlugin(
@@ -51,7 +45,10 @@ module.exports = {
       new webpack.DefinePlugin({
         'process.env': '"development"'
       }),
-      new VueLoaderPlugin()
+      new VueLoaderPlugin(),
+      new MiniCssExtractPlugin({
+        filename: 'index.css'
+      }),
     ],
     stats: "errors-only",
     module: {
@@ -60,24 +57,17 @@ module.exports = {
             test: /\.vue$/,
             loader: 'vue-loader',
             exclude: /node_modules/,
-            options: {
-              loaders: {
-                  css: ExtractTextPlugin.extract({
-                      use: ['css-loader'],
-                      fallback: 'vue-style-loader' 
-                  }),
-                  scss: ExtractTextPlugin.extract({
-                    use: ['css-loader', 'sass-loader'],
-                    fallback: 'vue-style-loader' 
-                  }),
-              },
-              sourceMap:true
-            }
           },
           {
             test: /\.js$/,
-            loader: 'babel-loader',
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env']
+              }
+            },
             include: path.resolve(__dirname, "./src"),
+            exclude: /(node_modules|bower_components)/,
           },
           {
             test: /\.(png|jpe?g|gif|svg)(\?.*)?$/i,
@@ -99,20 +89,17 @@ module.exports = {
           },
           {
             test: /\.scss$/,
-            use: ExtractTextPlugin.extract({
-              fallback: 'style-loader',
-              use: ['css-loader', 'sass-loader']
-            })
+            use: [
+              MiniCssExtractPlugin.loader,
+              'css-loader',
+              'sass-loader'
+            ]
           },
           {
             test: /\.css$/,
             use: [
-              'vue-style-loader',
-              {
-                loader: 'css-loader',
-                options: { importLoaders: 1 }
-              },
-              'postcss-loader'
+              MiniCssExtractPlugin.loader,
+              'css-loader'
             ]
           }
         ]

@@ -64,12 +64,13 @@
 <style lang="scss">
     .c-button {
         width: 100%;
-        height: 50px;
-        line-height: 50px;
+        height: 40px;
+        line-height: 40px;
         color: #fff;
         font-size: 20px;
         text-align: center;
         border-radius: 6px;
+        font-weight: normal;
     }
     .c-button-primary {
         background-color: #448FF2;

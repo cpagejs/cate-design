@@ -8,8 +8,8 @@
       <div class="alert-mask" v-show="showBg"></div>
       <transition :name="translate">
         <div class="alert-box" :class="[`alert-shape-${shape}`]" v-show="show">
-          <em class="alert-type" :class="[`alert-type-${type}`]" v-if="shape == 'square' && type != 'info'"></em>
-          <div class="text"><p>{{text}}</p></div>
+          <div class="alert-type" :class="[`alert-type-${type}`]" v-if="shape == 'square' && type != 'info'"></div>
+          <div class="text">{{text}}</div>
         </div>
       </transition>
     </div>
