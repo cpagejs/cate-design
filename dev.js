@@ -6,6 +6,7 @@ const app = express();
 const config = require('./dev.config.js');
 const compiler = webpack(config);
 
+// dev 开发测试	
 app.use(webpackDevMiddleware(compiler, {
 	publicPath: config.output.publicPath,
 	stats: {
