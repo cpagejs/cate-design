@@ -1,10 +1,6 @@
 import {
   defineComponent,
   getCurrentInstance,
-  inject,
-  onMounted,
-  ref,
-  watch,
 } from "vue";
 import { tabPaneProps } from "./types";
 

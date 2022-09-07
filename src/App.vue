@@ -18,4 +18,8 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  .main {
+    padding: 10px;
+  }
+</style>

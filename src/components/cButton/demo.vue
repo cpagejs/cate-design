@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <c-button :label="text" type="primary" size="lg"/>
+    <c-button :label="text" type="primary" size="lg" @on-click="btnClick"/>
   </div>
 </template>
 
@@ -15,9 +15,12 @@ export default defineComponent({
   },
   setup() {
     const text = ref("btn 按钮");
-
+    const btnClick = () => {
+      alert("click btn~");
+    };
     return {
-      text
+      text,
+      btnClick
     };
   },
 });

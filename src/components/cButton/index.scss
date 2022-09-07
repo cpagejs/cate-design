@@ -28,7 +28,7 @@
     border-color: $hover-border;
   }
   &:disabled,
-  &.disabled {
+  &.btn-disabled {
     color: $color;
     background: $background;
     border-color: $border;
@@ -85,7 +85,7 @@
     box-shadow: none;
   }
   &:disabled,
-  &.disabled {
+  &.btn-disabled {
     color: $btn-link-disabled-color;
     pointer-events: none;
   }
@@ -113,7 +113,7 @@
   cursor: pointer;
   transition: $btn-transition;
 
-  &.disabled,
+  &.btn-disabled,
   &[disabled] {
     cursor: not-allowed;
     opacity: $btn-disabled-opacity;

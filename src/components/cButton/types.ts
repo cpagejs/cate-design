@@ -7,6 +7,7 @@ type ButtonType = "primary" | "default" | "danger" | "link";
 const buttonProps = () => ({
   label: String,
   backgroundColor: String,
+  textColor: String,
   disabled: {
     type: Boolean,
     defalut: false,
