@@ -1,0 +1,55 @@
+@import '../../assets/styles/variable.scss';
+.c-auto-complete {
+  position: relative;
+}
+.c-suggestion-list {
+  padding-left: 0;
+  white-space: nowrap;
+  position: absolute;
+  background: $white;
+  z-index: 100;
+  top: calc(100% + 8px);
+  left: 0;
+  border: $menu-border-width solid $menu-border-color;
+  box-shadow: $submenu-box-shadow;
+  width: 100%;
+  list-style: none;
+
+  .suggestion-item {
+    padding: $menu-item-padding-y $menu-item-padding-x;
+    cursor: pointer;
+    transition: $menu-transition;
+    color: $body-color;
+    border-bottom: $menu-border-width solid $menu-border-color;
+    &.is-active {
+      background: $menu-item-active-color !important;
+      color: white !important;
+    }
+    &:hover {
+      color: greenyellow !important;
+    }
+  }
+}
+
+.spinner {
+  position: absolute;
+  border: 4px solid transparent;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.4);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.item-highlighted {
+  background: $primary;
+  color: white;
+}

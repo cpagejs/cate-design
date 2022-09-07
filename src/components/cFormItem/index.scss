@@ -1,0 +1,39 @@
+@import '../../assets/styles/variable.scss';
+.#{$c-pre}form-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+  .item-label {
+    display: inline-block;
+    margin-right: 10px;
+    text-align: right;
+    white-space: nowrap;
+    color: $text-color;
+    vertical-align: middle;
+    font-size: $font-size-mid;
+    width: 100px;
+  }
+
+  .item-content {
+    position: relative;
+
+    .item-error {
+      position: absolute;
+      color: $error-color;
+      font-size: $font-size-base;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      margin-left: -15px;
+    }
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,26 @@
+@import '../../assets/styles/variable.scss';
+.#{$c-pre}tabs {
+  position: relative;
+  .navs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    .c-tab-pane {
+      flex-shrink: 0;
+      padding: 10px 15px;
+      text-align: center;
+      height: 32px;
+      line-height: 32px;
+      border-bottom: $tab-border-width solid $border-color;
+
+      cursor: pointer;
+      transition: color 0.2s ease-in-out;
+      &.active,
+      &:hover {
+        color: $tab-item-active-color;
+        border-bottom: $tab-item-active-border-width solid
+          $tab-item-active-color;
+      }
+    }
+  }
+}

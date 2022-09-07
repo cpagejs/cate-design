@@ -1,7 +1,7 @@
-# ui-vue 前端 UI 框架
+# ui-vue vue3+Typescript 组件库
+不断完善中
 
 备注：1.x版本是基于 Vue2.x 开发，2.x版本是基于 vue3+ts开发
-
 ## 安装
 ```
 npm install --save ui-vue
@@ -348,6 +348,3 @@ this.$toast({
 | delay | 类型Number | 默认1500 提示框显示时间，单位ms |
 | showBg | 类型Boolean | 默认false 是否显示遮罩层 |
 | position | 类型String | 默认'center' 提示框显示位置，'center'：居中，'top'：顶部，'bottom'：底部 |
-
-
-

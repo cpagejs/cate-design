@@ -1,0 +1,69 @@
+@import './iconfont.css';
+@import '../../assets/styles/variable.scss';
+
+.#{$c-pre}tree-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  user-select: none;
+  .#{$c-pre}tree {
+    .#{$c-pre}tree-node {
+      padding: 4px 0;
+      line-height: normal;
+      font-size: $font-size-base;
+      cursor: pointer;
+      &:hover {
+        background-color: $bg-prev-color;
+      }
+      .node-arrow {
+        display: inline-block;
+        cursor: pointer;
+        min-width: 16px;
+        .iconfont {
+          display: block;
+        }
+        &.expanded {
+          .iconfont {
+            transform: rotate(90deg);
+          }
+        }
+        .ico-loading {
+          animation: roundLoading 1s linear infinite;
+        }
+      }
+      .node-content {
+        display: inline-block;
+        vertical-align: top;
+        .node-title {
+          padding: 0 6px;
+          vertical-align: top;
+          color: #515a6e;
+          white-space: nowrap;
+          transition: background-color 0.2s;
+          &:hover {
+            color: $primary-color;
+          }
+          &.selected {
+            background-color: $assist-color;
+          }
+          &.disabled {
+            cursor: not-allowed;
+            color: $disable-color;
+          }
+        }
+      }
+    }
+    .node-selected .node-title {
+      background-color: #d5e8fc;
+    }
+  }
+
+  @keyframes roundLoading {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

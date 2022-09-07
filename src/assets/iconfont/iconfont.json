@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "10273624",
+      "name": "loading",
+      "font_class": "loading",
+      "unicode": "e891",
+      "unicode_decimal": 59537
+    }
+  ]
+}
