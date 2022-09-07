@@ -1,4 +1,4 @@
-# ui-vue vue3+Typescript 组件库
+# ui-vue 一个基于 Vue3+TypeScript+storybook 的前端UI框架，简单易用
 不断完善中
 
 备注：1.x版本是基于 Vue2.x 开发，2.x版本是基于 vue3+ts开发
