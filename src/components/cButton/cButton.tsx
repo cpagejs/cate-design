@@ -26,17 +26,17 @@ export default defineComponent({
     };
 
     return () => {
-      const { href, label } = props;
+      const { href, text } = props;
       if (href) {
         return (
           <a href={href} class={classes} style={styles}>
-            {label}
+            {text || ''}
           </a>
         );
       } else {
         return (
           <div class={classes} style={styles} onClick={buttonClick}>
-            {label}
+            {text || ''}
           </div>
         );
       }

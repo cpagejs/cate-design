@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <cInput style="width: 100px" placeholder="placeholder" />
+    <cInput style="width: 200px" placeholder="placeholder" size="sm"/>
     <cInput style="width: 300px" placeholder="disabled input" disabled />
     <cInput style="width: 300px" defaultValue="large size" size="lg" />
     <cInput style="width: 300px" placeholder="small size" size="sm" />

@@ -4,7 +4,10 @@ type InputSize = "lg" | "sm";
 
 const inputProps = () => ({
   disabled: Boolean,
-  size: String as PropType<InputSize>,
+  size: {
+    type: String as PropType<InputSize>,
+    default: "sm"
+  },
   prepend: String,
   append: String,
   style: Object,

@@ -2,6 +2,7 @@
   <div class="main">
     <cButtonDemo />
     <cInputDemo />
+    <cBarDemo />
   </div>
 </template>
 
@@ -9,11 +10,14 @@
 import { defineComponent } from "vue";
 import cButtonDemo from "./components/cButton/demo.vue";
 import cInputDemo from "./components/cInput/demo.vue";
+import cBarDemo from "./components/cBar/demo.vue";
+
 export default defineComponent({
   name: "App",
   components: {
     cButtonDemo,
-    cInputDemo
+    cInputDemo,
+    cBarDemo
   },
 });
 </script>

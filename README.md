@@ -31,15 +31,17 @@ import { cBar } from 'ui-vue';
 ```
 import { cButton } from 'ui-vue';
 
-<c-button text="点击" @onClick="buttonClick" type="primary"></c-button>
+<c-button text="btn text" type="primary" text-color="#fff" size="lg" @on-click="btnClick"/>
 ```
 ### 属性
-| 属性 | 类型 | 作用 |
-| :------ | :------ | :------ |
-| text | 类型String  默认'' | 按钮文字 |
-| color | 类型String  默认'#448FF2' | 按钮颜色 |
-| disabled | 类型Boolean  默认false | 按钮是否允许点击 |
-| type | default/primary/warning，默认default | 按钮类型 |
+| 属性 | 类型 | 作用 | 
+| :------ | :------ | :------ | 
+| text | 类型String  默认'' | 按钮文字 | 
+| backgroundColor | 类型String | 自定义按钮颜色 | 
+| textColor | 类型String | 自定义文字颜色 | 
+| disabled | 类型Boolean  默认false | 按钮是否允许点击 | 
+| type | default/primary/danger/link，默认default | 按钮类型 | 
+| size | sm/lg  默认sm | 按钮大小 | 
 
 ### 事件
 | 事件 | 作用 |

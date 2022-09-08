@@ -1,11 +1,11 @@
 import { PropType } from "vue";
 
-type ButtonSize = "lg" | "sm";
+type ButtonSize = "lg" | "sm" | "full";
 
 type ButtonType = "primary" | "default" | "danger" | "link";
 
 const buttonProps = () => ({
-  label: String,
+  text: String,
   backgroundColor: String,
   textColor: String,
   disabled: {

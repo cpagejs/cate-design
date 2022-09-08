@@ -1,18 +1,17 @@
 <template>
   <div class="main">
-    <c-button :text="text" type="primary" size="lg" @on-click="btnClick"/>
-    <c-button text="btn text" type="danger" text-color="#fff" @on-click="btnClick"/>
+    <c-bar percent="30" />
   </div>
 </template>
 
 <script lang="tsx">
 import { defineComponent, ref } from "vue";
-import cButton from "./cButton";
+import cBar from "./cBar";
 
 export default defineComponent({
   name: "App",
   components: {
-    cButton,
+    cBar,
   },
   setup() {
     const text = ref("btn 按钮");
