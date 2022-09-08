@@ -1,6 +1,6 @@
 {
   "name": "ui-vue",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "ui-vue 前端ui框架",
   "author": "夏小宅",
   "main": "dist/index.js",
