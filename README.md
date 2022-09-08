@@ -1,16 +1,16 @@
-# ui-vue 一个基于 Vue3+TypeScript+storybook 的前端UI框架，简单易用
+# cate-design 一个基于 Vue3+TypeScript+storybook 的前端UI框架，简单易用
 不断完善中
 
-备注：1.x版本是基于 Vue2.x 开发，2.x版本是基于 vue3+ts开发
+备注：1.x版本是基于 Vue2.x 开发，2.x版本是基于 vue3+ts 开发
 ## 安装
 ```
-npm install --save ui-vue
+npm install --save cate-design
 
 然后全局引入css
-import 'ui-vue/dist/index.css';
+import 'cate-design/dist/index.css';
 
 可以全局注入组件
-import * as uiVue from 'ui-vue';
+import * as uiVue from 'cate-design';
 Object.keys(uiVue).forEach(key=>{
   Vue.use(uiVue[key]);
 });
@@ -18,7 +18,7 @@ Object.keys(uiVue).forEach(key=>{
 
 ## 1，cBar 水平进度条组件
 ```
-import { cBar } from 'ui-vue';
+import { cBar } from 'cate-design';
 
 <c-bar percent='20' color="#f60"></c-bar>
 ```
@@ -29,7 +29,7 @@ import { cBar } from 'ui-vue';
 
 ## 2，cButton 按钮组件
 ```
-import { cButton } from 'ui-vue';
+import { cButton } from 'cate-design';
 
 <c-button text="btn text" type="primary" text-color="#fff" size="lg" @on-click="btnClick"/>
 ```
@@ -50,7 +50,7 @@ import { cButton } from 'ui-vue';
 
 ## 3，cButtonFooter 底部按钮组件
 ```
-import { cButtonFooter } from 'ui-vue';
+import { cButtonFooter } from 'cate-design';
 
 <c-button-footer text="点击" @onClick="buttonClick"></c-button-footer>
 ```
@@ -68,7 +68,7 @@ import { cButtonFooter } from 'ui-vue';
 
 ## 4，cCircle 水平进度条组件
 ```
-import { cCircle } from 'ui-vue';
+import { cCircle } from 'cate-design';
 
 <c-circle percent='100'></c-circle>
 ```
@@ -79,7 +79,7 @@ import { cCircle } from 'ui-vue';
 
 ## 5，cConfirm 确认框组件
 ```
-import { cConfirm } from 'ui-vue';
+import { cConfirm } from 'cate-design';
 
  <confirm ref="myConfirm" confirm-text="提交" @confirm="confirmFn()">
     <div slot="inner">
@@ -112,7 +112,7 @@ this.$refs.myConfirm.hide();
 
 ## 6，cHeaderBack 顶部导航组件
 ```
-import { cHeaderBack } from 'ui-vue';
+import { cHeaderBack } from 'cate-design';
 <c-header-back title="详情页" @onBack="backFn"></c-header-back>
 ```
 ### 属性
@@ -127,7 +127,7 @@ import { cHeaderBack } from 'ui-vue';
 
 ## 7，cInput 输入框组件
 ```
-import { cInput } from 'ui-vue';
+import { cInput } from 'cate-design';
 <c-input ref="input1"  @onInput="inputFn" @onBlur="blurFn"></c-input>
 ```
 ### 属性
@@ -147,7 +147,7 @@ import { cInput } from 'ui-vue';
 
 ## 8，cInputPassword 密码输入框组件（可显示密码）
 ```
-import { cInputPassword } from 'ui-vue';
+import { cInputPassword } from 'cate-design';
 <c-input-password ref="input1"  @onInput="inputFn" @onBlur="blurFn"></c-input-password>
 ```
 ### 属性
@@ -168,7 +168,7 @@ import { cInputPassword } from 'ui-vue';
 
 ## 9，cItem 列表组件
 ```
-import { cItem } from 'ui-vue';
+import { cItem } from 'cate-design';
 <c-item :has-left-icon="hasIcon" left-icon="leftIcon.png" left-text="测试" right-text="10" @onClick="handelC()"></c-item>
 ```
 ### 属性
@@ -187,7 +187,7 @@ import { cItem } from 'ui-vue';
 
 ## 10，cLoading loading组件
 ```
-import { cLoading } from 'ui-vue';
+import { cLoading } from 'cate-design';
 <c-loading color="#f60"></c-loading>
 ```
 ### 属性
@@ -198,7 +198,7 @@ import { cLoading } from 'ui-vue';
 
 ## 11，cScrollAble 页面scroll组件
 ```
-import { cScrollAble } from 'ui-vue';
+import { cScrollAble } from 'cate-design';
  <c-scroll-able @pullUp="pullUpFn" @pullDown="pullDownFn" ref="scrollList" :data="data" :bottom-tip-show="bottomTipShow">
     <div>xxx</div>
 </c-scroll-able>
@@ -221,7 +221,7 @@ import { cScrollAble } from 'ui-vue';
 
 ## 12，cScrollX 左右滑动组件
 ```
-import { cScrollX } from 'ui-vue';
+import { cScrollX } from 'cate-design';
 
 <c-scroll-x>
   <div class="item">
@@ -232,7 +232,7 @@ import { cScrollX } from 'ui-vue';
 
 ## 13，cSlide 抽屉组件
 ```
-import { cSlide } from 'ui-vue';
+import { cSlide } from 'cate-design';
 <slide ref="mySlider">
     内容
 </slide>
@@ -245,7 +245,7 @@ import { cSlide } from 'ui-vue';
 
 ## 14，cSwiper 图片切换组件
 ```
-import { cSwiper } from 'ui-vue';
+import { cSwiper } from 'cate-design';
 <c-swiper :img-list="imgList" page-style="dot" page-pos="center" height="3rem"></c-swiper>
 ```
 ### 属性
@@ -258,7 +258,7 @@ import { cSwiper } from 'ui-vue';
 
 ## 15，cSwitch 开关组件
 ```
-import { cSwitch } from 'ui-vue';
+import { cSwitch } from 'cate-design';
 <c-switch ref="mySwitch" :checked="checked"></c-switch>
 ```
 ### 属性
@@ -271,7 +271,7 @@ import { cSwitch } from 'ui-vue';
 
 ## 16，cTabs tab切换组件
 ```
-import { tabs, tabItem } from 'ui-vue';
+import { tabs, tabItem } from 'cate-design';
 <tabs @onClick="tabClick" :active-index="activeIndex" active-color="#f60" icon-width="0.4rem">
     <tab-item 
         title="转让中" 
@@ -311,7 +311,7 @@ import { tabs, tabItem } from 'ui-vue';
 
 ## 17，cTimeCircle 圆环倒计时组件
 ```
-import { cTimeCircle } from 'ui-vue';
+import { cTimeCircle } from 'cate-design';
 <c-time-circle :timer="timer"></c-time-circle>
 ```
 ### 属性
@@ -326,7 +326,7 @@ import { cTimeCircle } from 'ui-vue';
 
 ## 18，cTimeCount 普通倒计时组件
 ```
-import { cTimeCount } from 'ui-vue';
+import { cTimeCount } from 'cate-design';
 <c-time-count :date="date"></c-time-count>
 ```
 ### 属性
