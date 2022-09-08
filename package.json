@@ -1,7 +1,7 @@
 {
-  "name": "ui-vue",
-  "version": "1.2.1",
-  "description": "ui-vue 前端ui框架",
+  "name": "cate-design",
+  "version": "1.2.11",
+  "description": "cate-design 前端ui框架",
   "author": "夏小宅",
   "main": "dist/index.js",
   "private": false,
@@ -13,10 +13,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:chenhaozhi/ui-vue.git"
+    "url": "git@github.com:chenhaozhi/cate-design.git"
   },
   "keywords": [
     "ui-vue",
+    "cate-design",
     "ui",
     "Cpage.js",
     "js mvvm",
