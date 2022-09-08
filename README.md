@@ -1,4 +1,4 @@
-# ui-vue 前端 UI 框架
+# cate-design 前端 UI 框架
 
 备注：1.x版本是基于 Vue2.x 开发，2.x版本是基于 vue3+ts开发
 
