@@ -8,7 +8,8 @@ import {
   TreeProps,
 } from "./types";
 import TreeNode from "./node";
-import { cloneDeep } from "lodash";
+// import { cloneDeep } from "lodash";
+import deepClone from "project-libs/build/data/deepClone";
 import { updateDownWards, updateUpwards } from "./utlils";
 const props = TreeProps();
 
@@ -78,7 +79,7 @@ export default defineComponent({
       // 深拷贝
       const trueChildren = children?.length
         ? children
-        : cloneDeep(node.children);
+        : deepClone(node.children);
       node.children = trueChildren.map((item) => {
         return {
           ...item,

@@ -2,17 +2,17 @@
   <div class="demo-box">
     <div class="form-item" style="width: 206px">
       value: {{ value }}
-      <a-checkbox v-model="value" />
+      <c-checkbox v-model="value" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import ACheckbox from "./index";
+import cCheckbox from "./index";
 export default defineComponent({
   name: "CheckboxDemo",
-  components: { ACheckbox },
+  components: { cCheckbox },
   setup(props, context) {
     const value = ref(false);
     return {

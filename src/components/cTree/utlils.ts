@@ -1,4 +1,3 @@
-import { update } from "lodash";
 import { RequiredTreeNodeOptions } from "./types";
 
 // 向下递归更新节点的勾选状态

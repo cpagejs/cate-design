@@ -7,6 +7,7 @@ import cConfirm from "./cConfirm";
 import cHeaderBack from "./cHeaderBack";
 import cInput from "./cInput";
 import cInputPassword from "./cInputPassword";
+import cCheckBox from "./cCheckBox";
 import cItem from "./cItem";
 import cLoading from "./cLoading";
 import cSlide from "./cSlide";
@@ -27,6 +28,7 @@ const components = [
   cHeaderBack,
   cInput,
   cInputPassword,
+  cCheckBox,
   cItem,
   cLoading,
   cSlide,
@@ -48,6 +50,7 @@ export {
   cHeaderBack,
   cInput,
   cInputPassword,
+  cCheckBox,
   cItem,
   cLoading,
   cSlide,

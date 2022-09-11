@@ -1,24 +1,11 @@
 import { defineComponent, computed } from 'vue';
 import './index.scss';
-import { CustomEventFuncType } from '../cTree/types';
+import { checkBoxProps } from "./types";
 
+const props = checkBoxProps();
 export default defineComponent({
-  name: 'ACheckbox',
-  props: {
-    modelValue: {
-      type: Boolean,
-      default: false,
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    halfChecked: {
-      type: Boolean,
-      default: false,
-    },
-    onChange: Function as CustomEventFuncType<boolean>,
-  },
+  name: 'cCheckbox',
+  props: props,
   emits: ['update:modelValue', 'change'],
   setup(props, { emit, slots }) {
     const rootCls = computed(() => {
