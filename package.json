@@ -1,10 +1,10 @@
 {
   "name": "cate-design",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "publish": true,
   "main": "dist/index.common.js",
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -72,5 +72,11 @@
     "vue-jest": "^5.0.0-alpha.10",
     "vue-loader": "^16.8.3",
     "vue-loader-v16": "^16.0.0-beta.5.4"
-  }
+  },
+  "keywords": [
+    "vue ui",
+    "vue3 ui",
+    "cate-design",
+    "vue design"
+  ]
 }

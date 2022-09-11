@@ -1,0 +1,45 @@
+@import '../../assets/styles/variable.scss';
+@import '../../assets/styles/mixin.scss';
+
+.c-cell-item {
+  @include flex-justify(space-between);
+  padding: 12px 0;
+  font-size: $font-size-base;
+  color: $text-color;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+
+  .cell-left {
+    @include flex-justify(space-between);
+
+    .cell-left-info {
+      .cell-left-desc {
+        padding-top: 10px;
+        @include font(15px, rgba($color: $black, $alpha: 0.4));
+      }
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+      padding-right: 15px;
+      object-fit: cover;
+    }
+  }
+
+  .cell-right {
+    @include flex-justify(space-between);
+
+    .right-text {
+      padding-left: 15px;
+      @include font(15px, rgba($color: $black, $alpha: 0.4));
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      background: url(./right.png) no-repeat right center;
+      background-size: cover;
+    }
+  }
+}

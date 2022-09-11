@@ -1,10 +1,12 @@
+import { ref } from "vue";
 import cButton from "../src/components/cButton/cButton";
 
 export default {
-  title: "Example/Button",
+  title: "Example/cButton",
   component: cButton,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
+    textColor: { control: "color" },
     backgroundColor: { control: "color" },
     onClick: {},
     size: {
@@ -15,7 +17,7 @@ export default {
       control: { type: "select" },
       options: ["primary", "default", "danger", "link"],
     },
-    label: {},
+    text: {},
   },
 };
 
@@ -28,19 +30,19 @@ const Template = (args) => ({
     return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<c-Button v-bind="args" />',
+  template: '<c-button v-bind="args" />',
 });
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
   disabled: false,
-  label: "Primary",
+  text: "Primary",
 };
 
 export const Link = Template.bind({});
 Link.args = {
-  label: "Link",
+  text: "Link",
   btnType: "link",
   href: "www.baidu.com",
   disabled: false,

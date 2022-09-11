@@ -1,0 +1,50 @@
+@import '../../assets/styles/variable.scss';
+@import '../../assets/styles/mixin.scss';
+
+.c-input-password {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  line-height: 80px;
+  border-bottom: 1px solid #e0e0e0;
+  background: #fff;
+
+  &.disabled {
+    background: $input-disabled;
+  }
+
+  span {
+    display: inline-block;
+    font-size: 30px;
+    color: #333333;
+    padding-top: 4px;
+  }
+
+  input {
+    flex: 1;
+    text-align: left;
+    border: none;
+    font-size: 30px;
+    height: 30px;
+    padding: 25px 0;
+
+    &.disabled {
+      background: $input-disabled;
+    }
+  }
+
+  .input-pwd-eye {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(./icon/eye.png);
+    background-size: cover;
+
+    &.invisible {
+      background: url(./icon/eye2.png);
+      background-size: cover;
+    }
+  }
+}

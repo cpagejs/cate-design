@@ -3,3 +3,16 @@
   font-size: $font-size;
   border-radius: $border-raduis;
 }
+
+@mixin flex-justify($justify:center){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@mixin font($size:15px, $color:#000000, $weight:normal) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}

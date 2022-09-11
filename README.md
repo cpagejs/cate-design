@@ -1,4 +1,4 @@
-# cate-design 一个基于 Vue3+TypeScript+storybook 的前端UI框架，简单易用
+# cate-design 一个基于 Vue3+TypeScript 的前端UI框架，简单易用
 不断完善中
 
 备注：1.x版本是基于 Vue2.x 开发，2.x版本是基于 vue3+ts 开发
@@ -58,7 +58,8 @@ import { cButtonFooter } from 'cate-design';
 | 属性 | 类型 | 作用 |
 | :------ | :------ | :------ |
 | text | 类型String  默认'' | 按钮文字 |
-| color | 类型String  默认'#448FF2' | 按钮颜色 |
+| backgroundColor | 类型String | 自定义按钮颜色 | 
+| textColor | 类型String | 自定义文字颜色 | 
 | disabled | 类型Boolean  默认false | 按钮是否允许点击 |
 
 ### 事件
@@ -66,7 +67,7 @@ import { cButtonFooter } from 'cate-design';
 | :------ | :------ |
 | onClick | 返回按钮点击事件 |
 
-## 4，cCircle 水平进度条组件
+## 4，cCircle 圆环进度条组件
 ```
 import { cCircle } from 'cate-design';
 
@@ -74,7 +75,6 @@ import { cCircle } from 'cate-design';
 ```
 | 属性 | 类型 | 作用 |
 | :------ | :------ | :------ |
-| percent | 类型String  默认'' | 进度条的百分比 |
 | percent | 类型String  默认'' | 进度条的百分比 |
 
 ## 5，cConfirm 确认框组件
@@ -196,41 +196,7 @@ import { cLoading } from 'cate-design';
 | color | 类型String  默认'#6284e2' | loading颜色 |
 | styleLoading | 类型Object  默认{} | 自定义样式 |
 
-## 11，cScrollAble 页面scroll组件
-```
-import { cScrollAble } from 'cate-design';
- <c-scroll-able @pullUp="pullUpFn" @pullDown="pullDownFn" ref="scrollList" :data="data" :bottom-tip-show="bottomTipShow">
-    <div>xxx</div>
-</c-scroll-able>
-```
-### 属性
-| 属性 | 类型 | 作用 |
-| :------ | :------ | :------ |
-| topTipShow | 类型Boolean  默认true | 是否显示 上拉加载数据
-| bottomTipShow | 类型Boolean  默认false | 是否显示 下拉加载数据
-| canPullUp | 类型Boolean  默认true | 是否允许上拉加载数据
-| canPullDown | 类型Boolean  默认true | 是否允许下拉加载数据
-| data | 类型Any | 默认[] | 列表数据，用于数据监听，如果数据为空则呈现loading状态
-| noDataType | 类型String 默认'1' | data数据为空时候，展示的缺省页面
-
-### 事件
-| 事件 | 作用 |
-| :------ | :------ |
-| pullUp | 上拉时候事件响应 |
-| pullDown | 下拉时候事件响应 |
-
-## 12，cScrollX 左右滑动组件
-```
-import { cScrollX } from 'cate-design';
-
-<c-scroll-x>
-  <div class="item">
-    xxx
-  </div>
-</c-scroll-x>
-```
-
-## 13，cSlide 抽屉组件
+## 11，cSlide 抽屉组件
 ```
 import { cSlide } from 'cate-design';
 <slide ref="mySlider">
@@ -243,20 +209,7 @@ import { cSlide } from 'cate-design';
 | show | 打开侧滑，this.$refs.mySlider.show() |
 | hide | 关闭侧滑，this.$refs.mySlider.hide() |
 
-## 14，cSwiper 图片切换组件
-```
-import { cSwiper } from 'cate-design';
-<c-swiper :img-list="imgList" page-style="dot" page-pos="center" height="3rem"></c-swiper>
-```
-### 属性
-| 属性 | 类型 | 作用 |
-| :------ | :------ | :------ |
-| imgList | 类型Array 默认[] | 图片列表信息 |
-| pageStyle | 类型String  默认'dot' | 分页器类型，‘dot’  'line' |
-| pagePos | 类型String 默认'center' | 分页器位置，'left'   'center'   'right' |
-| height | 类型String 默认'300px' | 图片高度 |
-
-## 15，cSwitch 开关组件
+## 12，cSwitch 开关组件
 ```
 import { cSwitch } from 'cate-design';
 <c-switch ref="mySwitch" :checked="checked"></c-switch>
@@ -269,7 +222,7 @@ import { cSwitch } from 'cate-design';
 | checked | 类型Boolean | 默认false 是否选中 |
 | disabled | 类型Boolean | 默认false 是否可以选择 |
 
-## 16，cTabs tab切换组件
+## 13，cTabs tab切换组件
 ```
 import { tabs, tabItem } from 'cate-design';
 <tabs @onClick="tabClick" :active-index="activeIndex" active-color="#f60" icon-width="0.4rem">
@@ -300,7 +253,7 @@ import { tabs, tabItem } from 'cate-design';
 | iconWidth | 类型String 默认'40px' | icon图标宽度 |
 | iconWidth | 类型String 默认'40px' | icon图标高度 |
 | position | 类型String 默认'normal' | tab位置，normal在文档流里，top最顶部，bottom最底部 |
-
+## 14，cTabs tab切换组件
 ### tab-item 组件属性
 | 属性 | 类型 | 作用 |
 | :------ | :------ | :------ |
@@ -309,7 +262,7 @@ import { tabs, tabItem } from 'cate-design';
 | activeTopIcon | 类型String | 默认'' 点击状态下显示的图标 |
 
 
-## 17，cTimeCircle 圆环倒计时组件
+## 15，cTimeCircle 圆环倒计时组件
 ```
 import { cTimeCircle } from 'cate-design';
 <c-time-circle :timer="timer"></c-time-circle>
@@ -324,7 +277,7 @@ import { cTimeCircle } from 'cate-design';
 | :------ | :------ |
 | timeCircle | 倒计时结束时候派发的事件，使用时候先引入event |
 
-## 18，cTimeCount 普通倒计时组件
+## 16，cTimeCount 普通倒计时组件
 ```
 import { cTimeCount } from 'cate-design';
 <c-time-count :date="date"></c-time-count>
@@ -333,6 +286,10 @@ import { cTimeCount } from 'cate-design';
 | 属性 | 类型 | 作用 |
 | :------ | :------ | :------ |
 | date | 类型String  默认'' | 日期格式 |
+
+## 17，menu菜单框组件
+
+## 18，tree树形组件
 
 ## 19，提示框组件
 ```

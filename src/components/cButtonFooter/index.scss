@@ -1,0 +1,22 @@
+@import '../../assets/styles/variable.scss';
+
+.c-button-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+
+  &_disabled {
+    cursor: not-allowed;
+    opacity: $btn-disabled-opacity;
+    box-shadow: none;
+    > * {
+      pointer-events: none;
+    }
+  }
+}

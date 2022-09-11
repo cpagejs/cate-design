@@ -3,7 +3,6 @@ import { AutoCompleteProps, DataSourceType } from "./type";
 import cInput from "../cInput/cInput";
 import "./index.scss";
 import "../../assets/iconfont/iconfont.css";
-import { useDebounce } from "../../hooks/useDebounce";
 import classNames from "classnames";
 import { useClickOutside } from "../../hooks/useClickOutside";
 

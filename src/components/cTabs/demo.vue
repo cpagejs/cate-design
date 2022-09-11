@@ -5,9 +5,8 @@
         <template #title>
           <b style="color: red">TabOne</b>
         </template>
-
-        content1</tab-pane
-      >
+        content1
+      </tab-pane>
       <tab-pane name="tab2">content2</tab-pane>
       <tab-pane name="tab3">content3</tab-pane>
     </c-tabs>

@@ -1,4 +1,4 @@
-import { defineComponent } from "vue";
+import { defineComponent, reactive } from "vue";
 import { buttonProps } from "./types";
 import classNames from "classnames";
 import "./index.scss";
@@ -16,10 +16,10 @@ export default defineComponent({
       [`btn-disabled`]: props.disabled,
     });
 
-    const styles = {
+    const styles = reactive({
       backgroundColor: props.backgroundColor,
       color: props.textColor,
-    };
+    });
     
     const buttonClick = () => {
       emit("onClick");
