@@ -3,7 +3,7 @@ import cInput from "../src/components/cInput/cInput.tsx";
 import { Meta, StoryFn } from '@storybook/vue3';
 
 export default {
-  title: "Example/Input",
+  title: "cate-design/cInput",
   component: cInput,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -25,7 +25,7 @@ const Template: StoryFn<typeof cInput> = (args: any) => ({
     return { inputValue, args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<cInput v-bind="args">按钮</cInput>',
+  template: '<c-input v-bind="args">按钮</c-input>',
 });
 
 const Template2 = (args: any) => ({
@@ -39,7 +39,7 @@ const Template2 = (args: any) => ({
   },
   // And then the `args` are bound to your component with `v-bind="args"`
   template:
-    '<cInput v-bind="args" v-model="inputValue">按钮</cInput> {{inputValue}} ',
+    '<c-input v-bind="args" v-model="inputValue">按钮</c-input> {{inputValue}} ',
 });
 
 export const Primary = Template.bind({});

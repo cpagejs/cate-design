@@ -2,7 +2,7 @@ import { ref } from "vue";
 import cButton from "../src/components/cButton/cButton";
 
 export default {
-  title: "Example/cButton",
+  title: "cate-design/cButton",
   component: cButton,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -13,7 +13,7 @@ export default {
       control: { type: "select" },
       options: ["sm", "lg"],
     },
-    btnType: {
+    type: {
       control: { type: "select" },
       options: ["primary", "default", "danger", "link"],
     },
