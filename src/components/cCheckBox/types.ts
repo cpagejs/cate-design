@@ -1,4 +1,4 @@
-import { CustomEventFuncType } from '../cTree/types';
+import { CustomEventFuncType } from "../cTree/types";
 
 const checkBoxProps = () => ({
   modelValue: {
@@ -16,6 +16,4 @@ const checkBoxProps = () => ({
   onChange: Function as CustomEventFuncType<boolean>,
 });
 
-export {
-  checkBoxProps
-};
+export { checkBoxProps };

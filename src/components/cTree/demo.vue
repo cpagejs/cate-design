@@ -18,7 +18,7 @@ import cTree from "./cTree";
 import { TreeInstance, TreeNodeOptions } from "./types";
 
 function recursionPrimary(path = "0", level = 3): TreeNodeOptions[] {
-  const list = [];
+  const list: TreeNodeOptions[] = [];
   for (let i = 0; i < 10; i += 1) {
     const nodeKey = `${path}-${i}`;
     const treeNode: TreeNodeOptions = {

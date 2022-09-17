@@ -18,9 +18,7 @@ const itemProps = () => ({
   rightArrow: {
     type: Boolean,
     default: true,
-  }
+  },
 });
 
-export {
-  itemProps
-};
+export { itemProps };

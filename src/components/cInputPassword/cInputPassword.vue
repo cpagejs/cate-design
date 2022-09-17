@@ -1,64 +1,85 @@
-
-
-/** 密码输入框
-* @author 夏小宅
-*/
+/** 密码输入框 * @author 夏小宅 */
 <template>
-  <div class="c-input-password" :class="{disabled: disabled}">
-    <span>{{label}}</span>
-    <input type="password" ref="input" v-bind:value="value" @input="_input()" @blur="_blur()" :length="length"
-      :placeholder="placeholder" autocapitalize="off" :class="{disabled: disabled}" v-if="showPwd" />
-    <input type="text" ref="input" v-bind:value="value" @input="_input()" @blur="_blur()" :length="length"
-      :placeholder="placeholder" autocapitalize="off" :class="{disabled: disabled}" v-if="!showPwd" />
-    <em class="input-pwd-eye" :class="{invisible: invisible}" v-if="showToggle" @click="toggle">
+  <div class="c-input-password" :class="{ disabled: disabled }">
+    <span>{{ label }}</span>
+    <input
+      type="password"
+      ref="input"
+      v-bind:value="value"
+      @input="_input()"
+      @blur="_blur()"
+      :length="length"
+      :placeholder="placeholder"
+      autocapitalize="off"
+      :class="{ disabled: disabled }"
+      v-if="showPwd"
+    />
+    <input
+      type="text"
+      ref="input"
+      v-bind:value="value"
+      @input="_input()"
+      @blur="_blur()"
+      :length="length"
+      :placeholder="placeholder"
+      autocapitalize="off"
+      :class="{ disabled: disabled }"
+      v-if="!showPwd"
+    />
+    <em
+      class="input-pwd-eye"
+      :class="{ invisible: invisible }"
+      v-if="showToggle"
+      @click="toggle"
+    >
     </em>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'cInputPassword',
+  name: "cInputPassword",
   props: {
     value: {
       type: String,
-      default: ''
+      default: "",
     },
     label: {
-      default: '',
-      type: String
+      default: "",
+      type: String,
     },
     length: {
       default: 20,
-      type: Number
+      type: Number,
     },
     placeholder: {
-      default: '请输入密码',
-      type: String
+      default: "请输入密码",
+      type: String,
     },
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     showToggle: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
   data() {
     return {
       showPwd: {
         type: Boolean,
-        default: true
+        default: true,
       },
-      invisible: false
-    }
+      invisible: false,
+    };
   },
   methods: {
     _input() {
-      this.$emit('onInput', this.$refs.input.value);
+      this.$emit("onInput", this.$refs.input.value);
     },
     _blur() {
-      this.$emit('onBlur', this.$refs.input.value);
+      this.$emit("onBlur", this.$refs.input.value);
     },
     focus() {
       this.$refs.input.focus();
@@ -73,7 +94,7 @@ export default {
       setTimeout(() => {
         this.$refs.input.value = val;
       }, 0);
-    }
-  }
-}
+    },
+  },
+};
 </script>

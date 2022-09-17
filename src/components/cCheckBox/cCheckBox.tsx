@@ -1,30 +1,30 @@
-import { defineComponent, computed } from 'vue';
-import './index.scss';
+import { defineComponent, computed } from "vue";
+import "./index.scss";
 import { checkBoxProps } from "./types";
 
 const props = checkBoxProps();
 export default defineComponent({
-  name: 'cCheckbox',
+  name: "cCheckbox",
   props: props,
-  emits: ['update:modelValue', 'change'],
+  emits: ["update:modelValue", "change"],
   setup(props, { emit, slots }) {
     const rootCls = computed(() => {
-      let result = 'c-checkbox';
+      let result = "c-checkbox";
       if (props.modelValue) {
-        result += ' checked';
+        result += " checked";
       } else if (props.halfChecked) {
-        result += ' half-checked';
+        result += " half-checked";
       }
       if (props.disabled) {
-        result += ' disabled';
+        result += " disabled";
       }
       return result;
     });
     const handleClick = (event: MouseEvent) => {
       event.stopPropagation();
       if (!props.disabled) {
-        emit('update:modelValue', !props.modelValue);
-        emit('change', !props.modelValue);
+        emit("update:modelValue", !props.modelValue);
+        emit("change", !props.modelValue);
       }
     };
     return () => {

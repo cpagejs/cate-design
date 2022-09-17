@@ -1,10 +1,12 @@
-/** 确认框组件
- * @author 夏小宅
-*/
+/** 确认框组件 * @author 夏小宅 */
 <template>
   <div class="c-confirm-container">
     <transition name="confirm-fade">
-      <div class="screen-fixed confirm-wrapper" v-show="openConfirm" @click.prevent="closeConfirm($event)">
+      <div
+        class="screen-fixed confirm-wrapper"
+        v-show="openConfirm"
+        @click.prevent="closeConfirm($event)"
+      >
         <!-- 普通类型 -->
         <div class="confirm-content" v-if="type == 1">
           <div class="confirm-inner">
@@ -12,8 +14,14 @@
               <slot name="inner"></slot>
             </div>
             <div class="confirm-content-footer" v-if="showBtn">
-              <div @click="cancel" class="operate-btn left" v-if="showCancelBtn">{{cancelText}}</div>
-              <div @click="confirm" class="operate-btn">{{confirmText}}</div>
+              <div
+                @click="cancel"
+                class="operate-btn left"
+                v-if="showCancelBtn"
+              >
+                {{ cancelText }}
+              </div>
+              <div @click="confirm" class="operate-btn">{{ confirmText }}</div>
             </div>
             <div v-if="!showBtn">
               <slot name="btn"></slot>
@@ -30,9 +38,21 @@
               <slot name="inner"></slot>
             </div>
             <div class="confirm-content-footer2" v-if="showBtn">
-              <div @click="cancel" class="operate-btn left" :style="cancelBtnStyle" v-if="showCancelBtn">{{cancelText}}
+              <div
+                @click="cancel"
+                class="operate-btn left"
+                :style="cancelBtnStyle"
+                v-if="showCancelBtn"
+              >
+                {{ cancelText }}
               </div>
-              <div @click="confirm" class="operate-btn right" :style="confirmBtnStyle">{{confirmText}}</div>
+              <div
+                @click="confirm"
+                class="operate-btn right"
+                :style="confirmBtnStyle"
+              >
+                {{ confirmText }}
+              </div>
             </div>
             <div v-if="!showBtn">
               <slot name="btn"></slot>
@@ -45,70 +65,74 @@
             <slot name="inner"></slot>
           </div>
           <div class="confirm-close">
-            <img :src="closeImg" alt="" @click="closeImgFn">
+            <img :src="closeImg" alt="" @click="closeImgFn" />
           </div>
         </div>
       </div>
     </transition>
-    <div class="screen-fixed confirm-bg" v-show="showBg && openConfirm" :style="{'backgroundColor': bgColor}"></div>
+    <div
+      class="screen-fixed confirm-bg"
+      v-show="showBg && openConfirm"
+      :style="{ backgroundColor: bgColor }"
+    ></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'cConfirm',
+  name: "cConfirm",
   props: {
     type: {
       type: Number,
-      default: 1
+      default: 1,
     },
     confirmText: {
       type: String,
-      default: "确定"
+      default: "确定",
     },
     cancelText: {
       type: String,
-      default: "取消"
+      default: "取消",
     },
     showBtn: {
       type: Boolean,
-      default: true
+      default: true,
     },
     showCancelBtn: {
       type: Boolean,
-      default: true
+      default: true,
     },
     cancelBtnStyle: {
       type: Object,
       default: function () {
-        return {}
-      }
+        return {};
+      },
     },
     confirmBtnStyle: {
       type: Object,
       default: function () {
-        return {}
-      }
+        return {};
+      },
     },
     innerStyle: {
       type: Object,
       default: function () {
-        return {}
-      }
+        return {};
+      },
     },
     showBg: {
       type: Boolean,
-      default: true
+      default: true,
     },
     bgColor: {
       type: String,
-      default: 'rgba(0,0,0,0.4)'
-    }
+      default: "rgba(0,0,0,0.4)",
+    },
   },
   data() {
     return {
       openConfirm: false,
-      closeImg: require('./close.png')
+      closeImg: require("./close.png"),
     };
   },
   created() {
@@ -130,17 +154,22 @@ export default {
       this.$emit("confirm");
     },
     closeConfirm(e) {
-      if (e.target.children.length && e.target.children[0].getAttribute('class') && e.target.children[0].getAttribute('class').indexOf('confirm-content') > -1) {
+      if (
+        e.target.children.length &&
+        e.target.children[0].getAttribute("class") &&
+        e.target.children[0].getAttribute("class").indexOf("confirm-content") >
+          -1
+      ) {
         this.hide();
       }
     },
     closeImgFn() {
       this.hide();
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss">
-@import './index';
+@import "./index";
 </style>

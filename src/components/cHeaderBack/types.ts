@@ -1,9 +1,7 @@
 const headerBackProps = () => ({
   title: {
-    default: ''
-  }
+    default: "",
+  },
 });
 
-export {
-  headerBackProps
-};
+export { headerBackProps };

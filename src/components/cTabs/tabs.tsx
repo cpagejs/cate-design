@@ -1,8 +1,4 @@
-import {
-  defineComponent,
-  ref,
-  watch,
-} from "vue";
+import { defineComponent, ref, watch } from "vue";
 import "./index.scss";
 import { tabsProps } from "./types";
 

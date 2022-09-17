@@ -1,6 +1,6 @@
 /** item组件
  * @author 夏小宅
-*/
+ */
 import { defineComponent } from "vue";
 import { itemProps } from "./types";
 import "./index.scss";
@@ -14,7 +14,7 @@ export default defineComponent({
     const onClickFn = () => {
       ctx.emit("onClick");
     };
-    
+
     return () => {
       return (
         <div class="c-cell-item" onClick={onClickFn}>
@@ -22,7 +22,9 @@ export default defineComponent({
             {props.avatar && <img src={props.avatar} class="cell-left-icon" />}
             <div class="cell-left-info">
               <div class="cell-left-title">{props.title}</div>
-              <div v-if="description" class="cell-left-desc">{props.description}</div>
+              <div v-if="description" class="cell-left-desc">
+                {props.description}
+              </div>
             </div>
           </div>
           <div class="cell-right">

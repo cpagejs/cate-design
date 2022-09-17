@@ -1,6 +1,6 @@
 /** 导航条--返回
  * @author 夏小宅
-*/
+ */
 import { defineComponent } from "vue";
 import { headerBackProps } from "./types";
 import "./index.scss";
@@ -14,7 +14,7 @@ export default defineComponent({
     const handleClickBack = () => {
       ctx.emit("onBack");
     };
-    
+
     return () => {
       return (
         <header class="c-header-back">

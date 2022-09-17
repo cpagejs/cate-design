@@ -1,9 +1,7 @@
 const inputPwdProps = () => ({
   title: {
-    default: ''
-  }
+    default: "",
+  },
 });
 
-export {
-  inputPwdProps
-};
+export { inputPwdProps };

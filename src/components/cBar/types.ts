@@ -1,14 +1,12 @@
 const barProps = () => ({
   percent: {
     type: String,
-    default: ''
+    default: "",
   },
   color: {
-      type: String,
-      default: '#FF6E4E'
-  }
+    type: String,
+    default: "#FF6E4E",
+  },
 });
 
-export {
-  barProps
-};
+export { barProps };

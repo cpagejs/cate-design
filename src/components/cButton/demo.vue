@@ -1,7 +1,12 @@
 <template>
   <div class="main">
-    <c-button :text="text" type="primary" size="lg" @on-click="btnClick"/>
-    <c-button text="btn text" type="danger" text-color="#fff" @on-click="btnClick"/>
+    <c-button :text="text" type="primary" size="lg" @on-click="btnClick" />
+    <c-button
+      text="btn text"
+      type="danger"
+      text-color="#fff"
+      @on-click="btnClick"
+    />
   </div>
 </template>
 
@@ -21,7 +26,7 @@ export default defineComponent({
     };
     return {
       text,
-      btnClick
+      btnClick,
     };
   },
 });

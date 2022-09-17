@@ -20,7 +20,7 @@ export default defineComponent({
       backgroundColor: props.backgroundColor,
       color: props.textColor,
     });
-    
+
     const buttonClick = () => {
       emit("onClick");
     };
@@ -30,13 +30,13 @@ export default defineComponent({
       if (href) {
         return (
           <a href={href} class={classes} style={styles}>
-            {text || ''}
+            {text || ""}
           </a>
         );
       } else {
         return (
           <div class={classes} style={styles} onClick={buttonClick}>
-            {text || ''}
+            {text || ""}
           </div>
         );
       }

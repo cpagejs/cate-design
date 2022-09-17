@@ -17,13 +17,13 @@ export default defineComponent({
   components: {
     cButtonDemo,
     cInputDemo,
-    cBarDemo
+    cBarDemo,
   },
 });
 </script>
 
 <style lang="scss">
-  .main {
-    padding: 10px;
-  }
+.main {
+  padding: 10px;
+}
 </style>

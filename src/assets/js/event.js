@@ -1,3 +1,3 @@
-import Vue from 'vue'
+import Vue from "vue";
 
-export var event = new Vue()
+export var event = new Vue();

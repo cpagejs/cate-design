@@ -20,7 +20,7 @@ export default defineComponent({
     };
     return {
       text,
-      btnClick
+      btnClick,
     };
   },
 });

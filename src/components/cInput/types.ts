@@ -6,7 +6,7 @@ const inputProps = () => ({
   disabled: Boolean,
   size: {
     type: String as PropType<InputSize>,
-    default: "sm"
+    default: "sm",
   },
   prepend: String,
   append: String,

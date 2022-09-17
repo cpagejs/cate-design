@@ -1,6 +1,6 @@
 /** 导航条--返回
  * @author 夏小宅
-*/
+ */
 import { defineComponent } from "vue";
 import { loadingProps } from "./types";
 import "./index.scss";
@@ -11,7 +11,7 @@ export default defineComponent({
   props: props,
   setup(props, ctx) {
     const colorStyle = { backgroundColor: props.color };
-    
+
     return () => {
       return (
         <div class="c-loading" style={props.styleLoading}>

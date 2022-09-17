@@ -1,16 +1,14 @@
 const loadingProps = () => ({
   color: {
     type: String,
-    default: "#6284e2"
+    default: "#6284e2",
   },
   styleLoading: {
     type: Object,
     default() {
-      return {}
-    }
-  }
+      return {};
+    },
+  },
 });
 
-export {
-  loadingProps
-};
+export { loadingProps };

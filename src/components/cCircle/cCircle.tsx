@@ -10,12 +10,12 @@ const props = circleProps();
 export default defineComponent({
   name: "cCircle",
   props: props,
-  setup(props, ctx) {
-    const showProcess = ref<Boolean>(true);
-    const text = ref<String>("");
-    const width0 = ref<Boolean>(true);
+  setup(props) {
+    const showProcess = ref<boolean>(true);
+    const text = ref<string>("");
+    const width0 = ref<boolean>(true);
     const number = ref<any>(0);
-    const clipAuto = ref<Boolean>(false);
+    const clipAuto = ref<boolean>(false);
 
     onMounted(() => {
       const percentdata = Number(props.percent);
@@ -23,9 +23,9 @@ export default defineComponent({
 
       if (percentdata >= 100) {
         showProcess.value = false;
-        text.value = '100%';
+        text.value = "100%";
       } else {
-        var loading = setInterval(() => {
+        const loading = setInterval(() => {
           if (percent >= percentdata) {
             clearInterval(loading);
             number.value = percentdata;
@@ -42,19 +42,31 @@ export default defineComponent({
     return () => {
       return (
         <div class="c-circle">
-          {showProcess && <div class="c-circle-process">
-            <div class={["circle", { "clip-auto": clipAuto }]}>
-              <div class="percent left" style={{ "transform": 'rotate(' + (360 - (18 / 5) * number) + 'deg)' }}></div>
-              <div class={["percent right", { "width0": width0 }]}></div>
+          {showProcess.value && (
+            <div class="c-circle-process">
+              <div class={["circle", { "clip-auto": clipAuto }]}>
+                <div
+                  class="percent left"
+                  style={{
+                    transform:
+                      "rotate(" + (360 - (18 / 5) * number.value) + "deg)",
+                  }}
+                ></div>
+                <div class={["percent right", { width0: width0 }]}></div>
+              </div>
+              <div class="num">
+                <span>{number}</span>%
+              </div>
             </div>
-            <div class="num"><span>{number}</span>%</div>
-          </div>}
-          {!showProcess && <div class="c-circle-status">
-            <div class="circle"></div>
-            <div class="num">{text}</div>
-          </div>}
+          )}
+          {!showProcess.value && (
+            <div class="c-circle-status">
+              <div class="circle"></div>
+              <div class="num">{text}</div>
+            </div>
+          )}
         </div>
       );
     };
   },
-})
+});

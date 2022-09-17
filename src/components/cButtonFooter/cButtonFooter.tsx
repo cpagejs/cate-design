@@ -1,4 +1,4 @@
-import { defineComponent, reactive,  } from "vue";
+import { defineComponent, reactive } from "vue";
 import { buttonFooterProps } from "./types";
 import classNames from "classnames";
 import "./index.scss";
@@ -15,7 +15,7 @@ export default defineComponent({
     });
 
     const styles = reactive({
-      backgroundColor: props.disabled ? '#D0D0D0' : props.backgroungColor,
+      backgroundColor: props.disabled ? "#D0D0D0" : props.backgroungColor,
       color: props.textColor,
     });
 
@@ -30,5 +30,5 @@ export default defineComponent({
         </h1>
       );
     };
-  }
+  },
 });

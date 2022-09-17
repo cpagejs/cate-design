@@ -1,7 +1,4 @@
-import {
-  defineComponent,
-  getCurrentInstance,
-} from "vue";
+import { defineComponent, getCurrentInstance } from "vue";
 import { tabPaneProps } from "./types";
 
 const props = tabPaneProps();
