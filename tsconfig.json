@@ -15,7 +15,7 @@
       "webpack-env",
       "jest"
     ],
-    
+    "noImplicitAny": false,
     "paths": {
       "@/*": [
         "src/*"

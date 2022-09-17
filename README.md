@@ -3,21 +3,26 @@
 
 备注：1.x版本是基于 Vue2.x 开发，2.x版本是基于 vue3+ts 开发
 ## 安装
-```
+```js
 npm install --save cate-design
+```
 
-然后全局引入css
+## 注册
+```js
+import { createApp } from 'vue';
+// 然后全局引入css
 import 'cate-design/dist/index.css';
 
-可以全局注入组件
-import * as uiVue from 'cate-design';
-Object.keys(uiVue).forEach(key=>{
-  Vue.use(uiVue[key]);
-});
+// 可以全局注入组件
+import cateDesign from 'cate-design';
+
+const app = createApp(App);
+app.use(cateDesign);
+app.mount('#app');
 ```
 
 ## 1，cBar 水平进度条组件
-```
+```js
 import { cBar } from 'cate-design';
 
 <c-bar percent='20' color="#f60"></c-bar>
@@ -28,7 +33,7 @@ import { cBar } from 'cate-design';
 | color | 类型String  默认'#FF6E4E' | 进度条的颜色 |
 
 ## 2，cButton 按钮组件
-```
+```js
 import { cButton } from 'cate-design';
 
 <c-button text="btn text" type="primary" text-color="#fff" size="lg" @on-click="btnClick"/>
@@ -49,7 +54,7 @@ import { cButton } from 'cate-design';
 | onClick | 返回按钮点击事件 |
 
 ## 3，cButtonFooter 底部按钮组件
-```
+```js
 import { cButtonFooter } from 'cate-design';
 
 <c-button-footer text="点击" @onClick="buttonClick"></c-button-footer>
@@ -68,7 +73,7 @@ import { cButtonFooter } from 'cate-design';
 | onClick | 返回按钮点击事件 |
 
 ## 4，cCircle 圆环进度条组件
-```
+```js
 import { cCircle } from 'cate-design';
 
 <c-circle percent='100'></c-circle>
@@ -78,7 +83,7 @@ import { cCircle } from 'cate-design';
 | percent | 类型String  默认'' | 进度条的百分比 |
 
 ## 5，cConfirm 确认框组件
-```
+```js
 import { cConfirm } from 'cate-design';
 
  <confirm ref="myConfirm" confirm-text="提交" @confirm="confirmFn()">
@@ -111,7 +116,7 @@ this.$refs.myConfirm.hide();
 | cancel | 取消按钮点击事件 |
 
 ## 6，cHeaderBack 顶部导航组件
-```
+```js
 import { cHeaderBack } from 'cate-design';
 <c-header-back title="详情页" @onBack="backFn"></c-header-back>
 ```
@@ -126,7 +131,7 @@ import { cHeaderBack } from 'cate-design';
 | onClick | 返回按钮点击事件 |
 
 ## 7，cInput 输入框组件
-```
+```js
 import { cInput } from 'cate-design';
 <c-input ref="input1"  @onInput="inputFn" @onBlur="blurFn"></c-input>
 ```
@@ -146,7 +151,7 @@ import { cInput } from 'cate-design';
 | onBlur | input失去焦点的事件，返回值value |
 
 ## 8，cInputPassword 密码输入框组件（可显示密码）
-```
+```js
 import { cInputPassword } from 'cate-design';
 <c-input-password ref="input1"  @onInput="inputFn" @onBlur="blurFn"></c-input-password>
 ```
@@ -167,7 +172,7 @@ import { cInputPassword } from 'cate-design';
 | onBlur | input失去焦点的事件，返回值value |
 
 ## 9，cItem 列表组件
-```
+```js
 import { cItem } from 'cate-design';
 <c-item :has-left-icon="hasIcon" left-icon="leftIcon.png" left-text="测试" right-text="10" @onClick="handelC()"></c-item>
 ```
@@ -186,7 +191,7 @@ import { cItem } from 'cate-design';
 | onClick | 点击事件 |
 
 ## 10，cLoading loading组件
-```
+```js
 import { cLoading } from 'cate-design';
 <c-loading color="#f60"></c-loading>
 ```
@@ -197,7 +202,7 @@ import { cLoading } from 'cate-design';
 | styleLoading | 类型Object  默认{} | 自定义样式 |
 
 ## 11，cSlide 抽屉组件
-```
+```js
 import { cSlide } from 'cate-design';
 <slide ref="mySlider">
     内容
@@ -210,7 +215,7 @@ import { cSlide } from 'cate-design';
 | hide | 关闭侧滑，this.$refs.mySlider.hide() |
 
 ## 12，cSwitch 开关组件
-```
+```js
 import { cSwitch } from 'cate-design';
 <c-switch ref="mySwitch" :checked="checked"></c-switch>
 ```
@@ -223,7 +228,7 @@ import { cSwitch } from 'cate-design';
 | disabled | 类型Boolean | 默认false 是否可以选择 |
 
 ## 13，cTabs tab切换组件
-```
+```js
 import { tabs, tabItem } from 'cate-design';
 <tabs @onClick="tabClick" :active-index="activeIndex" active-color="#f60" icon-width="0.4rem">
     <tab-item 
@@ -263,7 +268,7 @@ import { tabs, tabItem } from 'cate-design';
 
 
 ## 15，cTimeCircle 圆环倒计时组件
-```
+```js
 import { cTimeCircle } from 'cate-design';
 <c-time-circle :timer="timer"></c-time-circle>
 ```
@@ -278,7 +283,7 @@ import { cTimeCircle } from 'cate-design';
 | timeCircle | 倒计时结束时候派发的事件，使用时候先引入event |
 
 ## 16，cTimeCount 普通倒计时组件
-```
+```js
 import { cTimeCount } from 'cate-design';
 <c-time-count :date="date"></c-time-count>
 ```
@@ -292,7 +297,7 @@ import { cTimeCount } from 'cate-design';
 ## 18，tree树形组件
 
 ## 19，提示框组件
-```
+```js
 需要全局引入可用
 this.$toast({
     text: 'loading'

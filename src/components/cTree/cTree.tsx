@@ -80,7 +80,7 @@ export default defineComponent({
       const trueChildren = children?.length
         ? children
         : deepClone(node.children);
-      node.children = trueChildren.map((item) => {
+      node.children = trueChildren.map((item: any) => {
         return {
           ...item,
           level: item.level || node.level + 1,
