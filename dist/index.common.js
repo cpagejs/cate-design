@@ -266,7 +266,9 @@ __webpack_require__.d(__webpack_exports__, {
   "cItem": function() { return /* reexport */ components_cItem; },
   "cLoading": function() { return /* reexport */ components_cLoading; },
   "cMenu": function() { return /* reexport */ components_cMenu; },
+  "cMenuItem": function() { return /* reexport */ cMenuItem; },
   "cSlide": function() { return /* reexport */ components_cSlide; },
+  "cSubItem": function() { return /* reexport */ cSubMenu; },
   "cTabPane": function() { return /* reexport */ cTabPane; },
   "cTabs": function() { return /* reexport */ cTabs; },
   "cTree": function() { return /* reexport */ components_cTree; },
@@ -1680,6 +1682,150 @@ cMenu.install = app => {
 };
 
 /* harmony default export */ var components_cMenu = (cMenu);
+;// CONCATENATED MODULE: ./src/components/cMenu/menuItem.tsx
+
+
+
+
+const menuItem_props = MenuItemProps();
+const MenuItem = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.defineComponent)({
+  name: "cMenuItem",
+  props: menuItem_props,
+
+  setup(props, {
+    emit,
+    slots,
+    attrs
+  }) {
+    const parentContext = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.inject)(MenuKey);
+    return () => {
+      const {
+        index,
+        disabled
+      } = props;
+
+      const handleClick = () => {
+        if (parentContext?.onSelect && !disabled) {
+          parentContext.onSelect(index);
+        }
+      };
+
+      const classes = classnames_default()("menu-item", {
+        "is-disabled": disabled,
+        "is-active": parentContext?.index == index
+      });
+      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("li", (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.mergeProps)(attrs, {
+        "class": classes,
+        "onClick": handleClick
+      }), [slots.default()]);
+    };
+  }
+
+});
+MenuItem.playName = "cMenuItem";
+/* harmony default export */ var menuItem = (MenuItem);
+;// CONCATENATED MODULE: ./src/components/cMenuItem/index.ts
+
+
+menuItem.install = app => {
+  app.component(menuItem.name, menuItem);
+};
+
+/* harmony default export */ var cMenuItem = (menuItem);
+;// CONCATENATED MODULE: ./src/components/cMenu/subMenu.tsx
+
+
+
+
+const subMenu_props = SubMenuProps();
+/* harmony default export */ var subMenu = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.defineComponent)({
+  name: "cSubMenu",
+  props: subMenu_props,
+
+  setup(props, {
+    emit,
+    attrs,
+    slots
+  }) {
+    const parentCtx = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.inject)(MenuKey);
+    const menuOpen = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.ref)(false);
+    const subClass = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.reactive)({
+      "c-submenu": true,
+      "menu-opened": parentCtx?.mode !== "vertical" ? menuOpen.value : !menuOpen.value
+    });
+
+    const handleClick = e => {
+      e.preventDefault(); // menuOpen.value = !menuOpen.value;
+
+      subClass["menu-opened"] = !subClass["menu-opened"];
+    };
+
+    let timer;
+
+    const handleMouse = (e, toggle) => {
+      console.log("handleMouse", toggle);
+      clearTimeout(timer);
+      e.preventDefault();
+      timer = setTimeout(() => {
+        subClass["menu-opened"] = toggle;
+      }, 100);
+    };
+
+    console.log(parentCtx?.mode !== "vertical");
+    const clickEvents = parentCtx?.mode === "vertical" ? {
+      onClick: handleClick
+    } : {};
+    const hoverEvents = parentCtx?.mode !== "vertical" ? {
+      onMouseenter: e => {
+        handleMouse(e, true);
+      },
+      onMouseleave: e => {
+        handleMouse(e, false);
+      }
+    } : {};
+    return () => {
+      const renderChildren = () => {
+        const items = slots.default().map((item, index) => {
+          if (item.type.name === "MenuItem") {
+            return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.cloneVNode)(item, {
+              index: `${props.index}-${index.toString()}`
+            });
+          } else {
+            console.error("must be a MenuItem");
+          }
+        });
+        return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("ul", {
+          "class": subClass
+        }, [items]);
+      };
+
+      const {
+        index,
+        title
+      } = props;
+      const classes = classnames_default()("menu-item submenu-item", {
+        "is-active": parentCtx.index === index
+      });
+      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("li", (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.mergeProps)(attrs, {
+        "key": index,
+        "class": classes
+      }, hoverEvents), [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.mergeProps)({
+        "class": "submenu-title"
+      }, clickEvents, {
+        "onClick": handleClick
+      }), [title]), renderChildren()]);
+    };
+  }
+
+}));
+;// CONCATENATED MODULE: ./src/components/cSubMenu/index.ts
+
+
+subMenu.install = app => {
+  app.component(subMenu.name, subMenu);
+};
+
+/* harmony default export */ var cSubMenu = (subMenu);
 ;// CONCATENATED MODULE: ./src/components/cTabs/types.ts
 const tabPaneProps = () => ({
   name: String
@@ -1753,7 +1899,7 @@ tabs.install = app => {
 
 const tabPane_props = tabPaneProps();
 /* harmony default export */ var tabPane = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.defineComponent)({
-  name: "TabPane",
+  name: "cTabPane",
   props: tabPane_props,
 
   setup(props, {
@@ -2470,7 +2616,9 @@ cTree.install = app => {
 
 
 
-const components = [components_cBar, components_cButton, components_cButtonFooter, components_cCircle, components_cConfirm, components_cHeaderBack, components_cInput, components_cInputPassword, components_cCheckBox, components_cItem, components_cLoading, components_cSlide, components_cForm, components_cFormItem, components_cMenu, cTabPane, cTabs, cAutoComplete, components_cTree];
+
+
+const components = [components_cBar, components_cButton, components_cButtonFooter, components_cCircle, components_cConfirm, components_cHeaderBack, components_cInput, components_cInputPassword, components_cCheckBox, components_cItem, components_cLoading, components_cSlide, components_cForm, components_cFormItem, components_cMenu, cMenuItem, cSubMenu, cTabs, cTabPane, cAutoComplete, components_cTree];
 
 /* harmony default export */ function src_components(app) {
   components.forEach(item => {

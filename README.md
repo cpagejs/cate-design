@@ -293,6 +293,25 @@ import { cTimeCount } from 'cate-design';
 | date | 类型String  默认'' | 日期格式 |
 
 ## 17，menu菜单框组件
+```js
+<c-menu defaultIndex="0" mode="vertical" :onSelect="handleClick">
+    <c-menu-item>link1</c-menu-item>
+    <c-sub-menu title="下拉">
+        <c-menu-item>link2-1</c-menu-item>
+    </c-sub-menu>
+    <c-menu-item>link3</c-menu-item>
+</c-menu>
+```
+### 属性
+| 属性 | 类型 | 作用 |
+| :------ | :------ | :------ |
+| defaultIndex | 类型String  默认'0' | 默认选中的菜单 | 
+| mode | 类型String  默认'0' | 水平或者垂直, "horizontal" | "vertical" | 
+
+### 事件
+| 事件 | 作用 |
+| :------ | :------ |
+| onSelect | 菜单被点击时候调用 |
 
 ## 18，tree树形组件
 

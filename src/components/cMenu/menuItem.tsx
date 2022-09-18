@@ -5,7 +5,7 @@ import { MenuContext, MenuItemProps, MenuKey } from "./types";
 const props = MenuItemProps();
 
 const MenuItem = defineComponent({
-  name: "MenuItem",
+  name: "cMenuItem",
   props,
   setup(props, { emit, slots, attrs }) {
     const parentContext = inject<MenuContext>(MenuKey);
@@ -31,6 +31,6 @@ const MenuItem = defineComponent({
   },
 });
 
-MenuItem.playName = "MenuItem";
+MenuItem.playName = "cMenuItem";
 
 export default MenuItem;

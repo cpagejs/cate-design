@@ -14,6 +14,8 @@ import cSlide from "./cSlide";
 import cForm from "./cForm";
 import cFormItem from "./cFormItem/index";
 import cMenu from "./cMenu";
+import cMenuItem from "./cMenuItem";
+import cSubItem from "./cSubMenu";
 import cTabs from "./cTabs";
 import cTabPane from "./cTabPane";
 import cAutoComplete from "./cAutoComplete/cAutoComplete";
@@ -35,8 +37,10 @@ const components = [
   cForm,
   cFormItem,
   cMenu,
-  cTabPane,
+  cMenuItem,
+  cSubItem,
   cTabs,
+  cTabPane,
   cAutoComplete,
   cTree,
 ];
@@ -57,8 +61,10 @@ export {
   cForm,
   cFormItem,
   cMenu,
-  cTabPane,
+  cMenuItem,
+  cSubItem,
   cTabs,
+  cTabPane,
   cAutoComplete,
   cTree,
 };

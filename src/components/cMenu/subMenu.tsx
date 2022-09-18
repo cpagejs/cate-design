@@ -5,15 +5,13 @@ import {
   inject,
   reactive,
   ref,
-  ssrContextKey,
-  watch,
 } from "vue";
 import { ItemType, MenuContext, MenuKey, SubMenuProps } from "./types";
 
 const props = SubMenuProps();
 
 export default defineComponent({
-  name: "SubMenu",
+  name: "cSubMenu",
   props: props,
   setup(props, { emit, attrs, slots }) {
     const parentCtx = inject<MenuContext>(MenuKey);
@@ -24,14 +22,14 @@ export default defineComponent({
         parentCtx?.mode !== "vertical" ? menuOpen.value : !menuOpen.value,
     });
 
-    const handleClick = (e: MouseEvent) => {
+    const handleClick = (e: Event) => {
       e.preventDefault();
       // menuOpen.value = !menuOpen.value;
       subClass["menu-opened"] = !subClass["menu-opened"];
     };
 
     let timer: any;
-    const handleMouse = (e: MouseEvent, toggle: boolean) => {
+    const handleMouse = (e: Event, toggle: boolean) => {
       console.log("handleMouse", toggle);
 
       clearTimeout(timer);
@@ -52,10 +50,10 @@ export default defineComponent({
     const hoverEvents =
       parentCtx?.mode !== "vertical"
         ? {
-            onMouseenter: (e: MouseEvent) => {
+            onMouseenter: (e: Event) => {
               handleMouse(e, true);
             },
-            onMouseleave: (e: MouseEvent) => {
+            onMouseleave: (e: Event) => {
               handleMouse(e, false);
             },
           }

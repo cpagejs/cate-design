@@ -16,7 +16,6 @@ import {
   NewStringSchema,
   triggerType,
 } from "./types";
-import * as yup from "yup";
 
 let id = 0;
 

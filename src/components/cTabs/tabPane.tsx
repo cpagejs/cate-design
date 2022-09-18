@@ -3,7 +3,7 @@ import { tabPaneProps } from "./types";
 
 const props = tabPaneProps();
 export default defineComponent({
-  name: "TabPane",
+  name: "cTabPane",
   props: props,
   setup(props, { emit, slots }) {
     const parentNode = getCurrentInstance()?.parent;

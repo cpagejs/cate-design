@@ -13,7 +13,7 @@ declare const _default: import("vue").DefineComponent<{
         default: boolean;
     };
     onChange: import("../cTree/types").CustomEventFuncType<boolean>;
-}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "change")[], "update:modelValue" | "change", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "onChange")[], "onChange" | "update:modelValue", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     modelValue: {
         type: BooleanConstructor;
         default: boolean;
@@ -28,8 +28,8 @@ declare const _default: import("vue").DefineComponent<{
     };
     onChange: import("../cTree/types").CustomEventFuncType<boolean>;
 }>> & {
-    onChange?: ((...args: any[]) => any) | undefined;
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
+    onOnChange?: ((...args: any[]) => any) | undefined;
 }, {
     disabled: boolean;
     modelValue: boolean;
