@@ -2,7 +2,7 @@ import cButton from "../src/components/cButton/cButton";
 import { action } from '@storybook/addon-actions';
 
 export default {
-  title: "cate-design/cButton",
+  title: "cate-design/cButton 按钮组件",
   component: cButton,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {

@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/vue3';
 import { ref, onMounted } from 'vue';
 
 export default {
-  title: "cate-design/cConfirm",
+  title: "cate-design/cConfirm确认框组件",
   component: cConfirm,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -11,10 +11,8 @@ export default {
       control: "boolean"
     },
     type: { control: "number" },
-    confirmText: { control: "string" },
-    cancelText: {
-      control: "string"
-    },
+    confirmText: {  },
+    cancelText: { },
   },
 } as Meta<typeof cConfirm>;
 
@@ -29,11 +27,22 @@ const Template: StoryFn<typeof cConfirm> = (args) => ({
 
     return { args };
   },
-  template: '<cConfirm ref="myConfirm" v-bind="args"><template #inner>confirm info confirm info</template></cConfirm>',
+  template: `
+  <cConfirm ref="myConfirm" v-bind="args">
+    <template #inner>confirm info confirm info</template>
+  </cConfirm>
+  `,
 });
 
-export const Demo = Template.bind({});
+export const 示例 = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
-Demo.args = {
+示例.args = {
   isShow: true,
 };
+
+export const 示例2 = Template.bind({});
+// More on args: https://storybook.js.org/docs/vue/writing-stories/args
+示例2.args = {
+  isShow: false,
+};
+

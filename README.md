@@ -1,5 +1,7 @@
 # cate-design 一个基于 Vue3+TypeScript 的前端UI框架，简单易用
-不断完善中
+cate-design 一个基于 Vue3+TypeScript 的前端UI框架，简单易用，适合一般的H5项目。组件不断完善中
+
+## 文档地址：[https://cpagejs.github.io/ui-vue3/](https://cpagejs.github.io/ui-vue3/)
 
 备注：1.x版本是基于 Vue2.x 开发，2.x版本是基于 vue3+ts 开发
 ## 安装
@@ -53,7 +55,7 @@ import { cButton } from 'cate-design';
 | :------ | :------ |
 | onClick | 返回按钮点击事件 |
 
-## 3，cButtonFooter 底部按钮组件
+## 3，cButtonFooter 底部悬浮按钮组件
 ```js
 import { cButtonFooter } from 'cate-design';
 
@@ -256,7 +258,7 @@ import { tabs, tabItem } from 'cate-design';
 | iconWidth | 类型String 默认'40px' | icon图标宽度 |
 | iconWidth | 类型String 默认'40px' | icon图标高度 |
 | position | 类型String 默认'normal' | tab位置，normal在文档流里，top最顶部，bottom最底部 |
-## 14，cTabs tab切换组件
+
 ### tab-item 组件属性
 | 属性 | 类型 | 作用 |
 | :------ | :------ | :------ |
@@ -265,7 +267,7 @@ import { tabs, tabItem } from 'cate-design';
 | activeTopIcon | 类型String | 默认'' 点击状态下显示的图标 |
 
 
-## 15，cTimeCircle 圆环倒计时组件
+## 14，cTimeCircle 圆环倒计时组件
 ```js
 import { cTimeCircle } from 'cate-design';
 <c-time-circle :timer="timer"></c-time-circle>
@@ -280,7 +282,7 @@ import { cTimeCircle } from 'cate-design';
 | :------ | :------ |
 | timeCircle | 倒计时结束时候派发的事件，使用时候先引入event |
 
-## 16，cTimeCount 普通倒计时组件
+## 15，cTimeCount 普通倒计时组件
 ```js
 import { cTimeCount } from 'cate-design';
 <c-time-count :date="date"></c-time-count>
@@ -290,7 +292,7 @@ import { cTimeCount } from 'cate-design';
 | :------ | :------ | :------ |
 | date | 类型String  默认'' | 日期格式 |
 
-## 17，menu菜单框组件
+## 16，menu菜单框组件
 ```js
 <c-menu defaultIndex="0" mode="vertical" :onSelect="handleClick">
     <c-menu-item>link1</c-menu-item>
@@ -311,9 +313,9 @@ import { cTimeCount } from 'cate-design';
 | :------ | :------ |
 | onSelect | 菜单被点击时候调用 |
 
-## 18，tree树形组件
+## 17，tree树形组件
 
-## 19，提示框组件
+## 18，提示框组件
 ```js
 需要全局引入可用
 this.$toast({
