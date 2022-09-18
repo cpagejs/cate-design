@@ -18,8 +18,8 @@ export default defineComponent({
     return () => {
       return (
         <header class="c-header-back">
-          <i onClick={handleClickBack}></i>
-          <p class="ellipsis">{props.title}</p>
+          <i class="icon_left" onClick={handleClickBack}></i>
+          <div class="ellipsis">{props.title}</div>
         </header>
       );
     };

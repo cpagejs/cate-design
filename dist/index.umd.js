@@ -533,7 +533,7 @@ const cCircle_props = circleProps();
 
   setup(props) {
     const showProcess = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)(true);
-    const text = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)("");
+    const numText = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)("");
     const width0 = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)(true);
     const number = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)(0);
     const clipAuto = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)(false);
@@ -543,12 +543,12 @@ const cCircle_props = circleProps();
 
       if (percentdata >= 100) {
         showProcess.value = false;
-        text.value = "100%";
+        numText.value = "100%";
       } else {
         const loading = setInterval(() => {
           if (percent >= percentdata) {
-            clearInterval(loading);
             number.value = percentdata;
+            clearInterval(loading);
           } else if (percent > 50) {
             clipAuto.value = true;
             width0.value = false;
@@ -571,7 +571,7 @@ const cCircle_props = circleProps();
       }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
         "class": "percent left",
         "style": {
-          transform: "rotate(" + (360 - 18 / 5 * number.value) + "deg)"
+          transform: "rotate(" + (360 - 18 / 5 * Number(number.value)) + "deg)"
         }
       }, null), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
         "class": ["percent right", {
@@ -579,13 +579,13 @@ const cCircle_props = circleProps();
         }]
       }, null)]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
         "class": "num"
-      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", null, [number]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("%")])]), !showProcess.value && (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", null, [number.value]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("%")])]), !showProcess.value && (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
         "class": "c-circle-status"
       }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
         "class": "circle"
       }, null), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
         "class": "num"
-      }, [text])])]);
+      }, [numText.value])])]);
     };
   }
 
@@ -843,8 +843,9 @@ const cHeaderBack_props = headerBackProps();
       return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("header", {
         "class": "c-header-back"
       }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("i", {
+        "class": "icon_left",
         "onClick": handleClickBack
-      }, null), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("p", {
+      }, null), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
         "class": "ellipsis"
       }, [props.title])]);
     };
@@ -1107,7 +1108,7 @@ const cCheckBox_props = checkBoxProps();
 /* harmony default export */ var cCheckBox = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.defineComponent)({
   name: "cCheckbox",
   props: cCheckBox_props,
-  emits: ["update:modelValue", "change"],
+  emits: ["update:modelValue", "onChange"],
 
   setup(props, {
     emit,
@@ -1134,7 +1135,7 @@ const cCheckBox_props = checkBoxProps();
 
       if (!props.disabled) {
         emit("update:modelValue", !props.modelValue);
-        emit("change", !props.modelValue);
+        emit("onChange", !props.modelValue);
       }
     };
 

@@ -6,7 +6,7 @@ const props = checkBoxProps();
 export default defineComponent({
   name: "cCheckbox",
   props: props,
-  emits: ["update:modelValue", "change"],
+  emits: ["update:modelValue", "onChange"],
   setup(props, { emit, slots }) {
     const rootCls = computed(() => {
       let result = "c-checkbox";
@@ -24,7 +24,7 @@ export default defineComponent({
       event.stopPropagation();
       if (!props.disabled) {
         emit("update:modelValue", !props.modelValue);
-        emit("change", !props.modelValue);
+        emit("onChange", !props.modelValue);
       }
     };
     return () => {

@@ -1,5 +1,5 @@
 import { ref } from "vue";
-import cInput from "../src/components/cInput/cInput.tsx";
+import cInput from "../src/components/cInput/cInput";
 import { Meta, StoryFn } from '@storybook/vue3';
 
 export default {

@@ -30,7 +30,8 @@
   }
 
   .left {
-    transition: transform ease;
+    // transition: transform ease;
+    transition: all 1s ease;
     border: 8px solid $blue;
     clip: rect(0, 40px, 80px, 0);
   }

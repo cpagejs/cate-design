@@ -1,5 +1,5 @@
-import { ref } from "vue";
 import cButton from "../src/components/cButton/cButton";
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: "cate-design/cButton",
@@ -8,7 +8,6 @@ export default {
   argTypes: {
     textColor: { control: "color" },
     backgroundColor: { control: "color" },
-    onClick: {},
     size: {
       control: { type: "select" },
       options: ["sm", "lg"],
@@ -17,7 +16,17 @@ export default {
       control: { type: "select" },
       options: ["primary", "default", "danger", "link"],
     },
-    text: {},
+    text: {
+      control: { type: "text" },
+    },
+    onClick: {
+      description: '点击事件',
+      action: 'onClick',
+      table: {
+        category: 'Events',
+        type: Function
+      }
+    },
   },
 };
 
@@ -30,7 +39,7 @@ const Template = (args) => ({
     return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<c-button v-bind="args" />',
+  template: '<c-button @onClick="onClick" v-bind="args" />',
 });
 
 export const Primary = Template.bind({});

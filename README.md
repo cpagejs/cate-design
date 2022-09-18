@@ -128,7 +128,7 @@ import { cHeaderBack } from 'cate-design';
 ### 事件
 | 事件 | 作用 |
 | :------ | :------ |
-| onClick | 返回按钮点击事件 |
+| onBack | 返回按钮点击事件 |
 
 ## 7，cInput 输入框组件
 ```js

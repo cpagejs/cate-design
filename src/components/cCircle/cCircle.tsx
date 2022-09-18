@@ -12,9 +12,9 @@ export default defineComponent({
   props: props,
   setup(props) {
     const showProcess = ref<boolean>(true);
-    const text = ref<string>("");
+    const numText = ref<string>("");
     const width0 = ref<boolean>(true);
-    const number = ref<any>(0);
+    const number = ref<number>(0);
     const clipAuto = ref<boolean>(false);
 
     onMounted(() => {
@@ -23,12 +23,12 @@ export default defineComponent({
 
       if (percentdata >= 100) {
         showProcess.value = false;
-        text.value = "100%";
+        numText.value = "100%";
       } else {
         const loading = setInterval(() => {
           if (percent >= percentdata) {
-            clearInterval(loading);
             number.value = percentdata;
+            clearInterval(loading);
           } else if (percent > 50) {
             clipAuto.value = true;
             width0.value = false;
@@ -49,20 +49,20 @@ export default defineComponent({
                   class="percent left"
                   style={{
                     transform:
-                      "rotate(" + (360 - (18 / 5) * number.value) + "deg)",
+                      "rotate(" + (360 - (18 / 5) * Number(number.value)) + "deg)",
                   }}
                 ></div>
                 <div class={["percent right", { width0: width0 }]}></div>
               </div>
               <div class="num">
-                <span>{number}</span>%
+                <span>{number.value}</span>%
               </div>
             </div>
           )}
           {!showProcess.value && (
             <div class="c-circle-status">
               <div class="circle"></div>
-              <div class="num">{text}</div>
+              <div class="num">{numText.value}</div>
             </div>
           )}
         </div>

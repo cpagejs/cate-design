@@ -1,0 +1,25 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Example/Introduction" />
+
+# cate-design 一个基于 Vue3+TypeScript 的前端UI框架，简单易用
+
+## 安装
+```js
+npm install --save cate-design
+```
+
+## 注册
+```js
+import { createApp } from 'vue';
+// 然后全局引入css
+import 'cate-design/dist/index.css';
+
+// 可以全局注入组件
+import cateDesign from 'cate-design';
+
+const app = createApp(App);
+app.use(cateDesign);
+app.mount('#app');
+```
+
