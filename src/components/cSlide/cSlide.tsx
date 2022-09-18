@@ -1,7 +1,7 @@
 /** 侧滑组件
  * @author 夏小宅
  */
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
 import { loadingProps } from "./types";
 import "./index.scss";
 
@@ -11,8 +11,6 @@ export default defineComponent({
   props: props,
   emits: ["onBgClick"],
   setup(props, ctx) {
-    const slideShow = ref(false);
-
     const hide = (e: Event) => {
       e.stopPropagation();
       ctx.emit("onBgClick");
@@ -22,13 +20,11 @@ export default defineComponent({
       return (
         <section class="c-slide-container">
           <transition name="slide-fade">
-            {slideShow.value && (
-              <div class="slide-inner">
-                <slot></slot>
-              </div>
-            )}
+            <div class="slide-inner">
+              {ctx.slots.default && ctx.slots.default()}
+            </div>
           </transition>
-          {slideShow.value && <div class="slide-bg" onClick={hide}></div>}
+          { props.showMask && <div class="slide-bg" onClick={hide}></div> }
         </section>
       );
     };

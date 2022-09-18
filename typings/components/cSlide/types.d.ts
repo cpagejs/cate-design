@@ -1,11 +1,7 @@
 declare const loadingProps: () => {
-    color: {
-        type: StringConstructor;
-        default: string;
-    };
-    styleLoading: {
-        type: ObjectConstructor;
-        default(): {};
+    showMask: {
+        type: BooleanConstructor;
+        default: boolean;
     };
 };
 export { loadingProps };

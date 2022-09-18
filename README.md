@@ -204,15 +204,14 @@ import { cLoading } from 'cate-design';
 ## 11，cSlide 抽屉组件
 ```js
 import { cSlide } from 'cate-design';
-<slide ref="mySlider">
+<c-slide>
     内容
-</slide>
+</c-slide>
 ```
 ### 事件
 | 事件 | 作用 |
 | :------ | :------ |
-| show | 打开侧滑，this.$refs.mySlider.show() |
-| hide | 关闭侧滑，this.$refs.mySlider.hide() |
+| onBgClick | 背景区域被点击后触发 |
 
 ## 12，cSwitch 开关组件
 ```js

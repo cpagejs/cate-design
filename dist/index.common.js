@@ -1325,17 +1325,9 @@ cLoading.install = app => {
 /* harmony default export */ var components_cLoading = (cLoading);
 ;// CONCATENATED MODULE: ./src/components/cSlide/types.ts
 const types_loadingProps = () => ({
-  color: {
-    type: String,
-    default: "#6284e2"
-  },
-  styleLoading: {
-    type: Object,
-
-    default() {
-      return {};
-    }
-
+  showMask: {
+    type: Boolean,
+    default: true
   }
 });
 
@@ -1356,8 +1348,6 @@ const cSlide_props = types_loadingProps();
   emits: ["onBgClick"],
 
   setup(props, ctx) {
-    const slideShow = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.ref)(false);
-
     const hide = e => {
       e.stopPropagation();
       ctx.emit("onBgClick");
@@ -1369,10 +1359,10 @@ const cSlide_props = types_loadingProps();
       }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.resolveComponent)("transition"), {
         "name": "slide-fade"
       }, {
-        default: () => [slideShow.value && (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        default: () => [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
           "class": "slide-inner"
-        }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("slot", null, null)])]
-      }), slideShow.value && (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        }, [ctx.slots.default && ctx.slots.default()])]
+      }), props.showMask && (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": "slide-bg",
         "onClick": hide
       }, null)]);
