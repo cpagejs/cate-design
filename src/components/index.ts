@@ -17,7 +17,7 @@ import cMenu from "./cMenu";
 import cMenuItem from "./cMenuItem";
 import cSubItem from "./cSubMenu";
 import cTabs from "./cTabs";
-import cTabPane from "./cTabPane";
+import cTabItem from "./cTabItem";
 import cAutoComplete from "./cAutoComplete/cAutoComplete";
 import cTree from "./cTree";
 
@@ -40,7 +40,7 @@ const components = [
   cMenuItem,
   cSubItem,
   cTabs,
-  cTabPane,
+  cTabItem,
   cAutoComplete,
   cTree,
 ];
@@ -64,7 +64,7 @@ export {
   cMenuItem,
   cSubItem,
   cTabs,
-  cTabPane,
+  cTabItem,
   cAutoComplete,
   cTree,
 };

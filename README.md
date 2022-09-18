@@ -228,23 +228,18 @@ import { cSwitch } from 'cate-design';
 
 ## 13，cTabs tab切换组件
 ```js
-import { tabs, tabItem } from 'cate-design';
-<tabs @onClick="tabClick" :active-index="activeIndex" active-color="#f60" icon-width="0.4rem">
-    <tab-item 
-        title="转让中" 
-        top-icon="login_password_visible.png" 
-        active-top-icon="login_password_invisible.png"
-    >
-        转让中
-    </tab-item>
-    <tab-item 
-        title="可转让"
-        top-icon="login_password_visible.png" 
-        active-top-icon="login_password_invisible.png"
-    >
-        可转让
-    </tab-item>
-</tabs>
+import { cTabs, cTabPane } from 'cate-design';
+
+<c-tabs v-model="currentTabName" v-bind="args">
+    <c-tab-pane name="React">
+    <template #title>
+        <b style="color: red">TabOne</b>
+    </template>
+    content1
+    </c-tab-pane>
+    <c-tab-pane name="Vue">content2</c-tab-pane>
+    <c-tab-pane name="Cpage">content3</c-tab-pane>
+</c-tabs>
 ```
 ### tabs组件属性
 | 属性 | 类型 | 作用 |
@@ -261,9 +256,7 @@ import { tabs, tabItem } from 'cate-design';
 ### tab-item 组件属性
 | 属性 | 类型 | 作用 |
 | :------ | :------ | :------ |
-| title | 类型String | 默认'' tab标题，可以是字符串，也可以是html |
-| topIcon | 类型String | 默认'' 默认显示的图标 |
-| activeTopIcon | 类型String | 默认'' 点击状态下显示的图标 |
+| name | 类型String | 默认'' tab标题，可以是字符串 |
 
 
 ## 14，cTimeCircle 圆环倒计时组件

@@ -269,7 +269,7 @@ __webpack_require__.d(__webpack_exports__, {
   "cMenuItem": function() { return /* reexport */ cMenuItem; },
   "cSlide": function() { return /* reexport */ components_cSlide; },
   "cSubItem": function() { return /* reexport */ cSubMenu; },
-  "cTabPane": function() { return /* reexport */ cTabPane; },
+  "cTabItem": function() { return /* reexport */ cTabItem; },
   "cTabs": function() { return /* reexport */ cTabs; },
   "cTree": function() { return /* reexport */ components_cTree; },
   "default": function() { return /* binding */ entry_lib; }
@@ -1844,7 +1844,7 @@ const tabs_props = tabsProps();
 /* harmony default export */ var tabs = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.defineComponent)({
   name: "cTabs",
   props: tabs_props,
-  emits: ["update:modelValue"],
+  emits: ["update:modelValue", "onClick"],
 
   setup(props, {
     emit,
@@ -1858,16 +1858,17 @@ const tabs_props = tabsProps();
     const clickTab = tabName => {
       if (currentTabName.value !== tabName) {
         emit("update:modelValue", tabName);
+        emit("onClick", tabName);
       }
     };
 
     const renderNavs = () => {
-      return slots.default().map((pane, index) => {
-        const extraCls = pane.props.name === currentTabName.value ? "active" : "";
+      return slots.default().map((item, index) => {
+        const extraCls = item.props.name === currentTabName.value ? "active" : "";
         return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
-          "class": "c-tab-pane " + extraCls,
-          "onClick": clickTab.bind(null, pane.props.name)
-        }, [pane.children.title ? pane.children.title() : pane.props.name]);
+          "class": "c-tab-item " + extraCls,
+          "onClick": clickTab.bind(null, item.props.name)
+        }, [item.children.title ? item.children.title() : item.props.name]);
       });
     };
 
@@ -1889,14 +1890,14 @@ tabs.install = app => {
 };
 
 /* harmony default export */ var cTabs = (tabs);
-;// CONCATENATED MODULE: ./src/components/cTabs/tabPane.tsx
+;// CONCATENATED MODULE: ./src/components/cTabs/tabItem.tsx
 
 
 
-const tabPane_props = tabPaneProps();
-/* harmony default export */ var tabPane = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.defineComponent)({
-  name: "cTabPane",
-  props: tabPane_props,
+const tabItem_props = tabPaneProps();
+/* harmony default export */ var tabItem = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.defineComponent)({
+  name: "cTabItem",
+  props: tabItem_props,
 
   setup(props, {
     emit,
@@ -1911,14 +1912,14 @@ const tabPane_props = tabPaneProps();
   }
 
 }));
-;// CONCATENATED MODULE: ./src/components/cTabPane/index.ts
+;// CONCATENATED MODULE: ./src/components/cTabItem/index.ts
 
 
-tabPane.install = app => {
-  app.component(tabPane.name, tabPane);
+tabItem.install = app => {
+  app.component(tabItem.name, tabItem);
 };
 
-/* harmony default export */ var cTabPane = (tabPane);
+/* harmony default export */ var cTabItem = (tabItem);
 ;// CONCATENATED MODULE: ./src/components/cAutoComplete/type.ts
 
 
@@ -2614,7 +2615,7 @@ cTree.install = app => {
 
 
 
-const components = [components_cBar, components_cButton, components_cButtonFooter, components_cCircle, components_cConfirm, components_cHeaderBack, components_cInput, components_cInputPassword, components_cCheckBox, components_cItem, components_cLoading, components_cSlide, components_cForm, components_cFormItem, components_cMenu, cMenuItem, cSubMenu, cTabs, cTabPane, cAutoComplete, components_cTree];
+const components = [components_cBar, components_cButton, components_cButtonFooter, components_cCircle, components_cConfirm, components_cHeaderBack, components_cInput, components_cInputPassword, components_cCheckBox, components_cItem, components_cLoading, components_cSlide, components_cForm, components_cFormItem, components_cMenu, cMenuItem, cSubMenu, cTabs, cTabItem, cAutoComplete, components_cTree];
 
 /* harmony default export */ function src_components(app) {
   components.forEach(item => {
