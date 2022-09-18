@@ -6,7 +6,7 @@
     @include flex-justify();
     width: 100%;
     background: transparent;
-    z-index: 998;
+    
 
     &.confirm-fade-enter-active {
       animation: confirm-fadein 0.3s;
@@ -18,30 +18,28 @@
 
     .confirm-content {
       color: #757575;
-
+      z-index: 998;
       .confirm-inner {
         margin: 0 auto;
-        width: 600px;
+        width: 350px;
         border-radius: 12px;
-        padding: 20px 20px 0 20px;
+        padding: 0;
         background: #fff;
 
         .confirm-content-body {
           @include flex-justify();
           padding: 19px 15px;
-          line-height: 22px;
           text-align: center;
           font-size: 40px;
+          color: #000;
           height: 300px;
         }
 
         .confirm-content-footer {
           @include flex-justify();
-          height: 8px;
           text-align: center;
-          font-size: 40px;
+          font-size: 20px;
           border-top: 1px solid #e0e0e0;
-
           .operate-btn {
             flex: 1;
             line-height: 30px;
@@ -65,9 +63,9 @@
 
         .confirm-content-footer2 {
           @include flex-justify();
-          height: 88px;
+          height: 50px;
           text-align: center;
-          font-size: 40px;
+          font-size: 20px;
           margin: 20px;
 
           .operate-btn {

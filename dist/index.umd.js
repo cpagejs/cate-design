@@ -600,9 +600,10 @@ cCircle.install = app => {
 };
 
 /* harmony default export */ var components_cCircle = (cCircle);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-87.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=template&id=2635a76c
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-87.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=template&id=373568ff
 
 const _hoisted_1 = {
+  key: 0,
   class: "c-confirm-container"
 };
 const _hoisted_2 = {
@@ -645,10 +646,10 @@ const _hoisted_12 = {
 };
 const _hoisted_13 = ["src"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("div", _hoisted_1, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(external_commonjs_vue_commonjs2_vue_root_Vue_.Transition, {
+  return $props.isShow ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("div", _hoisted_1, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(external_commonjs_vue_commonjs2_vue_root_Vue_.Transition, {
     name: "confirm-fade"
   }, {
-    default: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withCtx)(() => [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.withDirectives)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", {
+    default: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withCtx)(() => [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", {
       class: "screen-fixed confirm-wrapper",
       onClick: _cache[5] || (_cache[5] = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withModifiers)($event => $options.closeConfirm($event), ["prevent"]))
     }, [$props.type == 1 ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("div", _hoisted_2, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", _hoisted_3, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", {
@@ -680,21 +681,25 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       src: $data.closeImg,
       alt: "",
       onClick: _cache[4] || (_cache[4] = (...args) => $options.closeImgFn && $options.closeImgFn(...args))
-    }, null, 8, _hoisted_13)])])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true)], 512), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, $data.openConfirm]])]),
+    }, null, 8, _hoisted_13)])])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true)])]),
     _: 3
   }), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withDirectives)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", {
     class: "screen-fixed confirm-bg",
     style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeStyle)({
       backgroundColor: $props.bgColor
     })
-  }, null, 4), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, $props.showBg && $data.openConfirm]])]);
+  }, null, 4), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, $props.showBg && $props.isShow]])])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true);
 }
-;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=template&id=2635a76c
+;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=template&id=373568ff
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-87.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=script&lang=js
 /* harmony default export */ var cConfirmvue_type_script_lang_js = ({
   name: "cConfirm",
   props: {
+    isShow: {
+      type: Boolean,
+      default: true
+    },
     type: {
       type: Number,
       default: 1
@@ -752,6 +757,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   created() {
     this.showConfirm = this.show;
+    console.log(123456);
   },
 
   methods: {
@@ -787,10 +793,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 });
 ;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-69.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-69.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-69.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-69.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-69.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=2635a76c&lang=scss
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-69.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-69.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-69.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-69.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-69.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=373568ff&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=2635a76c&lang=scss
+;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=373568ff&lang=scss
 
 // EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(118);

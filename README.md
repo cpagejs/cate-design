@@ -86,18 +86,16 @@ import { cCircle } from 'cate-design';
 ```js
 import { cConfirm } from 'cate-design';
 
- <confirm ref="myConfirm" confirm-text="提交" @confirm="confirmFn()">
-    <div slot="inner">
+ <confirm isShow="true" confirm-text="提交" @confirm="confirmFn()">
+    <template #inner>
         inner test
-    </div>
+    </template>
 </confirm>
-
-this.$refs.myConfirm.show();
-this.$refs.myConfirm.hide();
 ```
 ### 属性
 | 属性 | 类型 | 作用 |
-| :------ | :------ | :------ |
+| :------ | :------ | :------ | 
+| isShow | 类型Boolean  默认true | 是否显示弹窗 |
 | type | 类型Number  默认1 | 弹窗显示类型--1：普通确认框; 2：支持顶部背景图，按钮组有空隙; 3：弹窗里面没有内容，自由发挥 |
 | showBtn | 类型Boolean  默认true | 是否显示默认按钮 |
 | showCancelBtn | 类型Boolean  默认true | 是否显示取消按钮 |

@@ -1,10 +1,9 @@
 /** 确认框组件 * @author 夏小宅 */
 <template>
-  <div class="c-confirm-container">
+  <div class="c-confirm-container" v-if="isShow">
     <transition name="confirm-fade">
       <div
         class="screen-fixed confirm-wrapper"
-        v-show="openConfirm"
         @click.prevent="closeConfirm($event)"
       >
         <!-- 普通类型 -->
@@ -72,7 +71,7 @@
     </transition>
     <div
       class="screen-fixed confirm-bg"
-      v-show="showBg && openConfirm"
+      v-show="showBg && isShow"
       :style="{ backgroundColor: bgColor }"
     ></div>
   </div>
@@ -82,6 +81,10 @@
 export default {
   name: "cConfirm",
   props: {
+    isShow: {
+      type: Boolean,
+      default: true
+    },
     type: {
       type: Number,
       default: 1,
@@ -137,6 +140,7 @@ export default {
   },
   created() {
     this.showConfirm = this.show;
+    console.log(123456)
   },
   methods: {
     show() {
