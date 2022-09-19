@@ -2,7 +2,7 @@ import cButton from "../src/components/cButton/cButton";
 import { action } from '@storybook/addon-actions';
 
 export default {
-  title: "cate-design/cButton 按钮组件",
+  title: "组件/按钮 cButton",
   component: cButton,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -14,7 +14,7 @@ export default {
     },
     type: {
       control: { type: "select" },
-      options: ["primary", "default", "danger", "link"],
+      options: ["primary", "info", "danger", "link"],
     },
     text: {
       control: { type: "text" },
@@ -46,13 +46,27 @@ export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 Primary.args = {
   disabled: false,
-  text: "Primary",
+  text: "primary",
+};
+
+export const Info = Template.bind({});
+Info.args = {
+  disabled: false,
+  text: "info 按钮",
+  type: "info"
+};
+
+export const Danger = Template.bind({});
+Danger.args = {
+  disabled: false,
+  text: "danger  按钮",
+  type: "danger"
 };
 
 export const Link = Template.bind({});
 Link.args = {
-  text: "Link",
-  btnType: "link",
+  text: "Link  按钮",
+  type: "link",
   href: "www.baidu.com",
   disabled: false,
 };

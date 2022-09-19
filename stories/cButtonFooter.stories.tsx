@@ -2,7 +2,7 @@ import cButtonFooter from "../src/components/cButtonFooter/cButtonFooter";
 import { Meta, StoryFn } from '@storybook/vue3';
 
 export default {
-  title: "cate-design/cButtonFooter 底部悬浮按钮组件",
+  title: "组件/底部悬浮按钮 cButtonFooter",
   component: cButtonFooter,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {

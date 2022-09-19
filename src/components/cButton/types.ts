@@ -2,7 +2,7 @@ import { PropType } from "vue";
 
 type ButtonSize = "lg" | "sm" | "full";
 
-type ButtonType = "primary" | "default" | "danger" | "link";
+type ButtonType = "primary" | "info" | "danger" | "link";
 
 const buttonProps = () => ({
   text: String,

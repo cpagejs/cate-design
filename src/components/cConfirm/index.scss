@@ -30,7 +30,7 @@
           @include flex-justify();
           padding: 19px 15px;
           text-align: center;
-          font-size: 40px;
+          font-size: $font-size-mid;
           color: #000;
           height: 300px;
         }
@@ -38,7 +38,7 @@
         .confirm-content-footer {
           @include flex-justify();
           text-align: center;
-          font-size: 20px;
+          font-size: $font-size-mid;
           border-top: 1px solid #e0e0e0;
           .operate-btn {
             flex: 1;
@@ -65,7 +65,7 @@
           @include flex-justify();
           height: 50px;
           text-align: center;
-          font-size: 20px;
+          font-size: $font-size-mid;
           margin: 20px;
 
           .operate-btn {

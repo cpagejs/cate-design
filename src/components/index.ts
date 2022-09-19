@@ -8,6 +8,7 @@ import cHeaderBack from "./cHeaderBack";
 import cInput from "./cInput";
 import cInputPassword from "./cInputPassword";
 import cCheckBox from "./cCheckBox";
+import cSwitch from "./cSwitch";
 import cItem from "./cItem";
 import cLoading from "./cLoading";
 import cSlide from "./cSlide";
@@ -18,7 +19,9 @@ import cMenuItem from "./cMenuItem";
 import cSubItem from "./cSubMenu";
 import cTabs from "./cTabs";
 import cTabItem from "./cTabItem";
-import cAutoComplete from "./cAutoComplete/cAutoComplete";
+import cAutoComplete from "./cAutoComplete";
+import cTimeCircle from "./cTimeCircle";
+import cTimeOut from "./cTimeOut";
 import cTree from "./cTree";
 
 const components = [
@@ -31,6 +34,7 @@ const components = [
   cInput,
   cInputPassword,
   cCheckBox,
+  cSwitch,
   cItem,
   cLoading,
   cSlide,
@@ -42,6 +46,8 @@ const components = [
   cTabs,
   cTabItem,
   cAutoComplete,
+  cTimeCircle,
+  cTimeOut,
   cTree,
 ];
 
@@ -55,6 +61,7 @@ export {
   cInput,
   cInputPassword,
   cCheckBox,
+  cSwitch,
   cItem,
   cLoading,
   cSlide,
@@ -66,6 +73,8 @@ export {
   cTabs,
   cTabItem,
   cAutoComplete,
+  cTimeCircle,
+  cTimeOut,
   cTree,
 };
 

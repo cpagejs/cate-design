@@ -251,7 +251,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "cAutoComplete": function() { return /* reexport */ cAutoComplete; },
+  "cAutoComplete": function() { return /* reexport */ components_cAutoComplete; },
   "cBar": function() { return /* reexport */ components_cBar; },
   "cButton": function() { return /* reexport */ components_cButton; },
   "cButtonFooter": function() { return /* reexport */ components_cButtonFooter; },
@@ -269,8 +269,11 @@ __webpack_require__.d(__webpack_exports__, {
   "cMenuItem": function() { return /* reexport */ cMenuItem; },
   "cSlide": function() { return /* reexport */ components_cSlide; },
   "cSubItem": function() { return /* reexport */ cSubMenu; },
+  "cSwitch": function() { return /* reexport */ components_cSwitch; },
   "cTabItem": function() { return /* reexport */ cTabItem; },
   "cTabs": function() { return /* reexport */ cTabs; },
+  "cTimeCircle": function() { return /* reexport */ components_cTimeCircle; },
+  "cTimeOut": function() { return /* reexport */ components_cTimeOut; },
   "cTree": function() { return /* reexport */ components_cTree; },
   "default": function() { return /* binding */ entry_lib; }
 });
@@ -382,9 +385,9 @@ const props = buttonProps();
     attrs
   }) {
     const classes = classnames_default()("c-btn", {
-      [`btn-${props.type}`]: props.type,
-      [`btn-${props.size}`]: props.size,
-      [`btn-disabled`]: props.disabled
+      [`c-btn-${props.type}`]: props.type,
+      [`c-btn-${props.size}`]: props.size,
+      [`c-btn-disabled`]: props.disabled
     });
     const styles = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.reactive)({
       backgroundColor: props.backgroundColor,
@@ -939,80 +942,85 @@ cInput.install = app => {
 };
 
 /* harmony default export */ var components_cInput = (cInput);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cInputPassword/cInputPassword.vue?vue&type=template&id=2efc7612
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cInputPassword/cInputPassword.vue?vue&type=template&id=b57a5448
 
-const cInputPasswordvue_type_template_id_2efc7612_hoisted_1 = ["value", "length", "placeholder"];
-const cInputPasswordvue_type_template_id_2efc7612_hoisted_2 = ["value", "length", "placeholder"];
-function cInputPasswordvue_type_template_id_2efc7612_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("div", {
-    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(["c-input-password", {
-      disabled: $props.disabled
-    }])
-  }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("span", null, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toDisplayString)($props.label), 1), $data.showPwd ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("input", {
+const cInputPasswordvue_type_template_id_b57a5448_hoisted_1 = {
+  class: "c-input-password"
+};
+const cInputPasswordvue_type_template_id_b57a5448_hoisted_2 = ["value", "length", "placeholder"];
+const cInputPasswordvue_type_template_id_b57a5448_hoisted_3 = ["value", "length", "placeholder"];
+function cInputPasswordvue_type_template_id_b57a5448_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("div", cInputPasswordvue_type_template_id_b57a5448_hoisted_1, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("span", null, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toDisplayString)(_ctx.label), 1), $data.showPwd ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("input", {
     key: 0,
     type: "password",
     ref: "input",
-    value: $props.value,
+    value: _ctx.value,
     onInput: _cache[0] || (_cache[0] = $event => $options._input()),
     onBlur: _cache[1] || (_cache[1] = $event => $options._blur()),
-    length: $props.length,
-    placeholder: $props.placeholder,
+    length: _ctx.length,
+    placeholder: _ctx.placeholder,
     autocapitalize: "off",
     class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)({
-      disabled: $props.disabled
+      'c-input-password_disabled': _ctx.disabled
     })
-  }, null, 42, cInputPasswordvue_type_template_id_2efc7612_hoisted_1)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true), !$data.showPwd ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("input", {
+  }, null, 42, cInputPasswordvue_type_template_id_b57a5448_hoisted_2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true), !$data.showPwd ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("input", {
     key: 1,
     type: "text",
     ref: "input",
-    value: $props.value,
+    value: _ctx.value,
     onInput: _cache[2] || (_cache[2] = $event => $options._input()),
     onBlur: _cache[3] || (_cache[3] = $event => $options._blur()),
-    length: $props.length,
-    placeholder: $props.placeholder,
+    length: _ctx.length,
+    placeholder: _ctx.placeholder,
     autocapitalize: "off",
     class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)({
-      disabled: $props.disabled
+      'c-input-password_disabled': _ctx.disabled
     })
-  }, null, 42, cInputPasswordvue_type_template_id_2efc7612_hoisted_2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true), $props.showToggle ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("em", {
+  }, null, 42, cInputPasswordvue_type_template_id_b57a5448_hoisted_3)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true), _ctx.showToggle ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("em", {
     key: 2,
-    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(["input-pwd-eye", {
+    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(["pwd-eye", {
       invisible: $data.invisible
     }]),
     onClick: _cache[4] || (_cache[4] = (...args) => $options.toggle && $options.toggle(...args))
-  }, null, 2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true)], 2);
+  }, null, 2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true)]);
 }
-;// CONCATENATED MODULE: ./src/components/cInputPassword/cInputPassword.vue?vue&type=template&id=2efc7612
+;// CONCATENATED MODULE: ./src/components/cInputPassword/cInputPassword.vue?vue&type=template&id=b57a5448
+
+;// CONCATENATED MODULE: ./src/components/cInputPassword/types.ts
+const inputPwdProps = () => ({
+  value: {
+    type: String,
+    default: ""
+  },
+  label: {
+    default: "",
+    type: String
+  },
+  length: {
+    default: 20,
+    type: Number
+  },
+  placeholder: {
+    default: "请输入密码",
+    type: String
+  },
+  disabled: {
+    type: Boolean,
+    default: false
+  },
+  showToggle: {
+    type: Boolean,
+    default: true
+  }
+});
+
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cInputPassword/cInputPassword.vue?vue&type=script&lang=js
+
+const cInputPasswordvue_type_script_lang_js_props = inputPwdProps();
 /* harmony default export */ var cInputPasswordvue_type_script_lang_js = ({
   name: "cInputPassword",
-  props: {
-    value: {
-      type: String,
-      default: ""
-    },
-    label: {
-      default: "",
-      type: String
-    },
-    length: {
-      default: 20,
-      type: Number
-    },
-    placeholder: {
-      default: "请输入密码",
-      type: String
-    },
-    disabled: {
-      type: Boolean,
-      default: false
-    },
-    showToggle: {
-      type: Boolean,
-      default: true
-    }
-  },
+  props: cInputPasswordvue_type_script_lang_js_props,
 
   data() {
     return {
@@ -1054,13 +1062,20 @@ function cInputPasswordvue_type_template_id_2efc7612_render(_ctx, _cache, $props
 });
 ;// CONCATENATED MODULE: ./src/components/cInputPassword/cInputPassword.vue?vue&type=script&lang=js
  
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-22.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cInputPassword/cInputPassword.vue?vue&type=style&index=0&id=b57a5448&lang=scss
+// extracted by mini-css-extract-plugin
+
+;// CONCATENATED MODULE: ./src/components/cInputPassword/cInputPassword.vue?vue&type=style&index=0&id=b57a5448&lang=scss
+
 ;// CONCATENATED MODULE: ./src/components/cInputPassword/cInputPassword.vue
 
 
 
 
 ;
-const cInputPassword_exports_ = /*#__PURE__*/(0,exportHelper/* default */.Z)(cInputPasswordvue_type_script_lang_js, [['render',cInputPasswordvue_type_template_id_2efc7612_render]])
+
+
+const cInputPassword_exports_ = /*#__PURE__*/(0,exportHelper/* default */.Z)(cInputPasswordvue_type_script_lang_js, [['render',cInputPasswordvue_type_template_id_b57a5448_render]])
 
 /* harmony default export */ var cInputPassword = (cInputPassword_exports_);
 ;// CONCATENATED MODULE: ./src/components/cInputPassword/index.ts
@@ -1150,6 +1165,135 @@ cCheckBox.install = app => {
 };
 
 /* harmony default export */ var components_cCheckBox = (cCheckBox);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cSwitch/cSwitch.vue?vue&type=template&id=1eb78665
+
+const cSwitchvue_type_template_id_1eb78665_hoisted_1 = ["checked"];
+
+const cSwitchvue_type_template_id_1eb78665_hoisted_2 = /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("small", {
+  class: "switcher"
+}, null, -1);
+
+const cSwitchvue_type_template_id_1eb78665_hoisted_3 = [cSwitchvue_type_template_id_1eb78665_hoisted_2];
+function cSwitchvue_type_template_id_1eb78665_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("label", {
+    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(["c-switch-wrap", [{
+      'c-switch-disabled': $props.disabled
+    }]]),
+    onClick: _cache[0] || (_cache[0] = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.withModifiers)((...args) => $options.toggle && $options.toggle(...args), ["prevent"]))
+  }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("input", {
+    type: "checkbox",
+    style: {
+      "display": "none"
+    },
+    checked: $data.on
+  }, null, 8, cSwitchvue_type_template_id_1eb78665_hoisted_1), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("span", {
+    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(["c-switch-box", [{
+      'on': $data.on
+    }]]),
+    style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeStyle)($data.colorStyle)
+  }, cSwitchvue_type_template_id_1eb78665_hoisted_3, 6)], 2);
+}
+;// CONCATENATED MODULE: ./src/components/cSwitch/cSwitch.vue?vue&type=template&id=1eb78665
+
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cSwitch/cSwitch.vue?vue&type=script&lang=js
+/* harmony default export */ var cSwitchvue_type_script_lang_js = ({
+  name: 'cSwitch',
+  props: {
+    color: {
+      type: String,
+      default: '#a0a0a0'
+    },
+    activeColor: {
+      type: String,
+      default: '#448ff2'
+    },
+    checked: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    }
+  },
+
+  data() {
+    return {
+      on: false,
+      showText: "",
+      colorStyle: {}
+    };
+  },
+
+  watch: {
+    checked(val) {
+      this.on = val;
+    },
+
+    on(val) {
+      this.colorStyle = {
+        backgroundColor: val ? this.activeColor : this.color,
+        borderColor: val ? this.activeColor : this.color,
+        boxShadow: val ? this.activeColor + " 0px 0px 0px 12px inset" : this.color + " 0px 0px 0px 12px inset"
+      };
+    }
+
+  },
+  methods: {
+    toggle() {
+      this.on = !this.on;
+      this.$emit("onSwitch", this.on);
+    },
+
+    val() {
+      return this.on;
+    }
+
+  },
+
+  created() {
+    this.colorStyle = {
+      backgroundColor: this.on ? this.activeColor : this.color,
+      borderColor: this.on ? this.activeColor : this.color,
+      boxShadow: this.on ? this.activeColor + " 0px 0px 0px 12px inset" : this.color + " 0px 0px 0px 12px inset"
+    };
+  },
+
+  mounted() {
+    if (this.checked) {
+      this.on = true;
+    } else {
+      this.on = false;
+    }
+  }
+
+});
+;// CONCATENATED MODULE: ./src/components/cSwitch/cSwitch.vue?vue&type=script&lang=js
+ 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-22.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cSwitch/cSwitch.vue?vue&type=style&index=0&id=1eb78665&lang=scss
+// extracted by mini-css-extract-plugin
+
+;// CONCATENATED MODULE: ./src/components/cSwitch/cSwitch.vue?vue&type=style&index=0&id=1eb78665&lang=scss
+
+;// CONCATENATED MODULE: ./src/components/cSwitch/cSwitch.vue
+
+
+
+
+;
+
+
+const cSwitch_exports_ = /*#__PURE__*/(0,exportHelper/* default */.Z)(cSwitchvue_type_script_lang_js, [['render',cSwitchvue_type_template_id_1eb78665_render]])
+
+/* harmony default export */ var cSwitch = (cSwitch_exports_);
+;// CONCATENATED MODULE: ./src/components/cSwitch/index.ts
+
+
+cSwitch.install = app => {
+  app.component(cSwitch.name, cSwitch);
+};
+
+/* harmony default export */ var components_cSwitch = (cSwitch);
 ;// CONCATENATED MODULE: ./src/components/cItem/types.ts
 const itemProps = () => ({
   avatar: {
@@ -1168,9 +1312,13 @@ const itemProps = () => ({
     type: String,
     default: ""
   },
-  rightArrow: {
+  rightArrowShow: {
     type: Boolean,
     default: true
+  },
+  rightArrowIcon: {
+    type: String,
+    default: ""
   }
 });
 
@@ -1208,13 +1356,13 @@ const cItem_props = itemProps();
         "class": "cell-left-info"
       }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": "cell-left-title"
-      }, [props.title]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.withDirectives)((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+      }, [props.title]), props.description && (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": "cell-left-desc"
-      }, [props.description]), [[(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.resolveDirective)("if"), "description"]])])]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+      }, [props.description])])]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": "cell-right"
       }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("span", {
         "class": "right-text"
-      }, [props.rightText]), props.rightArrow && (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("em", {
+      }, [props.rightText]), props.rightArrowShow && (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("em", {
         "class": "icon"
       }, null)])]);
     };
@@ -2114,6 +2262,171 @@ const cAutoComplete_props = AutoCompleteProps();
   }
 
 }));
+;// CONCATENATED MODULE: ./src/components/cAutoComplete/index.ts
+
+
+cAutoComplete.install = app => {
+  app.component(cAutoComplete.name, cAutoComplete);
+};
+
+/* harmony default export */ var components_cAutoComplete = (cAutoComplete);
+;// CONCATENATED MODULE: ./src/components/cTimeCircle/types.ts
+const timeCircleProps = () => ({
+  timer: {
+    type: Number,
+    default: 60
+  },
+  showNum: {
+    type: Boolean,
+    default: true
+  }
+});
+
+
+;// CONCATENATED MODULE: ./src/components/cTimeCircle/cTimeCircle.tsx
+
+
+/** 侧滑组件
+ * @author 夏小宅
+ */
+
+
+
+const cTimeCircle_props = timeCircleProps();
+/* harmony default export */ var cTimeCircle = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.defineComponent)({
+  name: "cTimeCircle",
+  props: cTimeCircle_props,
+  emits: ["onEnd"],
+
+  setup(props, ctx) {
+    const clipAuto = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.ref)(false);
+    const wth0 = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.ref)(true);
+    const rotate = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.ref)(0);
+    const time = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.ref)(0);
+    (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.onMounted)(() => {
+      const loading = setInterval(() => {
+        if (rotate.value >= 360) {
+          clearInterval(loading);
+          rotate.value = 360;
+          ctx.emit("onEnd");
+          return;
+        } else if (rotate.value >= 180) {
+          clipAuto.value = true;
+          wth0.value = false;
+        }
+
+        rotate.value += 360 / props.timer;
+        time.value++;
+      }, 1000);
+    });
+    return () => {
+      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        "class": "c-time-circle"
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        "class": ["circle", {
+          'clip-auto': clipAuto.value
+        }]
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        "class": "percent left",
+        "style": {
+          transform: 'rotate(' + (360 - rotate.value) + 'deg)'
+        }
+      }, null), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        "class": ["percent right", {
+          wth0: wth0.value
+        }]
+      }, null)]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        "class": "num"
+      }, [props.showNum && (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("span", null, [time.value, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)("s")])])]);
+    };
+  }
+
+}));
+;// CONCATENATED MODULE: ./src/components/cTimeCircle/index.ts
+
+
+cTimeCircle.install = app => {
+  app.component(cTimeCircle.name, cTimeCircle);
+};
+
+/* harmony default export */ var components_cTimeCircle = (cTimeCircle);
+;// CONCATENATED MODULE: ./src/components/cTimeOut/types.ts
+const timeOutProps = () => ({
+  date: {
+    type: String,
+    default: '2022-10-16 10:15:26'
+  }
+});
+
+
+;// CONCATENATED MODULE: ./src/components/cTimeOut/cTimeOut.tsx
+
+
+/**@author 夏小宅
+* 倒计时效果
+ */
+
+
+
+const cTimeOut_props = timeOutProps();
+/* harmony default export */ var cTimeOut = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.defineComponent)({
+  name: "cTimeOut",
+  props: cTimeOut_props,
+
+  setup(props) {
+    const timeData = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.ref)({
+      hour: '',
+      minute: '',
+      second: ''
+    });
+    const timer = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.ref)(null);
+
+    const timeCount = date => {
+      const now = new Date(),
+            endDate = new Date(Date.parse(date)),
+            leftTime = endDate.getTime() - now.getTime(),
+            leftsecond = leftTime / 1000,
+            day = Math.floor(leftsecond / (60 * 60 * 24)),
+            _hour = Math.floor((leftsecond - day * 24 * 60 * 60) / 3600),
+            hour = _hour < 10 ? '0' + _hour : _hour,
+            _minute = Math.floor((leftsecond - day * 24 * 60 * 60 - Number(hour) * 3600) / 60),
+            minute = _minute < 10 ? '0' + _minute : _minute,
+            _second = Math.floor(leftsecond - day * 24 * 60 * 60 - Number(hour) * 3600 - Number(minute) * 60),
+            second = _second < 10 ? '0' + _second : _second;
+
+      timeData.value = {
+        hour: hour.toString(),
+        minute: minute.toString(),
+        second: second.toString()
+      };
+    };
+
+    (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.onMounted)(() => {
+      clearInterval(timer);
+      timer.value = setInterval(() => {
+        if (Date.parse(props.date) < Date.parse(new Date().toString())) {
+          clearInterval(timer);
+        } else {
+          timeCount(props.date);
+        }
+      }, 1000);
+    });
+    return () => {
+      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("section", {
+        "class": "c-time-count"
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("span", null, [timeData.value.hour, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)("\u65F6")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("em", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)(" : ")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("span", null, [timeData.value.minute, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)("\u5206")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("em", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)(" : ")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("span", null, [timeData.value.second, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)("\u79D2")])])]);
+    };
+  }
+
+}));
+;// CONCATENATED MODULE: ./src/components/cTimeOut/index.ts
+
+
+cTimeOut.install = app => {
+  app.component(cTimeOut.name, cTimeOut);
+};
+
+/* harmony default export */ var components_cTimeOut = (cTimeOut);
 ;// CONCATENATED MODULE: ./src/components/cTree/types.ts
 const TreeProps = () => ({
   source: {
@@ -2615,7 +2928,10 @@ cTree.install = app => {
 
 
 
-const components = [components_cBar, components_cButton, components_cButtonFooter, components_cCircle, components_cConfirm, components_cHeaderBack, components_cInput, components_cInputPassword, components_cCheckBox, components_cItem, components_cLoading, components_cSlide, components_cForm, components_cFormItem, components_cMenu, cMenuItem, cSubMenu, cTabs, cTabItem, cAutoComplete, components_cTree];
+
+
+
+const components = [components_cBar, components_cButton, components_cButtonFooter, components_cCircle, components_cConfirm, components_cHeaderBack, components_cInput, components_cInputPassword, components_cCheckBox, components_cSwitch, components_cItem, components_cLoading, components_cSlide, components_cForm, components_cFormItem, components_cMenu, cMenuItem, cSubMenu, cTabs, cTabItem, components_cAutoComplete, components_cTimeCircle, components_cTimeOut, components_cTree];
 
 /* harmony default export */ function src_components(app) {
   components.forEach(item => {

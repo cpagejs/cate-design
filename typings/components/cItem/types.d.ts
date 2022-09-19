@@ -15,9 +15,13 @@ declare const itemProps: () => {
         type: StringConstructor;
         default: string;
     };
-    rightArrow: {
+    rightArrowShow: {
         type: BooleanConstructor;
         default: boolean;
+    };
+    rightArrowIcon: {
+        type: StringConstructor;
+        default: string;
     };
 };
 export { itemProps };

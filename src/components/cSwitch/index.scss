@@ -1,0 +1,52 @@
+@import '../../assets/styles/variable.scss';
+
+$big-width: 80px;
+$big-height: 40px;
+$small-width: 40px;
+$small-height: 40px;
+$left: 40px;
+
+.c-switch-wrap {
+  position: relative;
+  display: inline-block;
+  height: $big-height;
+  width: $big-width;
+
+  &.c-switch-disabled {
+    pointer-events: none;
+  }
+
+  .c-switch-box {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    margin-top: -2px;
+    border: 1px solid #ddd;
+    border-radius: 100px;
+    width: $big-width;
+    height: $big-height;
+    transition: border .4s, box-shadow .4s;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(233, 233, 233);
+    box-shadow: rgb(233, 233, 233) 0px 0px 0px 0px inset;
+    box-sizing: content-box;
+
+    &>small {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $small-width;
+      height: $small-height;
+      transition: background-color 0.4s, left 0.2s;
+      border-radius: 100px;
+      background-color: #fff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+    }
+
+    &.on {
+      &>small {
+        left: $left;
+      }
+    }
+  }
+}

@@ -22,14 +22,14 @@ export default defineComponent({
             {props.avatar && <img src={props.avatar} class="cell-left-icon" />}
             <div class="cell-left-info">
               <div class="cell-left-title">{props.title}</div>
-              <div v-if="description" class="cell-left-desc">
+              {props.description && <div class="cell-left-desc">
                 {props.description}
-              </div>
+              </div>}
             </div>
           </div>
           <div class="cell-right">
             <span class="right-text">{props.rightText}</span>
-            {props.rightArrow && <em class="icon"></em>}
+            {props.rightArrowShow && <em class="icon"></em>}
           </div>
         </div>
       );

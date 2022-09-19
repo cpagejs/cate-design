@@ -2,7 +2,7 @@ import cHeaderBack from "../src/components/cHeaderBack/cHeaderBack";
 import { Meta, StoryFn } from '@storybook/vue3';
 
 export default {
-  title: "cate-design/cHeaderBack 顶部导航组件",
+  title: "组件/顶部导航 cHeaderBack",
   component: cHeaderBack,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {

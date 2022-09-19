@@ -2,7 +2,7 @@ import cBar from "../src/components/cBar/cBar";
 import { Meta, StoryFn } from '@storybook/vue3';
 
 export default {
-  title: "cate-design/cBar 水平进度条组件",
+  title: "组件/水平进度条 cBar",
   component: cBar,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {

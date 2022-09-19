@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/vue3';
 import { ref, onMounted } from 'vue';
 
 export default {
-  title: "cate-design/cConfirm确认框组件",
+  title: "组件/确认框 cConfirm",
   component: cConfirm,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -38,11 +38,5 @@ export const 示例 = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 示例.args = {
   isShow: true,
-};
-
-export const 示例2 = Template.bind({});
-// More on args: https://storybook.js.org/docs/vue/writing-stories/args
-示例2.args = {
-  isShow: false,
 };
 

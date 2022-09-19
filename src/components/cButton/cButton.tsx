@@ -11,9 +11,9 @@ export default defineComponent({
   emits: ["onClick"],
   setup(props, { emit, slots, attrs }) {
     const classes = classNames("c-btn", {
-      [`btn-${props.type}`]: props.type,
-      [`btn-${props.size}`]: props.size,
-      [`btn-disabled`]: props.disabled,
+      [`c-btn-${props.type}`]: props.type,
+      [`c-btn-${props.size}`]: props.size,
+      [`c-btn-disabled`]: props.disabled,
     });
 
     const styles = reactive({

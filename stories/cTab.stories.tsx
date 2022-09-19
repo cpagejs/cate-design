@@ -4,7 +4,7 @@ import { Meta, StoryFn } from '@storybook/vue3';
 import { ref } from "vue";
 
 export default {
-  title: "cate-design/cTabs tab切换组件",
+  title: "组件/标签页 cTabs",
   component: cTabs,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {

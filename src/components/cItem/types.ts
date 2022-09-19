@@ -15,9 +15,13 @@ const itemProps = () => ({
     type: String,
     default: "",
   },
-  rightArrow: {
+  rightArrowShow: {
     type: Boolean,
     default: true,
+  },
+  rightArrowIcon: {
+    type: String,
+    default: "",
   },
 });
 

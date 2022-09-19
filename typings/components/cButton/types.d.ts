@@ -1,6 +1,6 @@
 import { PropType } from "vue";
 declare type ButtonSize = "lg" | "sm" | "full";
-declare type ButtonType = "primary" | "default" | "danger" | "link";
+declare type ButtonType = "primary" | "info" | "danger" | "link";
 declare const buttonProps: () => {
     text: StringConstructor;
     backgroundColor: StringConstructor;

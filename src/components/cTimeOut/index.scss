@@ -1,0 +1,25 @@
+@import '../../assets/styles/variable.scss';
+
+.c-time-count {
+  div {
+    text-align: center;
+  }
+
+  span {
+    display: inline-block;
+    padding: 3px 5px;
+    font-size: $font-size-base;
+    color: $white;
+    background: $orange;
+    border-radius: 2px;
+  }
+
+  em {
+    display: inline-block;
+    font-size: $font-size-large;
+    font-weight: 600;
+    font-style: normal;
+    color: $gray-600;
+    margin: 0 5px;
+  }
+}

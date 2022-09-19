@@ -1,6 +1,6 @@
 /** 密码输入框 * @author 夏小宅 */
 <template>
-  <div class="c-input-password" :class="{ disabled: disabled }">
+  <div class="c-input-password">
     <span>{{ label }}</span>
     <input
       type="password"
@@ -11,7 +11,7 @@
       :length="length"
       :placeholder="placeholder"
       autocapitalize="off"
-      :class="{ disabled: disabled }"
+      :class="{ 'c-input-password_disabled': disabled }"
       v-if="showPwd"
     />
     <input
@@ -23,11 +23,11 @@
       :length="length"
       :placeholder="placeholder"
       autocapitalize="off"
-      :class="{ disabled: disabled }"
+      :class="{ 'c-input-password_disabled': disabled }"
       v-if="!showPwd"
     />
     <em
-      class="input-pwd-eye"
+      class="pwd-eye"
       :class="{ invisible: invisible }"
       v-if="showToggle"
       @click="toggle"
@@ -37,34 +37,11 @@
 </template>
 
 <script>
+  import { inputPwdProps } from "./types";
+  const props = inputPwdProps();
 export default {
   name: "cInputPassword",
-  props: {
-    value: {
-      type: String,
-      default: "",
-    },
-    label: {
-      default: "",
-      type: String,
-    },
-    length: {
-      default: 20,
-      type: Number,
-    },
-    placeholder: {
-      default: "请输入密码",
-      type: String,
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    showToggle: {
-      type: Boolean,
-      default: true,
-    },
-  },
+  props: props,
   data() {
     return {
       showPwd: {
@@ -98,3 +75,7 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+  @import "./index";
+</style>
+  

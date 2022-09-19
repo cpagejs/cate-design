@@ -2,7 +2,7 @@ import cCircle from "../src/components/cCircle/cCircle";
 import { Meta, StoryFn } from '@storybook/vue3';
 
 export default {
-  title: "cate-design/cCircle圆环进度组件",
+  title: "组件/圆环进度 cCircle",
   component: cCircle,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {

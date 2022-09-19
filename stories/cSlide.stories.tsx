@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/vue3';
 import { ref, onMounted } from 'vue';
 
 export default {
-  title: "cate-design/cSlide 抽屉组件",
+  title: "组件/抽屉 cSlide",
   component: cSlide,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {

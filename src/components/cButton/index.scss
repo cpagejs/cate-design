@@ -28,40 +28,23 @@
     border-color: $hover-border;
   }
   &:disabled,
-  &.btn-disabled {
-    color: $color;
+  &.c-btn-disabled {
+    color: $white;
     background: $background;
     border-color: $border;
   }
 }
 
-.btn-lg {
-  @include button-size(
-    $btn-padding-y-lg,
-    $btn-padding-x-lg,
-    $btn-font-size-lg,
-    $btn-border-radius-lg
-  );
-}
-.btn-sm {
-  @include button-size(
-    $btn-padding-y-sm,
-    $btn-padding-x-sm,
-    $btn-font-size-sm,
-    $btn-border-radius-sm
-  );
-}
-
-.btn-primary {
+.c-btn-primary {
   @include button-style($primary, $primary, $white);
 }
-.btn-danger {
+.c-btn-danger {
   @include button-style($danger, $danger, $white);
 }
 
-.btn-default {
+.c-btn-info {
   @include button-style(
-    $white,
+    $green,
     $gray-400,
     $body-color,
     $white,
@@ -70,33 +53,12 @@
   );
 }
 
-.btn-link {
-  font-weight: $font-weight-normal;
-  color: $btn-link-color;
-  text-decoration: $link-decoration;
-  box-shadow: none;
-  &:hover {
-    color: $btn-link-hover-color;
-    text-decoration: $link-hover-decoration;
-  }
-  &:focus,
-  &.focus {
-    text-decoration: $link-hover-decoration;
-    box-shadow: none;
-  }
-  &:disabled,
-  &.btn-disabled {
-    color: $btn-link-disabled-color;
-    pointer-events: none;
-  }
-}
-
 .c-btn {
   position: relative;
   display: inline-block;
   font-weight: $btn-font-weight;
   line-height: $btn-line-height;
-  color: $body-color;
+  color: $white;
   white-space: nowrap;
   text-align: center;
   vertical-align: middle;
@@ -113,7 +75,7 @@
   cursor: pointer;
   transition: $btn-transition;
 
-  &.btn-disabled,
+  &-disabled,
   &[disabled] {
     cursor: not-allowed;
     opacity: $btn-disabled-opacity;
@@ -123,9 +85,30 @@
       pointer-events: none;
     }
   }
+
+  &-link {
+    font-weight: $font-weight-normal;
+    color: $black;
+    text-decoration: $link-decoration;
+    box-shadow: none;
+    &:hover {
+      color: $btn-link-hover-color;
+      text-decoration: $link-hover-decoration;
+    }
+    &:focus,
+    &.focus {
+      text-decoration: $link-hover-decoration;
+      box-shadow: none;
+    }
+    &:disabled,
+    &-disabled {
+      color: $btn-link-disabled-color;
+      pointer-events: none;
+    }
+  }
 }
 
-.btn-lg {
+.c-btn-lg {
   @include button-size(
     $btn-padding-y-lg,
     $btn-padding-x-lg,
@@ -133,7 +116,7 @@
     $btn-border-radius-lg
   );
 }
-.btn-sm {
+.c-btn-sm {
   @include button-size(
     $btn-padding-y-sm,
     $btn-padding-x-sm,

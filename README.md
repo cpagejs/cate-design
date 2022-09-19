@@ -183,7 +183,7 @@ import { cItem } from 'cate-design';
 | title | 类型String  默认'' | 左侧文案 |
 | description | 类型String  默认'' | 列表元素的描述内容 |
 | rightText | 类型String  默认'' | 右侧文案 |
-| rightArrow | 类型Boolean  默认true | 判断右侧是否有图标 |
+| rightArrowShow | 类型Boolean  默认true | 右侧是否显示箭头图标 |
 
 ### 事件
 | 事件 | 作用 |
@@ -226,6 +226,11 @@ import { cSwitch } from 'cate-design';
 | checked | 类型Boolean | 默认false 是否选中 |
 | disabled | 类型Boolean | 默认false 是否可以选择 |
 
+### 事件
+| 事件 | 作用 |
+| :------ | :------ |
+| onSwitch | 被点击后触发 |
+
 ## 13，cTabs tab切换组件
 ```js
 import { cTabs, cTabPane } from 'cate-design';
@@ -267,7 +272,8 @@ import { cTimeCircle } from 'cate-design';
 ### 属性
 | 属性 | 类型 | 作用 |
 | :------ | :------ | :------ |
-| timer | 类型Number | 默认60 倒计时时间 |
+| timer | 类型Number | 默认60 倒计时时间 | 
+| showNum | 类型Boolean | 是否展示倒计时数字，默认true | 
 
 ### 事件
 | 事件 | 作用 |

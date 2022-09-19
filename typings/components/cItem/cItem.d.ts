@@ -16,9 +16,13 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
-    rightArrow: {
+    rightArrowShow: {
         type: BooleanConstructor;
         default: boolean;
+    };
+    rightArrowIcon: {
+        type: StringConstructor;
+        default: string;
     };
 }, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "onClick"[], "onClick", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     avatar: {
@@ -37,9 +41,13 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
-    rightArrow: {
+    rightArrowShow: {
         type: BooleanConstructor;
         default: boolean;
+    };
+    rightArrowIcon: {
+        type: StringConstructor;
+        default: string;
     };
 }>> & {
     onOnClick?: ((...args: any[]) => any) | undefined;
@@ -48,6 +56,7 @@ declare const _default: import("vue").DefineComponent<{
     avatar: string;
     description: string;
     rightText: string;
-    rightArrow: boolean;
+    rightArrowShow: boolean;
+    rightArrowIcon: string;
 }>;
 export default _default;
