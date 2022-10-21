@@ -9,8 +9,8 @@
     position: relative;
     top: 0;
     left: 0;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     direction: ltr;
     background-color: $white-color;
     border: 1px solid $border-color;
@@ -21,10 +21,10 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 4px;
-      height: 8px;
-      margin-left: -2px;
-      margin-top: -5px;
+      width: 6px;
+      height: 10px;
+      margin-left: -3px;
+      margin-top: -7px;
       border: 2px solid $white-color;
       border-top: 0;
       border-left: 0;
@@ -55,20 +55,20 @@
       border-color: $primary-color;
       background-color: $primary-color;
       &:after {
-        transform: rotate(45deg);
+        transform: scale(1.2) rotate(45deg);
         opacity: 1;
       }
     }
   }
   &.disabled {
-    color: $disable-color;
     cursor: not-allowed;
     .inner {
-      border-color: $disable-color;
-      background-color: $disable-color;
-      &:after {
-        background-color: $disable-color;
-      }
+      // border-color: $primary-color;
+      // background-color: $primary-color;
+      // &:after {
+      //   background-color: $primary-color;
+      // }
+      background: rgba($color: #000000, $alpha: 0.5)
     }
   }
 }

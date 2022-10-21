@@ -1,7 +1,7 @@
 const barProps = () => ({
   percent: {
-    type: String,
-    default: "",
+    type: Number,
+    default: 0,
   },
   color: {
     type: String,

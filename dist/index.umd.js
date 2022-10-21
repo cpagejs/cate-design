@@ -1832,32 +1832,35 @@ if (typeof window !== 'undefined') {
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(7203);
+;// CONCATENATED MODULE: ./src/components/cBar/types.ts
+const barProps = () => ({
+  percent: {
+    type: Number,
+    default: 0
+  },
+  color: {
+    type: String,
+    default: "#FF6E4E"
+  }
+});
+
+
 ;// CONCATENATED MODULE: ./src/components/cBar/cBar.tsx
 
- // import { barProps } from "./types";
 
- // const props = barProps();
 
+
+const props = barProps();
 /* harmony default export */ var cBar = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.defineComponent)({
   name: "cBar",
-  props: {
-    percent: {
-      type: String,
-      default: ""
-    },
-    color: {
-      type: String,
-      default: "#FF6E4E"
-    }
-  },
+  props: props,
 
   setup(props) {
     const percentData = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)("0%");
-    const color = props.color || "#f90";
     (0,external_commonjs_vue_commonjs2_vue_root_Vue_.onMounted)(() => {
       percentData.value = "0%";
       setTimeout(() => {
-        percentData.value = Number(props.percent) > 100 ? 100 : Number(props.percent) + "%";
+        percentData.value = Number(props.percent) > 100 ? "100%" : Number(props.percent) + "%";
       }, 1000);
     });
     return () => {
@@ -1866,7 +1869,7 @@ var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(7203);
       }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
         "style": {
           width: percentData.value,
-          backgroundColor: color
+          backgroundColor: props.color
         }
       }, null)]);
     };
@@ -1908,10 +1911,10 @@ var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 
 
-const props = buttonProps();
+const cButton_props = buttonProps();
 /* harmony default export */ var cButton = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.defineComponent)({
   name: "cButton",
-  props: props,
+  props: cButton_props,
   emits: ["onClick"],
 
   setup(props, {
@@ -2120,7 +2123,7 @@ cCircle.install = app => {
 };
 
 /* harmony default export */ var components_cCircle = (cCircle);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-87.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=template&id=373568ff
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-87.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=template&id=68260a72
 
 const _hoisted_1 = {
   key: 0,
@@ -2210,7 +2213,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 4), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, $props.showBg && $props.isShow]])])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true);
 }
-;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=template&id=373568ff
+;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=template&id=68260a72
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-87.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=script&lang=js
 /* harmony default export */ var cConfirmvue_type_script_lang_js = ({
@@ -2276,8 +2279,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   },
 
   created() {
-    this.showConfirm = this.show;
-    console.log(123456);
+    this.openConfirm = this.isShow;
   },
 
   methods: {
@@ -2307,16 +2309,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
     closeImgFn() {
       this.hide();
+      this.$emit("cancel");
     }
 
   }
 });
 ;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-69.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-69.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-69.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-69.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-69.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=373568ff&lang=scss
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-69.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-69.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-69.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-69.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-69.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=68260a72&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=373568ff&lang=scss
+;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=68260a72&lang=scss
 
 // EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(8118);
@@ -2637,11 +2640,15 @@ const checkBoxProps = () => ({
   },
   bgColor: {
     type: String,
-    default: "rgb(64, 169, 255)"
+    default: "#fff"
   },
   borderColor: {
     type: String,
-    default: "rgb(64, 169, 255)"
+    default: "#fff"
+  },
+  round: {
+    type: Boolean,
+    default: false
   },
   onChange: Function
 });
@@ -2654,7 +2661,7 @@ const checkBoxProps = () => ({
 
 const cCheckBox_props = checkBoxProps();
 /* harmony default export */ var cCheckBox = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.defineComponent)({
-  name: "cCheckbox",
+  name: "cCheckBox",
   props: cCheckBox_props,
   emits: ["update:modelValue", "onChange"],
 
@@ -2692,7 +2699,8 @@ const cCheckBox_props = checkBoxProps();
 
     const innerStyle = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(() => ({
       backgroundColor: props.bgColor,
-      borderColor: props.borderColor
+      borderColor: props.borderColor,
+      borderRadius: props.round ? "50%" : "2px"
     }));
     return () => {
       return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
@@ -3024,6 +3032,10 @@ cLoading.install = app => {
 /* harmony default export */ var components_cLoading = (cLoading);
 ;// CONCATENATED MODULE: ./src/components/cSlide/types.ts
 const types_loadingProps = () => ({
+  isShow: {
+    type: Boolean,
+    default: false
+  },
   showMask: {
     type: Boolean,
     default: true
@@ -3044,27 +3056,27 @@ const cSlide_props = types_loadingProps();
 /* harmony default export */ var cSlide = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.defineComponent)({
   name: "cHeaderBack",
   props: cSlide_props,
-  emits: ["onBgClick"],
+  emits: ["bgClick"],
 
   setup(props, ctx) {
     const hide = e => {
       e.stopPropagation();
-      ctx.emit("onBgClick");
+      ctx.emit("bgClick");
     };
 
     return () => {
-      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("section", {
+      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(external_commonjs_vue_commonjs2_vue_root_Vue_.Fragment, null, [props.isShow && (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("section", {
         "class": "c-slide-container"
       }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.resolveComponent)("transition"), {
         "name": "slide-fade"
       }, {
         default: () => [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
           "class": "slide-inner"
-        }, [ctx.slots.default && ctx.slots.default()])]
+        }, [ctx.slots.default?.()])]
       }), props.showMask && (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
         "class": "slide-bg",
         "onClick": hide
-      }, null)]);
+      }, null)])]);
     };
   }
 

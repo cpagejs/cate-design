@@ -1,29 +1,19 @@
 import { defineComponent, ref, onMounted } from "vue";
-// import { barProps } from "./types";
+import { barProps } from "./types";
 import "./index.scss";
 
-// const props = barProps();
+const props = barProps();
 export default defineComponent({
   name: "cBar",
-  props: {
-    percent: {
-      type: String,
-      default: "",
-    },
-    color: {
-      type: String,
-      default: "#FF6E4E",
-    },
-  },
+  props: props,
   setup(props) {
-    const percentData = ref<any>("0%");
-    const color = props.color || "#f90";
+    const percentData = ref<string>("0%");
 
     onMounted(() => {
       percentData.value = "0%";
       setTimeout(() => {
         percentData.value =
-          Number(props.percent) > 100 ? 100 : Number(props.percent) + "%";
+          Number(props.percent) > 100 ? "100%" : Number(props.percent) + "%";
       }, 1000);
     });
 
@@ -31,7 +21,7 @@ export default defineComponent({
       return (
         <div class="c-progress-bar">
           <span
-            style={{ width: percentData.value, backgroundColor: color }}
+            style={{ width: percentData.value, backgroundColor: props.color }}
           ></span>
         </div>
       );

@@ -139,8 +139,7 @@ export default {
     };
   },
   created() {
-    this.showConfirm = this.show;
-    console.log(123456)
+    this.openConfirm = this.isShow;
   },
   methods: {
     show() {
@@ -169,6 +168,7 @@ export default {
     },
     closeImgFn() {
       this.hide();
+      this.$emit("cancel");
     },
   },
 };

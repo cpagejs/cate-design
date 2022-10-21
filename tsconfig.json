@@ -34,7 +34,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "stories/LayoutStory.tsx", "stories/LayoutStory.tsx"  ],
   "exclude": [
     "node_modules"
   ]

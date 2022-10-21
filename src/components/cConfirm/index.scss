@@ -27,12 +27,12 @@
         background: #fff;
 
         .confirm-content-body {
-          @include flex-justify();
+          // @include flex-justify();
           padding: 19px 15px;
           text-align: center;
           font-size: $font-size-mid;
           color: #000;
-          height: 300px;
+          // height: 300px;
         }
 
         .confirm-content-footer {
@@ -59,7 +59,7 @@
       }
 
       .confirm-inner {
-        padding-bottom: 20px;
+        padding-bottom: 1px;
 
         .confirm-content-footer2 {
           @include flex-justify();
@@ -90,6 +90,9 @@
     }
 
     .confirm-content3 {
+      .confirm-inner {
+        padding: 10px
+      }
       .confirm-close {
         text-align: center;
 

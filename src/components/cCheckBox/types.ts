@@ -15,11 +15,15 @@ const checkBoxProps = () => ({
   },
   bgColor: {
     type: String,
-    default: "rgb(64, 169, 255)",
+    default: "#fff",
   },
   borderColor: {
     type: String,
-    default: "rgb(64, 169, 255)",
+    default: "#fff",
+  },
+  round: { // 是否是圆角
+    type: Boolean,
+    default: false,
   },
   onChange: Function as CustomEventFuncType<boolean>,
 });

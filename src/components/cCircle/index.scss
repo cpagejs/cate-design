@@ -32,12 +32,12 @@
   .left {
     // transition: transform ease;
     transition: all 1s ease;
-    border: 8px solid $blue;
+    border: 8px solid $orange;
     clip: rect(0, 40px, 80px, 0);
   }
 
   .right {
-    border: 8px solid $blue;
+    border: 8px solid $orange;
     clip: rect(0, 80px, 80px, 40px);
   }
 

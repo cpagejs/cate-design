@@ -4,7 +4,7 @@ import { checkBoxProps } from "./types";
 
 const props = checkBoxProps();
 export default defineComponent({
-  name: "cCheckbox",
+  name: "cCheckBox",
   props: props,
   emits: ["update:modelValue", "onChange"],
   setup(props, { emit, slots }) {
@@ -34,7 +34,8 @@ export default defineComponent({
 
     const innerStyle = computed(() => ({
       backgroundColor: props.bgColor,
-      borderColor: props.borderColor
+      borderColor: props.borderColor,
+      borderRadius: props.round ? "50%" : "2px"
     }));
 
     return () => {

@@ -9,23 +9,25 @@ const props = loadingProps();
 export default defineComponent({
   name: "cHeaderBack",
   props: props,
-  emits: ["onBgClick"],
+  emits: ["bgClick"],
   setup(props, ctx) {
     const hide = (e: Event) => {
       e.stopPropagation();
-      ctx.emit("onBgClick");
+      ctx.emit("bgClick");
     };
 
     return () => {
       return (
-        <section class="c-slide-container">
-          <transition name="slide-fade">
-            <div class="slide-inner">
-              {ctx.slots.default && ctx.slots.default()}
-            </div>
-          </transition>
-          { props.showMask && <div class="slide-bg" onClick={hide}></div> }
-        </section>
+        <>
+          {props.isShow && <section class="c-slide-container">
+            <transition name="slide-fade">
+              <div class="slide-inner">
+                {ctx.slots.default?.()}
+              </div>
+            </transition>
+            {props.showMask && <div class="slide-bg" onClick={hide}></div>}
+          </section>}
+        </>
       );
     };
   },
