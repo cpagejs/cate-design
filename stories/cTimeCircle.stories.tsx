@@ -7,7 +7,7 @@ export default {
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
     timer: { 
-      control: "text",
+      control: "number",
       description: '倒计时时间,默认60',
      },
     showNum: {
@@ -29,5 +29,5 @@ export const 示例 = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 示例.args = {
   timer: 10,
-  showNum: false
+  showNum: true
 };

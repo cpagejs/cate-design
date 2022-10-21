@@ -1,4 +1,4 @@
-/** 侧滑组件
+/** 圆环倒计时组件
  * @author 夏小宅
  */
 import { defineComponent, ref, onMounted } from "vue";

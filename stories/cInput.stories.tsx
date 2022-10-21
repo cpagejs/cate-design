@@ -3,7 +3,7 @@ import cInput from "../src/components/cInput/cInput";
 import { Meta, StoryFn } from '@storybook/vue3';
 
 export default {
-  title: "组件/输入框 cInput",
+  title: "表单组件/输入框 cInput",
   component: cInput,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {

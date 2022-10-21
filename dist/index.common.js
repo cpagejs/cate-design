@@ -2617,6 +2617,14 @@ const checkBoxProps = () => ({
     type: Boolean,
     default: false
   },
+  bgColor: {
+    type: String,
+    default: "rgb(64, 169, 255)"
+  },
+  borderColor: {
+    type: String,
+    default: "rgb(64, 169, 255)"
+  },
   onChange: Function
 });
 
@@ -2636,40 +2644,48 @@ const cCheckBox_props = checkBoxProps();
     emit,
     slots
   }) {
+    const isCheck = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.ref)(props.modelValue);
     const rootCls = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.computed)(() => {
       let result = "c-checkbox";
-
-      if (props.modelValue) {
-        result += " checked";
-      } else if (props.halfChecked) {
-        result += " half-checked";
-      }
 
       if (props.disabled) {
         result += " disabled";
       }
 
+      if (isCheck.value) {
+        result += " checked";
+      } // else if (props.halfChecked) {
+      //   result += " half-checked";
+      // }
+
+
       return result;
     });
 
-    const handleClick = event => {
-      event.stopPropagation();
+    const handleClick = e => {
+      e.stopPropagation();
 
       if (!props.disabled) {
-        emit("update:modelValue", !props.modelValue);
-        emit("onChange", !props.modelValue);
+        isCheck.value = !isCheck.value;
+        emit("update:modelValue", isCheck.value);
+        emit("onChange", isCheck.value);
       }
     };
 
+    const innerStyle = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.computed)(() => ({
+      backgroundColor: props.bgColor,
+      borderColor: props.borderColor
+    }));
     return () => {
       return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": rootCls.value,
         "onClick": handleClick
       }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
-        "class": "inner"
+        "class": "inner",
+        "style": innerStyle.value
       }, null), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": "content"
-      }, [slots.default && slots.default()])]);
+      }, [slots.default?.()])]);
     };
   }
 
@@ -3572,10 +3588,11 @@ const tabItem_props = tabPaneProps();
     slots
   }) {
     const parentNode = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.getCurrentInstance)()?.parent;
+    const show = parentNode?.props?.modelValue === props.name;
     return () => {
       return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.withDirectives)((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": "pane"
-      }, [slots.default()]), [[external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.vShow, parentNode?.props.modelValue === props.name]]);
+      }, [slots.default()]), [[external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.vShow, show]]);
     };
   }
 
@@ -3806,7 +3823,7 @@ const timeCircleProps = () => ({
 ;// CONCATENATED MODULE: ./src/components/cTimeCircle/cTimeCircle.tsx
 
 
-/** 侧滑组件
+/** 圆环倒计时组件
  * @author 夏小宅
  */
 

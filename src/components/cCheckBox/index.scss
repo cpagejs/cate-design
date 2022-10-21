@@ -17,6 +17,7 @@
     border-radius: 2px;
     border-collapse: initial;
     &:after {
+      content: ' ';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -27,7 +28,6 @@
       border: 2px solid $white-color;
       border-top: 0;
       border-left: 0;
-      content: ' ';
       opacity: 0;
       box-sizing: border-box;
       transition: all 0.2s ease-in-out;

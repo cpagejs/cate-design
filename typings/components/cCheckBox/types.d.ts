@@ -12,6 +12,14 @@ declare const checkBoxProps: () => {
         type: BooleanConstructor;
         default: boolean;
     };
+    bgColor: {
+        type: StringConstructor;
+        default: string;
+    };
+    borderColor: {
+        type: StringConstructor;
+        default: string;
+    };
     onChange: CustomEventFuncType<boolean>;
 };
 export { checkBoxProps };

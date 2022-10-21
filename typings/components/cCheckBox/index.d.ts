@@ -12,6 +12,14 @@ declare const _default: SFCWithInstall<import("vue").DefineComponent<{
         type: BooleanConstructor;
         default: boolean;
     };
+    bgColor: {
+        type: StringConstructor;
+        default: string;
+    };
+    borderColor: {
+        type: StringConstructor;
+        default: string;
+    };
     onChange: import("../cTree/types").CustomEventFuncType<boolean>;
 }, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "onChange")[], "onChange" | "update:modelValue", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     modelValue: {
@@ -26,6 +34,14 @@ declare const _default: SFCWithInstall<import("vue").DefineComponent<{
         type: BooleanConstructor;
         default: boolean;
     };
+    bgColor: {
+        type: StringConstructor;
+        default: string;
+    };
+    borderColor: {
+        type: StringConstructor;
+        default: string;
+    };
     onChange: import("../cTree/types").CustomEventFuncType<boolean>;
 }>> & {
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
@@ -34,5 +50,7 @@ declare const _default: SFCWithInstall<import("vue").DefineComponent<{
     disabled: boolean;
     modelValue: boolean;
     halfChecked: boolean;
+    bgColor: string;
+    borderColor: string;
 }>>;
 export default _default;

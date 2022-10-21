@@ -7,10 +7,11 @@ export default defineComponent({
   props: props,
   setup(props, { emit, slots }) {
     const parentNode = getCurrentInstance()?.parent;
+    const show = parentNode?.props?.modelValue === props.name;
 
     return () => {
       return (
-        <div class="pane" v-show={parentNode?.props.modelValue === props.name}>
+        <div class="pane" v-show={show}>
           {slots.default!()}
         </div>
       );

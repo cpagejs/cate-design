@@ -13,6 +13,14 @@ const checkBoxProps = () => ({
     type: Boolean,
     default: false,
   },
+  bgColor: {
+    type: String,
+    default: "rgb(64, 169, 255)",
+  },
+  borderColor: {
+    type: String,
+    default: "rgb(64, 169, 255)",
+  },
   onChange: Function as CustomEventFuncType<boolean>,
 });
 

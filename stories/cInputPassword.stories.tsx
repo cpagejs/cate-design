@@ -2,7 +2,7 @@ import cInputPassword from "../src/components/cInputPassword/cInputPassword.vue"
 import { Meta, StoryFn } from '@storybook/vue3';
 
 export default {
-  title: "组件/密码输入框 cInputPassword",
+  title: "表单组件/密码输入框 cInputPassword",
   component: cInputPassword,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {

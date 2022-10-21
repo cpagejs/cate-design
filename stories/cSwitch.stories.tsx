@@ -2,7 +2,7 @@ import cSwitch from "../src/components/cSwitch/cSwitch.vue";
 import { Meta, StoryFn } from '@storybook/vue3';
 
 export default {
-  title: "组件/开关 cSwitch",
+  title: "表单组件/开关 cSwitch",
   component: cSwitch,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -24,7 +24,7 @@ const Template: StoryFn<typeof cSwitch> = (args) => ({
   components: { cSwitch },
   setup() {
     const onSwitch = (msg) => {
-      alert(msg)
+      console.log(msg)
     };
     return { args, onSwitch };
   },
