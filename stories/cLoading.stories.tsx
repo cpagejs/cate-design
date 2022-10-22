@@ -16,6 +16,19 @@ export default {
       description: '颜色',
       control: "color" 
     },
+    type: { 
+      description: 'loading的类型，默认dot',
+      control: "select",
+      options: ["dot", "huan",],
+    },
+    huanLeftColor: { 
+      description: '圆环类型loading左边颜色',
+      control: "color" 
+    },
+    huanRightColor: { 
+      description: '圆环类型loading右边颜色',
+      control: "color" 
+    },
   },
 } as Meta<typeof cLoading>;
 
@@ -29,6 +42,9 @@ const Template: StoryFn<typeof cLoading> = (args) => ({
     <LayoutStoryItem title="圆点loading">
       <c-loading v-bind="args" />
     </LayoutStoryItem>
+    <LayoutStoryItem title="圆环loading">
+      <c-loading v-bind="args" type="huan" />
+    </LayoutStoryItem>
   </LayoutStory>
   `,
 });
@@ -40,5 +56,7 @@ export const 示例 = Template.bind({});
   styleLoading: {
     width: "40px",
     height: "40px"
-  }
+  },
+  huanLeftColor: "#f90",
+  huanRightColor: "#f60"
 };

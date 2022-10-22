@@ -13,6 +13,7 @@ export default {
       control: { type: "select" },
       options: ["sm", "lg"],
     },
+    style: { control: "object", description: '自定义样式', },
   },
 } as Meta<typeof cInput>;
 
@@ -48,7 +49,7 @@ export const Primary = Template.bind({});
 
 (Primary as any).args = {
   placeholder: "placeholder",
-  style: "width: 200px",
+  // style: "width: 200px",
   disabled: false,
 };
 
@@ -56,7 +57,7 @@ export const PrependInput = Template.bind({});
 
 (PrependInput as any).args = {
   placeholder: "placeholder",
-  style: "width: 200px",
+  // style: "width: 200px",
   prepend: "https://",
   disabled: false,
 };
@@ -65,7 +66,7 @@ export const AppendInput = Template.bind({});
 
 (AppendInput as any).args = {
   placeholder: "placeholder",
-  style: "width: 200px",
+  // style: "width: 200px",
   append: ".com",
   disabled: false,
 };
@@ -74,6 +75,6 @@ export const ModelInput = Template2.bind({});
 
 (ModelInput as any).args = {
   placeholder: "placeholder",
-  style: "width: 200px",
+  // style: "width: 200px",
   disabled: false,
 };

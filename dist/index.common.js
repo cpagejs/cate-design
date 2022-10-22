@@ -2934,6 +2934,18 @@ const loadingProps = () => ({
       return {};
     }
 
+  },
+  type: {
+    type: String,
+    default: "dot"
+  },
+  huanLeftColor: {
+    type: String,
+    default: "#6284e2"
+  },
+  huanRightColor: {
+    type: String,
+    default: "#6284e2"
   }
 });
 
@@ -2956,8 +2968,12 @@ const cLoading_props = loadingProps();
     const colorStyle = {
       backgroundColor: props.color
     };
+    const borderStyle = {
+      borderLeftColor: props.huanLeftColor,
+      borderRightColor: props.huanRightColor
+    };
     return () => {
-      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)(external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.Fragment, null, [props.type === 'dot' && (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": "c-loading",
         "style": props.styleLoading
       }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
@@ -3002,6 +3018,16 @@ const cLoading_props = loadingProps();
       }, null), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": "circle4",
         "style": colorStyle
+      }, null)])]), props.type === 'huan' && (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        "class": "c-loading c-loading-huan"
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        "style": borderStyle
+      }, null), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        "style": borderStyle
+      }, null), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        "style": borderStyle
+      }, null), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        "style": borderStyle
       }, null)])]);
     };
   }

@@ -28,18 +28,20 @@
   background-color: $input-bg;
   background-clip: padding-box;
   border: $input-border-width solid $input-border-color;
-
   border-radius: $input-border-radius;
-
   box-shadow: $input-box-shadow;
   transition: $input-transition;
+  outline: none;
+  appearance: none;/*去除阴影边框*/
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  box-shadow: none;
 
   &:focus {
     color: $input-focus-color;
     background-color: $input-focus-bg;
     border-color: $input-focus-border-color;
     outline: 0;
-    box-shadow: $input-focus-box-shadow;
+    // box-shadow: $input-focus-box-shadow;
   }
   &::placeholder {
     color: $input-placeholder-color;
@@ -91,7 +93,10 @@
 }
 
 .input-size-lg .c-input-inner {
-  padding: $input-padding-y-lg $input-padding-x-lg;
+  height: 40px;
+  line-height: 40px;
+  // padding: $input-padding-y-lg $input-padding-x-lg;
   font-size: $input-font-size-lg;
   border-radius: $input-border-radius-lg;
+  box-sizing: border-box;
 }
