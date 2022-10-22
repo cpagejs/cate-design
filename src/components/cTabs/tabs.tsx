@@ -6,7 +6,7 @@ const props = tabsProps();
 export default defineComponent({
   name: "cTabs",
   props: props,
-  emits: ["update:modelValue", "onClick"],
+  emits: ["update:modelValue", "click"],
   setup(props, { emit, slots }) {
     const currentTabName = ref(props.modelValue);
 
@@ -20,7 +20,8 @@ export default defineComponent({
     const clickTab = (tabName: string) => {
       if (currentTabName.value !== tabName) {
         emit("update:modelValue", tabName);
-        emit("onClick", tabName);
+        emit("click", tabName);
+        currentTabName.value = tabName;
       }
     };
 

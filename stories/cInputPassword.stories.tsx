@@ -1,5 +1,6 @@
 import cInputPassword from "../src/components/cInputPassword/cInputPassword.vue";
 import { Meta, StoryFn } from '@storybook/vue3';
+import LayoutStory from "./LayoutStory";
 
 export default {
   title: "表单组件/密码输入框 cInputPassword",
@@ -24,11 +25,15 @@ export default {
 } as Meta<typeof cInputPassword>;
 
 const Template: StoryFn<typeof cInputPassword> = (args) => ({
-  components: { cInputPassword },
+  components: { LayoutStory, cInputPassword },
   setup() {
     return { args };
   },
-  template: '<cInputPassword v-bind="args" />',
+  template: `
+  <LayoutStory>
+    <cInputPassword v-bind="args" />
+  </LayoutStory>
+  `,
 });
 
 export const 示例 = Template.bind({});

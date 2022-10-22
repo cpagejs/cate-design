@@ -1,6 +1,7 @@
 import cCircle from "../src/components/cCircle/cCircle";
 import { Meta, StoryFn } from '@storybook/vue3';
 import LayoutStory from "./LayoutStory";
+import LayoutStoryItem from "./LayoutStoryItem";
 
 export default {
   title: "组件/圆环进度 cCircle",
@@ -19,14 +20,15 @@ export default {
 } as Meta<typeof cCircle>;
 
 const Template: StoryFn<typeof cCircle> = (args) => ({
-  components: { LayoutStory, cCircle },
+  components: { LayoutStory, LayoutStoryItem, cCircle },
   setup() {
     return { args };
   },
   template: `
   <LayoutStory>
+    <LayoutStoryItem title="圆环进度">
     <c-circle v-bind="args" />
-    <c-circle percent="50" />
+    </LayoutStoryItem>
   </LayoutStory>
   `,
 });

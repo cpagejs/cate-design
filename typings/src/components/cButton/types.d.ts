@@ -1,5 +1,5 @@
 import { PropType } from "vue";
-declare type ButtonSize = "lg" | "sm" | "full";
+declare type ButtonSize = "lg" | "sm" | "default";
 declare type ButtonType = "primary" | "info" | "danger" | "link";
 declare const buttonProps: () => {
     text: StringConstructor;
@@ -9,7 +9,10 @@ declare const buttonProps: () => {
         type: BooleanConstructor;
         defalut: boolean;
     };
-    size: PropType<ButtonSize>;
+    size: {
+        type: PropType<ButtonSize>;
+        default: string;
+    };
     type: {
         type: PropType<ButtonType>;
         default: string;

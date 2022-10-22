@@ -1,5 +1,7 @@
 import cLoading from "../src/components/cLoading/cLoading";
 import { Meta, StoryFn } from '@storybook/vue3';
+import LayoutStory from "./LayoutStory";
+import LayoutStoryItem from "./LayoutStoryItem";
 
 export default {
   title: "组件/加载 cLoading",
@@ -18,11 +20,17 @@ export default {
 } as Meta<typeof cLoading>;
 
 const Template: StoryFn<typeof cLoading> = (args) => ({
-  components: { cLoading },
+  components: { LayoutStory, LayoutStoryItem, cLoading },
   setup() {
     return { args };
   },
-  template: '<c-loading v-bind="args" />',
+  template: `
+  <LayoutStory>
+    <LayoutStoryItem title="圆点loading">
+      <c-loading v-bind="args" />
+    </LayoutStoryItem>
+  </LayoutStory>
+  `,
 });
 
 export const 示例 = Template.bind({});

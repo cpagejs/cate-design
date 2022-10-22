@@ -1,5 +1,6 @@
 import cItem from "../src/components/cItem/cItem";
 import { Meta, StoryFn } from '@storybook/vue3';
+import LayoutStory from "./LayoutStory";
 
 export default {
   title: "组件/item cItem",
@@ -23,11 +24,11 @@ export default {
 } as Meta<typeof cItem>;
 
 const Template: StoryFn<typeof cItem> = (args) => ({
-  components: { cItem },
+  components: { LayoutStory, cItem },
   setup() {
     return { args };
   },
-  template: '<cItem v-bind="args" />',
+  template: '<LayoutStory><cItem v-bind="args" /></LayoutStory>',
 });
 
 export const 示例 = Template.bind({});

@@ -1,5 +1,7 @@
 import cTimeOut from "../src/components/cTimeOut/cTimeOut";
 import { Meta, StoryFn } from '@storybook/vue3';
+import LayoutStory from "./LayoutStory";
+import LayoutStoryItem from "./LayoutStoryItem";
 
 export default {
   title: "组件/时分秒倒计时 cTimeOut",
@@ -14,11 +16,15 @@ export default {
 } as Meta<typeof cTimeOut>;
 
 const Template: StoryFn<typeof cTimeOut> = (args) => ({
-  components: { cTimeOut },
+  components: { LayoutStory, LayoutStoryItem, cTimeOut },
   setup() {
     return { args };
   },
-  template: '<cTimeOut v-bind="args" />',
+  template: `
+  <LayoutStory>
+    <cTimeOut v-bind="args" />
+  </LayoutStory>
+  `,
 });
 
 export const 示例 = Template.bind({});

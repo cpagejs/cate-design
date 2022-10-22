@@ -64,13 +64,6 @@
   vertical-align: middle;
   border: $btn-border-width solid transparent;
 
-  @include button-size(
-    $btn-padding-y,
-    $btn-padding-x,
-    $btn-font-size,
-    $border-radius
-  );
-
   box-shadow: $btn-box-shadow;
   cursor: pointer;
   transition: $btn-transition;
@@ -108,6 +101,14 @@
   }
 }
 
+.c-btn-default {
+  @include button-size(
+    $btn-padding-y,
+    $btn-padding-x,
+    $btn-font-size,
+    $border-radius
+  );
+}
 .c-btn-lg {
   @include button-size(
     $btn-padding-y-lg,

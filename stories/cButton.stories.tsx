@@ -1,5 +1,6 @@
 import cButton from "../src/components/cButton/cButton";
-import { action } from '@storybook/addon-actions';
+import LayoutStory from "./LayoutStory";
+import LayoutStoryItem from "./LayoutStoryItem";
 
 export default {
   title: "基础组件/按钮 cButton",
@@ -10,7 +11,7 @@ export default {
     backgroundColor: { control: "color" },
     size: {
       control: { type: "select" },
-      options: ["sm", "lg"],
+      options: ["default", "sm", "lg"],
     },
     type: {
       control: { type: "select" },
@@ -33,13 +34,28 @@ export default {
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template = (args) => ({
   // Components used in your story `template` are defined in the `components` object
-  components: { cButton },
+  components: { LayoutStory, LayoutStoryItem, cButton },
   // The story's `args` need to be mapped into the template through the `setup()` method
   setup() {
     return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<c-button @onClick="onClick" v-bind="args" />',
+  template: `
+  <LayoutStory>
+    <LayoutStoryItem title="普通按钮">
+      <c-button @onClick="onClick" v-bind="args" />
+      <c-button text="info" type="info" />
+      <c-button text="danger" type="danger" />
+      <c-button text="link" type="link" />
+    </LayoutStoryItem>
+    <LayoutStoryItem title="普通按钮：disabled">
+      <c-button text="primary" type="primary" disabled />
+      <c-button text="info" type="info" disabled />
+      <c-button text="danger" type="danger" disabled />
+      <c-button text="link" type="link" disabled />
+    </LayoutStoryItem>
+  </LayoutStory>
+  `,
 });
 
 export const Primary = Template.bind({});

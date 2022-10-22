@@ -1875,7 +1875,10 @@ const buttonProps = () => ({
     type: Boolean,
     defalut: false
   },
-  size: String,
+  size: {
+    type: String,
+    default: "default"
+  },
   type: {
     type: String,
     default: "primary"
@@ -3540,7 +3543,7 @@ const tabs_props = tabsProps();
 /* harmony default export */ var tabs = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.defineComponent)({
   name: "cTabs",
   props: tabs_props,
-  emits: ["update:modelValue", "onClick"],
+  emits: ["update:modelValue", "click"],
 
   setup(props, {
     emit,
@@ -3554,7 +3557,8 @@ const tabs_props = tabsProps();
     const clickTab = tabName => {
       if (currentTabName.value !== tabName) {
         emit("update:modelValue", tabName);
-        emit("onClick", tabName);
+        emit("click", tabName);
+        currentTabName.value = tabName;
       }
     };
 
@@ -3599,9 +3603,9 @@ const tabItem_props = tabPaneProps();
     emit,
     slots
   }) {
-    const parentNode = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.getCurrentInstance)()?.parent;
-    const show = parentNode?.props?.modelValue === props.name;
     return () => {
+      const parentNode = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.getCurrentInstance)()?.parent;
+      const show = parentNode?.props?.modelValue === props.name;
       return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.withDirectives)((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": "pane"
       }, [slots.default()]), [[external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.vShow, show]]);

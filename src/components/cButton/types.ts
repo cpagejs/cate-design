@@ -1,6 +1,6 @@
 import { PropType } from "vue";
 
-type ButtonSize = "lg" | "sm" | "full";
+type ButtonSize = "lg" | "sm" | "default";
 
 type ButtonType = "primary" | "info" | "danger" | "link";
 
@@ -12,7 +12,10 @@ const buttonProps = () => ({
     type: Boolean,
     defalut: false,
   },
-  size: String as PropType<ButtonSize>,
+  size: {
+    type: String as PropType<ButtonSize>,
+    default: "default"
+  },
   type: {
     type: String as PropType<ButtonType>,
     default: "primary",

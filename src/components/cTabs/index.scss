@@ -1,10 +1,12 @@
 @import '../../assets/styles/variable.scss';
+
 .#{$c-pre}tabs {
   position: relative;
   .navs {
     display: flex;
     align-items: center;
     margin-bottom: 16px;
+    background: $white;
     .c-tab-item {
       flex-shrink: 0;
       padding: 10px 15px;

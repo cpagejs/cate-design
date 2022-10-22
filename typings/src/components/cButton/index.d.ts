@@ -7,7 +7,10 @@ declare const _default: SFCWithInstall<import("vue").DefineComponent<{
         type: BooleanConstructor;
         defalut: boolean;
     };
-    size: import("vue").PropType<import("./types").ButtonSize>;
+    size: {
+        type: import("vue").PropType<import("./types").ButtonSize>;
+        default: string;
+    };
     type: {
         type: import("vue").PropType<import("./types").ButtonType>;
         default: string;
@@ -21,7 +24,10 @@ declare const _default: SFCWithInstall<import("vue").DefineComponent<{
         type: BooleanConstructor;
         defalut: boolean;
     };
-    size: import("vue").PropType<import("./types").ButtonSize>;
+    size: {
+        type: import("vue").PropType<import("./types").ButtonSize>;
+        default: string;
+    };
     type: {
         type: import("vue").PropType<import("./types").ButtonType>;
         default: string;
@@ -32,5 +38,6 @@ declare const _default: SFCWithInstall<import("vue").DefineComponent<{
 }, {
     type: import("./types").ButtonType;
     disabled: boolean;
+    size: import("./types").ButtonSize;
 }>>;
 export default _default;
