@@ -22,9 +22,9 @@ export default defineComponent({
             {props.avatar && <img src={props.avatar} class="cell-left-icon" />}
             <div class="cell-left-info">
               <div class="cell-left-title">{props.title}</div>
-              {props.description && <div class="cell-left-desc">
-                {props.description}
-              </div>}
+              {props.description && (
+                <div class="cell-left-desc">{props.description}</div>
+              )}
             </div>
           </div>
           <div class="cell-right">

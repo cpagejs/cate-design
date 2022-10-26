@@ -1,22 +1,20 @@
 const switchProps = () => ({
   color: {
     type: String,
-    default: '#a0a0a0'
+    default: "#a0a0a0",
   },
   activeColor: {
     type: String,
-    default: '#448ff2'
+    default: "#448ff2",
   },
   checked: {
     type: Boolean,
-    default: false
+    default: false,
   },
   disabled: {
     type: Boolean,
-    default: false
+    default: false,
   },
 });
 
-export {
-  switchProps
-};
+export { switchProps };

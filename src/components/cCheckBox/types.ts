@@ -21,7 +21,8 @@ const checkBoxProps = () => ({
     type: String,
     default: "#fff",
   },
-  round: { // 是否是圆角
+  round: {
+    // 是否是圆角
     type: Boolean,
     default: false,
   },

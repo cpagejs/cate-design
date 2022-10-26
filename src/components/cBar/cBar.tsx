@@ -23,6 +23,7 @@ export default defineComponent({
           <span
             style={{ width: percentData.value, backgroundColor: props.color }}
           ></span>
+          {/* <span>{props.percent+'%'}</span> */}
         </div>
       );
     };

@@ -1,11 +1,5 @@
 import classNames from "classnames";
-import {
-  cloneVNode,
-  defineComponent,
-  inject,
-  reactive,
-  ref,
-} from "vue";
+import { cloneVNode, defineComponent, inject, reactive, ref } from "vue";
 import { ItemType, MenuContext, MenuKey, SubMenuProps } from "./types";
 
 const props = SubMenuProps();

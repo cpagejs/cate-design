@@ -2108,7 +2108,7 @@ cCircle.install = app => {
 };
 
 /* harmony default export */ var components_cCircle = (cCircle);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=template&id=68260a72
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=template&id=39377020
 
 const _hoisted_1 = {
   key: 0,
@@ -2198,7 +2198,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 4), [[external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.vShow, $props.showBg && $props.isShow]])])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true);
 }
-;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=template&id=68260a72
+;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=template&id=39377020
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=script&lang=js
 /* harmony default export */ var cConfirmvue_type_script_lang_js = ({
@@ -2301,10 +2301,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 });
 ;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-22.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=68260a72&lang=scss
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-22.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=39377020&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=68260a72&lang=scss
+;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=39377020&lang=scss
 
 // EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(8118);
@@ -2465,15 +2465,15 @@ cInput.install = app => {
 };
 
 /* harmony default export */ var components_cInput = (cInput);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cInputPassword/cInputPassword.vue?vue&type=template&id=b57a5448
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cInputPassword/cInputPassword.vue?vue&type=template&id=c5e5e924
 
-const cInputPasswordvue_type_template_id_b57a5448_hoisted_1 = {
+const cInputPasswordvue_type_template_id_c5e5e924_hoisted_1 = {
   class: "c-input-password"
 };
-const cInputPasswordvue_type_template_id_b57a5448_hoisted_2 = ["value", "length", "placeholder"];
-const cInputPasswordvue_type_template_id_b57a5448_hoisted_3 = ["value", "length", "placeholder"];
-function cInputPasswordvue_type_template_id_b57a5448_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("div", cInputPasswordvue_type_template_id_b57a5448_hoisted_1, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("span", null, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toDisplayString)(_ctx.label), 1), $data.showPwd ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("input", {
+const cInputPasswordvue_type_template_id_c5e5e924_hoisted_2 = ["value", "length", "placeholder"];
+const cInputPasswordvue_type_template_id_c5e5e924_hoisted_3 = ["value", "length", "placeholder"];
+function cInputPasswordvue_type_template_id_c5e5e924_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("div", cInputPasswordvue_type_template_id_c5e5e924_hoisted_1, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("span", null, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toDisplayString)(_ctx.label), 1), $data.showPwd ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("input", {
     key: 0,
     type: "password",
     ref: "input",
@@ -2486,7 +2486,7 @@ function cInputPasswordvue_type_template_id_b57a5448_render(_ctx, _cache, $props
     class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)({
       'c-input-password_disabled': _ctx.disabled
     })
-  }, null, 42, cInputPasswordvue_type_template_id_b57a5448_hoisted_2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true), !$data.showPwd ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("input", {
+  }, null, 42, cInputPasswordvue_type_template_id_c5e5e924_hoisted_2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true), !$data.showPwd ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("input", {
     key: 1,
     type: "text",
     ref: "input",
@@ -2499,7 +2499,7 @@ function cInputPasswordvue_type_template_id_b57a5448_render(_ctx, _cache, $props
     class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)({
       'c-input-password_disabled': _ctx.disabled
     })
-  }, null, 42, cInputPasswordvue_type_template_id_b57a5448_hoisted_3)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true), _ctx.showToggle ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("em", {
+  }, null, 42, cInputPasswordvue_type_template_id_c5e5e924_hoisted_3)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true), _ctx.showToggle ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("em", {
     key: 2,
     class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(["pwd-eye", {
       invisible: $data.invisible
@@ -2507,7 +2507,7 @@ function cInputPasswordvue_type_template_id_b57a5448_render(_ctx, _cache, $props
     onClick: _cache[4] || (_cache[4] = (...args) => $options.toggle && $options.toggle(...args))
   }, null, 2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true)]);
 }
-;// CONCATENATED MODULE: ./src/components/cInputPassword/cInputPassword.vue?vue&type=template&id=b57a5448
+;// CONCATENATED MODULE: ./src/components/cInputPassword/cInputPassword.vue?vue&type=template&id=c5e5e924
 
 ;// CONCATENATED MODULE: ./src/components/cInputPassword/types.ts
 const inputPwdProps = () => ({
@@ -2585,10 +2585,10 @@ const cInputPasswordvue_type_script_lang_js_props = inputPwdProps();
 });
 ;// CONCATENATED MODULE: ./src/components/cInputPassword/cInputPassword.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-22.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cInputPassword/cInputPassword.vue?vue&type=style&index=0&id=b57a5448&lang=scss
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-22.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cInputPassword/cInputPassword.vue?vue&type=style&index=0&id=c5e5e924&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/cInputPassword/cInputPassword.vue?vue&type=style&index=0&id=b57a5448&lang=scss
+;// CONCATENATED MODULE: ./src/components/cInputPassword/cInputPassword.vue?vue&type=style&index=0&id=c5e5e924&lang=scss
 
 ;// CONCATENATED MODULE: ./src/components/cInputPassword/cInputPassword.vue
 
@@ -2598,7 +2598,7 @@ const cInputPasswordvue_type_script_lang_js_props = inputPwdProps();
 ;
 
 
-const cInputPassword_exports_ = /*#__PURE__*/(0,exportHelper/* default */.Z)(cInputPasswordvue_type_script_lang_js, [['render',cInputPasswordvue_type_template_id_b57a5448_render]])
+const cInputPassword_exports_ = /*#__PURE__*/(0,exportHelper/* default */.Z)(cInputPasswordvue_type_script_lang_js, [['render',cInputPasswordvue_type_template_id_c5e5e924_render]])
 
 /* harmony default export */ var cInputPassword = (cInputPassword_exports_);
 ;// CONCATENATED MODULE: ./src/components/cInputPassword/index.ts
@@ -2632,6 +2632,7 @@ const checkBoxProps = () => ({
     default: "#fff"
   },
   round: {
+    // 是否是圆角
     type: Boolean,
     default: false
   },
@@ -2709,16 +2710,16 @@ cCheckBox.install = app => {
 };
 
 /* harmony default export */ var components_cCheckBox = (cCheckBox);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cSwitch/cSwitch.vue?vue&type=template&id=1eb78665
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cSwitch/cSwitch.vue?vue&type=template&id=2c85caec
 
-const cSwitchvue_type_template_id_1eb78665_hoisted_1 = ["checked"];
+const cSwitchvue_type_template_id_2c85caec_hoisted_1 = ["checked"];
 
-const cSwitchvue_type_template_id_1eb78665_hoisted_2 = /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("small", {
+const cSwitchvue_type_template_id_2c85caec_hoisted_2 = /*#__PURE__*/(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("small", {
   class: "switcher"
 }, null, -1);
 
-const cSwitchvue_type_template_id_1eb78665_hoisted_3 = [cSwitchvue_type_template_id_1eb78665_hoisted_2];
-function cSwitchvue_type_template_id_1eb78665_render(_ctx, _cache, $props, $setup, $data, $options) {
+const cSwitchvue_type_template_id_2c85caec_hoisted_3 = [cSwitchvue_type_template_id_2c85caec_hoisted_2];
+function cSwitchvue_type_template_id_2c85caec_render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("label", {
     class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(["c-switch-wrap", [{
       'c-switch-disabled': $props.disabled
@@ -2730,26 +2731,26 @@ function cSwitchvue_type_template_id_1eb78665_render(_ctx, _cache, $props, $setu
       "display": "none"
     },
     checked: $data.on
-  }, null, 8, cSwitchvue_type_template_id_1eb78665_hoisted_1), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("span", {
+  }, null, 8, cSwitchvue_type_template_id_2c85caec_hoisted_1), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("span", {
     class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(["c-switch-box", [{
-      'on': $data.on
+      on: $data.on
     }]]),
     style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeStyle)($data.colorStyle)
-  }, cSwitchvue_type_template_id_1eb78665_hoisted_3, 6)], 2);
+  }, cSwitchvue_type_template_id_2c85caec_hoisted_3, 6)], 2);
 }
-;// CONCATENATED MODULE: ./src/components/cSwitch/cSwitch.vue?vue&type=template&id=1eb78665
+;// CONCATENATED MODULE: ./src/components/cSwitch/cSwitch.vue?vue&type=template&id=2c85caec
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cSwitch/cSwitch.vue?vue&type=script&lang=js
 /* harmony default export */ var cSwitchvue_type_script_lang_js = ({
-  name: 'cSwitch',
+  name: "cSwitch",
   props: {
     color: {
       type: String,
-      default: '#a0a0a0'
+      default: "#a0a0a0"
     },
     activeColor: {
       type: String,
-      default: '#448ff2'
+      default: "#448ff2"
     },
     checked: {
       type: Boolean,
@@ -2814,10 +2815,10 @@ function cSwitchvue_type_template_id_1eb78665_render(_ctx, _cache, $props, $setu
 });
 ;// CONCATENATED MODULE: ./src/components/cSwitch/cSwitch.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-22.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cSwitch/cSwitch.vue?vue&type=style&index=0&id=1eb78665&lang=scss
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-22.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cSwitch/cSwitch.vue?vue&type=style&index=0&id=2c85caec&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/cSwitch/cSwitch.vue?vue&type=style&index=0&id=1eb78665&lang=scss
+;// CONCATENATED MODULE: ./src/components/cSwitch/cSwitch.vue?vue&type=style&index=0&id=2c85caec&lang=scss
 
 ;// CONCATENATED MODULE: ./src/components/cSwitch/cSwitch.vue
 
@@ -2827,7 +2828,7 @@ function cSwitchvue_type_template_id_1eb78665_render(_ctx, _cache, $props, $setu
 ;
 
 
-const cSwitch_exports_ = /*#__PURE__*/(0,exportHelper/* default */.Z)(cSwitchvue_type_script_lang_js, [['render',cSwitchvue_type_template_id_1eb78665_render]])
+const cSwitch_exports_ = /*#__PURE__*/(0,exportHelper/* default */.Z)(cSwitchvue_type_script_lang_js, [['render',cSwitchvue_type_template_id_2c85caec_render]])
 
 /* harmony default export */ var cSwitch = (cSwitch_exports_);
 ;// CONCATENATED MODULE: ./src/components/cSwitch/index.ts
@@ -2973,7 +2974,7 @@ const cLoading_props = loadingProps();
       borderRightColor: props.huanRightColor
     };
     return () => {
-      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)(external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.Fragment, null, [props.type === 'dot' && (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)(external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.Fragment, null, [props.type === "dot" && (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": "c-loading",
         "style": props.styleLoading
       }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
@@ -3018,7 +3019,7 @@ const cLoading_props = loadingProps();
       }, null), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": "circle4",
         "style": colorStyle
-      }, null)])]), props.type === 'huan' && (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+      }, null)])]), props.type === "huan" && (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": "c-loading c-loading-huan"
       }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "style": borderStyle
@@ -3856,6 +3857,7 @@ const timeCircleProps = () => ({
     default: 60
   },
   showNum: {
+    // 是否显示数字
     type: Boolean,
     default: true
   }
@@ -3903,12 +3905,12 @@ const cTimeCircle_props = timeCircleProps();
         "class": "c-time-circle"
       }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": ["circle", {
-          'clip-auto': clipAuto.value
+          "clip-auto": clipAuto.value
         }]
       }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": "percent left",
         "style": {
-          transform: 'rotate(' + (360 - rotate.value) + 'deg)'
+          transform: "rotate(" + (360 - rotate.value) + "deg)"
         }
       }, null), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
         "class": ["percent right", {
@@ -3933,7 +3935,15 @@ cTimeCircle.install = app => {
 const timeOutProps = () => ({
   date: {
     type: String,
-    default: '2022-10-16 10:15:26'
+    default: "2023-10-16 10:15:26"
+  },
+  bgColor: {
+    type: String,
+    default: "#fd7e10"
+  },
+  textColor: {
+    type: String,
+    default: "#fff"
   }
 });
 
@@ -3942,7 +3952,7 @@ const timeOutProps = () => ({
 
 
 /**@author 夏小宅
-* 倒计时效果
+ * 倒计时效果
  */
 
 
@@ -3954,29 +3964,46 @@ const cTimeOut_props = timeOutProps();
 
   setup(props) {
     const timeData = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.ref)({
-      hour: '',
-      minute: '',
-      second: ''
+      day: "",
+      hour: "",
+      minute: "",
+      second: ""
     });
+    const styles = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.computed)(() => ({
+      color: props.textColor,
+      background: props.bgColor
+    }));
     const timer = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.ref)(null);
 
-    const timeCount = date => {
-      const now = new Date(),
-            endDate = new Date(Date.parse(date)),
-            leftTime = endDate.getTime() - now.getTime(),
-            leftsecond = leftTime / 1000,
-            day = Math.floor(leftsecond / (60 * 60 * 24)),
-            _hour = Math.floor((leftsecond - day * 24 * 60 * 60) / 3600),
-            hour = _hour < 10 ? '0' + _hour : _hour,
-            _minute = Math.floor((leftsecond - day * 24 * 60 * 60 - Number(hour) * 3600) / 60),
-            minute = _minute < 10 ? '0' + _minute : _minute,
-            _second = Math.floor(leftsecond - day * 24 * 60 * 60 - Number(hour) * 3600 - Number(minute) * 60),
-            second = _second < 10 ? '0' + _second : _second;
+    const checkTime = i => {
+      //将0-9的数字前面加上0，例1变为01
+      if (i < 10) {
+        i = "0" + i;
+      }
 
+      return i;
+    };
+
+    const leftTimer = (year, month, day, hour, minute, second) => {
+      const a = new Date(year, month - 1, day, hour, minute, second);
+      const b = new Date();
+      const leftTime = a - b; //计算剩余的毫秒数
+
+      const days = parseInt((leftTime / 1000 / 60 / 60 / 24).toString(), 10); //计算剩余的天数
+
+      const hours = parseInt((leftTime / 1000 / 60 / 60 % 24).toString(), 10); //计算剩余的小时
+
+      let minutes = parseInt((leftTime / 1000 / 60 % 60).toString(), 10); //计算剩余的分钟
+
+      let seconds = parseInt((leftTime / 1000 % 60).toString(), 10); //计算剩余的秒数
+
+      minutes = checkTime(minutes);
+      seconds = checkTime(seconds);
       timeData.value = {
-        hour: hour.toString(),
-        minute: minute.toString(),
-        second: second.toString()
+        day: days.toString(),
+        hour: hours.toString(),
+        minute: minutes.toString(),
+        second: seconds.toString()
       };
     };
 
@@ -3986,14 +4013,24 @@ const cTimeOut_props = timeOutProps();
         if (Date.parse(props.date) < Date.parse(new Date().toString())) {
           clearInterval(timer);
         } else {
-          timeCount(props.date);
+          const _timer = new Date(props.date);
+
+          leftTimer(_timer.getFullYear(), _timer.getMonth() + 1, _timer.getDate(), _timer.getHours(), _timer.getMinutes(), _timer.getSeconds());
         }
       }, 1000);
     });
     return () => {
       return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("section", {
         "class": "c-time-count"
-      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("span", null, [timeData.value.hour, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)("\u65F6")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("em", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)(" : ")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("span", null, [timeData.value.minute, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)("\u5206")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("em", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)(" : ")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("span", null, [timeData.value.second, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)("\u79D2")])])]);
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("span", {
+        "style": styles.value
+      }, [timeData.value.day, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)("\u5929")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("em", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)(" : ")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("span", {
+        "style": styles.value
+      }, [timeData.value.hour, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)("\u65F6")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("em", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)(" : ")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("span", {
+        "style": styles.value
+      }, [timeData.value.minute, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)("\u5206")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("em", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)(" : ")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("span", {
+        "style": styles.value
+      }, [timeData.value.second, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)("\u79D2")])])]);
     };
   }
 

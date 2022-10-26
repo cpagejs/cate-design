@@ -1,10 +1,12 @@
-/**开关组件
- * @author 夏小宅
- */
+/**开关组件 * @author 夏小宅 */
 <template>
-  <label class="c-switch-wrap" @click.prevent="toggle" :class="[{'c-switch-disabled': disabled}]">
-    <input type="checkbox" style="display: none" :checked="on">
-    <span class="c-switch-box" :class="[{'on': on}]" :style="colorStyle">
+  <label
+    class="c-switch-wrap"
+    @click.prevent="toggle"
+    :class="[{ 'c-switch-disabled': disabled }]"
+  >
+    <input type="checkbox" style="display: none" :checked="on" />
+    <span class="c-switch-box" :class="[{ on: on }]" :style="colorStyle">
       <small class="switcher"></small>
     </span>
   </label>
@@ -12,31 +14,31 @@
 
 <script>
 export default {
-  name: 'cSwitch',
+  name: "cSwitch",
   props: {
     color: {
       type: String,
-      default: '#a0a0a0'
+      default: "#a0a0a0",
     },
     activeColor: {
       type: String,
-      default: '#448ff2'
+      default: "#448ff2",
     },
     checked: {
       type: Boolean,
-      default: false
+      default: false,
     },
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   data() {
     return {
       on: false,
       showText: "",
-      colorStyle: {}
-    }
+      colorStyle: {},
+    };
   },
   watch: {
     checked(val) {
@@ -46,9 +48,11 @@ export default {
       this.colorStyle = {
         backgroundColor: val ? this.activeColor : this.color,
         borderColor: val ? this.activeColor : this.color,
-        boxShadow: val ? this.activeColor + " 0px 0px 0px 12px inset" : this.color + " 0px 0px 0px 12px inset"
+        boxShadow: val
+          ? this.activeColor + " 0px 0px 0px 12px inset"
+          : this.color + " 0px 0px 0px 12px inset",
       };
-    }
+    },
   },
   methods: {
     toggle() {
@@ -57,13 +61,15 @@ export default {
     },
     val() {
       return this.on;
-    }
+    },
   },
   created() {
     this.colorStyle = {
       backgroundColor: this.on ? this.activeColor : this.color,
       borderColor: this.on ? this.activeColor : this.color,
-      boxShadow: this.on ? this.activeColor + " 0px 0px 0px 12px inset" : this.color + " 0px 0px 0px 12px inset"
+      boxShadow: this.on
+        ? this.activeColor + " 0px 0px 0px 12px inset"
+        : this.color + " 0px 0px 0px 12px inset",
     };
   },
   mounted() {
@@ -72,10 +78,10 @@ export default {
     } else {
       this.on = false;
     }
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss">
-@import './index';
+@import "./index";
 </style>

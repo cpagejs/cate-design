@@ -1,7 +1,7 @@
 /**@author 夏小宅
-* 倒计时效果
+ * 倒计时效果
  */
-import { defineComponent, ref, onMounted } from "vue";
+import { defineComponent, ref, onMounted, computed } from "vue";
 import { timeOutProps } from "./types";
 import "./index.scss";
 
@@ -11,39 +11,62 @@ export default defineComponent({
   props,
   setup(props) {
     const timeData = ref({
-      hour: '',
-      minute: '',
-      second: ''
+      day: "",
+      hour: "",
+      minute: "",
+      second: "",
     });
 
+    const styles = computed(() => ({
+      color: props.textColor,
+      background: props.bgColor,
+    }));
+
     const timer = ref<any>(null);
-    
-    const timeCount = (date) => {
-      const now = new Date(),
-        endDate = new Date(Date.parse(date)),
-        leftTime = endDate.getTime() - now.getTime(),
-        leftsecond = leftTime / 1000,
-        day = Math.floor(leftsecond / (60 * 60 * 24)),
-        _hour = Math.floor((leftsecond - day * 24 * 60 * 60) / 3600),
-        hour = _hour < 10 ? '0' + _hour : _hour,
-        _minute = Math.floor((leftsecond - day * 24 * 60 * 60 - Number(hour) * 3600) / 60),
-        minute = _minute < 10 ? '0' + _minute : _minute,
-        _second = Math.floor(leftsecond - day * 24 * 60 * 60 - Number(hour) * 3600 - Number(minute) * 60),
-        second = _second < 10 ? '0' + _second : _second;
-      timeData.value = {
-        hour: hour.toString(), 
-        minute: minute.toString(),
-        second: second.toString()
+
+    const checkTime = (i) => {
+      //将0-9的数字前面加上0，例1变为01
+      if (i < 10) {
+        i = "0" + i;
       }
+      return i;
+    };
+
+    const leftTimer = (year, month, day, hour, minute, second) => {
+      const a: any = new Date(year, month - 1, day, hour, minute, second);
+      const b: any = new Date();
+      const leftTime = a - b; //计算剩余的毫秒数
+      const days = parseInt((leftTime / 1000 / 60 / 60 / 24).toString(), 10); //计算剩余的天数
+      const hours = parseInt(((leftTime / 1000 / 60 / 60) % 24).toString(), 10); //计算剩余的小时
+      let minutes = parseInt(((leftTime / 1000 / 60) % 60).toString(), 10); //计算剩余的分钟
+      let seconds = parseInt(((leftTime / 1000) % 60).toString(), 10); //计算剩余的秒数
+
+      minutes = checkTime(minutes);
+      seconds = checkTime(seconds);
+
+      timeData.value = {
+        day: days.toString(),
+        hour: hours.toString(),
+        minute: minutes.toString(),
+        second: seconds.toString(),
+      };
     };
 
     onMounted(() => {
       clearInterval(timer);
       timer.value = setInterval(() => {
-        if (Date.parse(props.date) < Date.parse((new Date()).toString())) {
+        if (Date.parse(props.date) < Date.parse(new Date().toString())) {
           clearInterval(timer);
         } else {
-          timeCount(props.date);
+          const _timer = new Date(props.date);
+          leftTimer(
+            _timer.getFullYear(),
+            _timer.getMonth() + 1,
+            _timer.getDate(),
+            _timer.getHours(),
+            _timer.getMinutes(),
+            _timer.getSeconds()
+          );
         }
       }, 1000);
     });
@@ -52,7 +75,13 @@ export default defineComponent({
       return (
         <section class="c-time-count">
           <div>
-            <span>{timeData.value.hour}时</span><em> : </em><span>{timeData.value.minute}分</span><em> : </em><span>{timeData.value.second}秒</span>
+            <span style={styles.value}>{timeData.value.day}天</span>
+            <em> : </em>
+            <span style={styles.value}>{timeData.value.hour}时</span>
+            <em> : </em>
+            <span style={styles.value}>{timeData.value.minute}分</span>
+            <em> : </em>
+            <span style={styles.value}>{timeData.value.second}秒</span>
           </div>
         </section>
       );

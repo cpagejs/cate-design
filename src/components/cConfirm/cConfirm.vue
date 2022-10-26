@@ -83,7 +83,7 @@ export default {
   props: {
     isShow: {
       type: Boolean,
-      default: true
+      default: true,
     },
     type: {
       type: Number,

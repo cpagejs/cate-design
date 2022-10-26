@@ -6,7 +6,6 @@ export default defineComponent({
   name: "cTabItem",
   props: props,
   setup(props, { emit, slots }) {
-
     return () => {
       const parentNode = getCurrentInstance()?.parent;
       const show = parentNode?.props?.modelValue === props.name;

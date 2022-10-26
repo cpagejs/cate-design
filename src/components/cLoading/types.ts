@@ -11,7 +11,7 @@ const loadingProps = () => ({
   },
   type: {
     type: String,
-    default: "dot"
+    default: "dot",
   },
   huanLeftColor: {
     type: String,

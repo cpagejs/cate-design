@@ -49,7 +49,9 @@ export default defineComponent({
                   class="percent left"
                   style={{
                     transform:
-                      "rotate(" + (360 - (18 / 5) * Number(number.value)) + "deg)",
+                      "rotate(" +
+                      (360 - (18 / 5) * Number(number.value)) +
+                      "deg)",
                   }}
                 ></div>
                 <div class={["percent right", { width0: width0 }]}></div>

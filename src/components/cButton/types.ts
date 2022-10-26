@@ -14,7 +14,7 @@ const buttonProps = () => ({
   },
   size: {
     type: String as PropType<ButtonSize>,
-    default: "default"
+    default: "default",
   },
   type: {
     type: String as PropType<ButtonType>,

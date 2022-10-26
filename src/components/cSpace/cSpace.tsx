@@ -9,6 +9,6 @@ export default defineComponent({
           <p style={{ height: "20px" }}></p>
         </>
       );
-    }
+    };
   },
 });

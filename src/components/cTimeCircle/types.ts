@@ -1,15 +1,13 @@
 const timeCircleProps = () => ({
   timer: {
     type: Number,
-    default: 60
+    default: 60,
   },
-  showNum: { // 是否显示数字
+  showNum: {
+    // 是否显示数字
     type: Boolean,
-    default: true
-  }
+    default: true,
+  },
 });
 
-export {
-  timeCircleProps
-};
-
+export { timeCircleProps };

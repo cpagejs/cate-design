@@ -37,8 +37,8 @@
 </template>
 
 <script>
-  import { inputPwdProps } from "./types";
-  const props = inputPwdProps();
+import { inputPwdProps } from "./types";
+const props = inputPwdProps();
 export default {
   name: "cInputPassword",
   props: props,
@@ -76,6 +76,5 @@ export default {
 };
 </script>
 <style lang="scss">
-  @import "./index";
+@import "./index";
 </style>
-  

@@ -63,6 +63,8 @@ export const Primary = Template.bind({});
 Primary.args = {
   disabled: false,
   text: "primary",
+  size: "default",
+  type: "primary"
 };
 
 export const Info = Template.bind({});

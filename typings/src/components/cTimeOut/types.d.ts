@@ -3,5 +3,13 @@ declare const timeOutProps: () => {
         type: StringConstructor;
         default: string;
     };
+    bgColor: {
+        type: StringConstructor;
+        default: string;
+    };
+    textColor: {
+        type: StringConstructor;
+        default: string;
+    };
 };
 export { timeOutProps };

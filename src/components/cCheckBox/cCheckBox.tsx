@@ -17,7 +17,7 @@ export default defineComponent({
       }
       if (isCheck.value) {
         result += " checked";
-      } 
+      }
       // else if (props.halfChecked) {
       //   result += " half-checked";
       // }
@@ -35,13 +35,13 @@ export default defineComponent({
     const innerStyle = computed(() => ({
       backgroundColor: props.bgColor,
       borderColor: props.borderColor,
-      borderRadius: props.round ? "50%" : "2px"
+      borderRadius: props.round ? "50%" : "2px",
     }));
 
     return () => {
       return (
         <div class={rootCls.value} onClick={handleClick}>
-          <div class="inner" style={innerStyle.value}/>
+          <div class="inner" style={innerStyle.value} />
           <div class="content">{slots.default?.()}</div>
         </div>
       );

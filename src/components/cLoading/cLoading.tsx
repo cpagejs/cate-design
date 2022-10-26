@@ -11,36 +11,43 @@ export default defineComponent({
   props: props,
   setup(props, ctx) {
     const colorStyle = { backgroundColor: props.color };
-    const borderStyle = { borderLeftColor: props.huanLeftColor, borderRightColor: props.huanRightColor };
+    const borderStyle = {
+      borderLeftColor: props.huanLeftColor,
+      borderRightColor: props.huanRightColor,
+    };
     return () => {
       return (
         <>
-          {props.type === 'dot' && <div class="c-loading" style={props.styleLoading}>
-            <div class="loading-container container1">
-              <div class="circle1" style={colorStyle}></div>
-              <div class="circle2" style={colorStyle}></div>
-              <div class="circle3" style={colorStyle}></div>
-              <div class="circle4" style={colorStyle}></div>
+          {props.type === "dot" && (
+            <div class="c-loading" style={props.styleLoading}>
+              <div class="loading-container container1">
+                <div class="circle1" style={colorStyle}></div>
+                <div class="circle2" style={colorStyle}></div>
+                <div class="circle3" style={colorStyle}></div>
+                <div class="circle4" style={colorStyle}></div>
+              </div>
+              <div class="loading-container container2">
+                <div class="circle1" style={colorStyle}></div>
+                <div class="circle2" style={colorStyle}></div>
+                <div class="circle3" style={colorStyle}></div>
+                <div class="circle4" style={colorStyle}></div>
+              </div>
+              <div class="loading-container container3">
+                <div class="circle1" style={colorStyle}></div>
+                <div class="circle2" style={colorStyle}></div>
+                <div class="circle3" style={colorStyle}></div>
+                <div class="circle4" style={colorStyle}></div>
+              </div>
             </div>
-            <div class="loading-container container2">
-              <div class="circle1" style={colorStyle}></div>
-              <div class="circle2" style={colorStyle}></div>
-              <div class="circle3" style={colorStyle}></div>
-              <div class="circle4" style={colorStyle}></div>
+          )}
+          {props.type === "huan" && (
+            <div class="c-loading c-loading-huan">
+              <div style={borderStyle}></div>
+              <div style={borderStyle}></div>
+              <div style={borderStyle}></div>
+              <div style={borderStyle}></div>
             </div>
-            <div class="loading-container container3">
-              <div class="circle1" style={colorStyle}></div>
-              <div class="circle2" style={colorStyle}></div>
-              <div class="circle3" style={colorStyle}></div>
-              <div class="circle4" style={colorStyle}></div>
-            </div>
-          </div>}
-          {props.type === 'huan' && <div class="c-loading c-loading-huan">
-            <div style={borderStyle}></div>
-            <div style={borderStyle}></div>
-            <div style={borderStyle}></div>
-            <div style={borderStyle}></div>
-          </div>}
+          )}
         </>
       );
     };

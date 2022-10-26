@@ -35,8 +35,11 @@ export default defineComponent({
     return () => {
       return (
         <div class="c-time-circle">
-          <div class={["circle", { 'clip-auto': clipAuto.value }]}>
-            <div class="percent left" style={{ transform: 'rotate(' + (360 - rotate.value) + 'deg)' }}></div>
+          <div class={["circle", { "clip-auto": clipAuto.value }]}>
+            <div
+              class="percent left"
+              style={{ transform: "rotate(" + (360 - rotate.value) + "deg)" }}
+            ></div>
             <div class={["percent right", { wth0: wth0.value }]}></div>
           </div>
           <div class="num">{props.showNum && <span>{time.value}s</span>}</div>

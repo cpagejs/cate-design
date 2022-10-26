@@ -19,14 +19,14 @@ export default defineComponent({
     return () => {
       return (
         <>
-          {props.isShow && <section class="c-slide-container">
-            <transition name="slide-fade">
-              <div class="slide-inner">
-                {ctx.slots.default?.()}
-              </div>
-            </transition>
-            {props.showMask && <div class="slide-bg" onClick={hide}></div>}
-          </section>}
+          {props.isShow && (
+            <section class="c-slide-container">
+              <transition name="slide-fade">
+                <div class="slide-inner">{ctx.slots.default?.()}</div>
+              </transition>
+              {props.showMask && <div class="slide-bg" onClick={hide}></div>}
+            </section>
+          )}
         </>
       );
     };
