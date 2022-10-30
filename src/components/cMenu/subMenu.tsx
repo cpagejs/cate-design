@@ -13,36 +13,34 @@ export default defineComponent({
     const subClass = reactive({
       "c-submenu": true,
       "menu-opened":
-        parentCtx?.mode !== "vertical" ? menuOpen.value : !menuOpen.value,
+        parentCtx?.type !== "vertical" ? menuOpen.value : !menuOpen.value,
     });
 
     const handleClick = (e: Event) => {
       e.preventDefault();
-      // menuOpen.value = !menuOpen.value;
       subClass["menu-opened"] = !subClass["menu-opened"];
     };
 
     let timer: any;
+    // handleMouse
     const handleMouse = (e: Event, toggle: boolean) => {
-      console.log("handleMouse", toggle);
-
       clearTimeout(timer);
       e.preventDefault();
       timer = setTimeout(() => {
         subClass["menu-opened"] = toggle;
       }, 100);
     };
-    console.log(parentCtx?.mode !== "vertical");
+    // console.log(parentCtx?.type !== "vertical");
 
     const clickEvents =
-      parentCtx?.mode === "vertical"
+      parentCtx?.type === "vertical"
         ? {
             onClick: handleClick,
           }
         : {};
 
     const hoverEvents =
-      parentCtx?.mode !== "vertical"
+      parentCtx?.type !== "vertical"
         ? {
             onMouseenter: (e: Event) => {
               handleMouse(e, true);
@@ -56,12 +54,12 @@ export default defineComponent({
     return () => {
       const renderChildren = () => {
         const items = slots.default!().map((item, index) => {
-          if ((item.type as ItemType).name === "MenuItem") {
+          if ((item.type as ItemType).name === "cMenuItem") {
             return cloneVNode(item, {
               index: `${props.index}-${index.toString()}`,
             });
           } else {
-            console.error("must be a MenuItem");
+            console.error("must be a cMenuItem");
           }
         });
 
@@ -70,9 +68,9 @@ export default defineComponent({
 
       const { index, title } = props;
       const classes = classNames("menu-item submenu-item", {
-        "is-active": parentCtx!.index === index,
+        "is-active": parentCtx!.index.split('-')[0] === index,
       });
-
+      
       return (
         <li {...attrs} key={index} class={classes} {...hoverEvents}>
           <div class="submenu-title" {...clickEvents} onClick={handleClick}>

@@ -14,7 +14,7 @@ export default defineComponent({
     const clipAuto = ref(false);
     const wth0 = ref(true);
     const rotate = ref(0);
-    const time = ref(0);
+    const time = ref(props.timer);
 
     onMounted(() => {
       const loading = setInterval(() => {
@@ -28,7 +28,7 @@ export default defineComponent({
           wth0.value = false;
         }
         rotate.value += 360 / props.timer;
-        time.value++;
+        time.value--;
       }, 1000);
     });
 
@@ -42,7 +42,7 @@ export default defineComponent({
             ></div>
             <div class={["percent right", { wth0: wth0.value }]}></div>
           </div>
-          <div class="num">{props.showNum && <span>{time.value}s</span>}</div>
+          <div class="num"><span v-show={props.showNum}>{time.value}s</span></div>
         </div>
       );
     };

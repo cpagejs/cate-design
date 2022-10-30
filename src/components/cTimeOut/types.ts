@@ -11,6 +11,10 @@ const timeOutProps = () => ({
     type: String,
     default: "#fff",
   },
+  type: {
+    type: Number,
+    default: 1
+  }
 });
 
 export { timeOutProps };

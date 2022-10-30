@@ -4,9 +4,10 @@
   div {
     text-align: center;
   }
-
-  span {
+  .timer {
     display: inline-block;
+    min-width: 35px;
+    box-sizing: border-box;
     padding: 3px 5px;
     font-size: $font-size-base;
     color: $white;
@@ -14,12 +15,28 @@
     border-radius: 2px;
   }
 
-  em {
+  .dot {
     display: inline-block;
-    font-size: $font-size-large;
+    width: 20px;
+    font-size: $font-size-base;
     font-weight: 600;
     font-style: normal;
     color: $gray-600;
-    margin: 0 5px;
+    margin: 0 0px;
+  }
+
+  .type1 {
+    .dot {
+      width: 15px;
+    }
+  }
+
+  .type2 {
+    .timer {
+      font-weight: 600;
+    }
+    .dot {
+      color: $black;
+    }
   }
 }

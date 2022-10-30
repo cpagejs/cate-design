@@ -71,8 +71,8 @@
     </transition>
     <div
       class="screen-fixed confirm-bg"
-      v-show="showBg && isShow"
-      :style="{ backgroundColor: bgColor }"
+      v-show="showMask && isShow"
+      :style="{ backgroundColor: maskColor }"
     ></div>
   </div>
 </template>
@@ -123,11 +123,11 @@ export default {
         return {};
       },
     },
-    showBg: {
+    showMask: {
       type: Boolean,
       default: true,
     },
-    bgColor: {
+    maskColor: {
       type: String,
       default: "rgba(0,0,0,0.4)",
     },

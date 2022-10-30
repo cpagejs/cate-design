@@ -10,7 +10,7 @@ const MenuProps = () => ({
     type: String,
     default: "0",
   },
-  mode: {
+  type: {
     type: String as PropType<MenuMode>,
     default: "horizontal",
   },
@@ -39,8 +39,8 @@ interface ItemType {
 
 interface MenuContext {
   index: string;
-  onSelect?: SelectFunc;
-  mode?: MenuMode;
+  onSelect: SelectFunc;
+  type?: MenuMode;
 }
 
 export {

@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/vue3';
 import LayoutStory from "./LayoutStory";
 
 export default {
-  title: "组件/item cItem",
+  title: "组件/列表 cItem",
   component: cItem,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {

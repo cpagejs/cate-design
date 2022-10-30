@@ -3,11 +3,12 @@
 
 .c-cell-item {
   @include flex-justify(space-between);
-  padding: 12px 0;
+  padding: 12px 8px;
   font-size: $font-size-base;
   color: $text-color;
   background: #ffffff;
   border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
 
   .cell-left {
     @include flex-justify(space-between);

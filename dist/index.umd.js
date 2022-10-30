@@ -2126,7 +2126,7 @@ cCircle.install = app => {
 };
 
 /* harmony default export */ var components_cCircle = (cCircle);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-87.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=template&id=39377020
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-87.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=template&id=1ff02320
 
 const _hoisted_1 = {
   key: 0,
@@ -2212,11 +2212,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withDirectives)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", {
     class: "screen-fixed confirm-bg",
     style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeStyle)({
-      backgroundColor: $props.bgColor
+      backgroundColor: $props.maskColor
     })
-  }, null, 4), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, $props.showBg && $props.isShow]])])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true);
+  }, null, 4), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, $props.showMask && $props.isShow]])])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true);
 }
-;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=template&id=39377020
+;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=template&id=1ff02320
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-87.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=script&lang=js
 /* harmony default export */ var cConfirmvue_type_script_lang_js = ({
@@ -2264,11 +2264,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         return {};
       }
     },
-    showBg: {
+    showMask: {
       type: Boolean,
       default: true
     },
-    bgColor: {
+    maskColor: {
       type: String,
       default: "rgba(0,0,0,0.4)"
     }
@@ -2319,10 +2319,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 });
 ;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-69.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-69.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-69.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-69.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-69.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=39377020&lang=scss
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-69.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-69.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-69.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-69.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-69.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=1ff02320&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=39377020&lang=scss
+;// CONCATENATED MODULE: ./src/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=1ff02320&lang=scss
 
 // EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(8118);
@@ -3327,7 +3327,7 @@ const MenuProps = () => ({
     type: String,
     default: "0"
   },
-  mode: {
+  type: {
     type: String,
     default: "horizontal"
   },
@@ -3371,41 +3371,39 @@ const cMenu_props = MenuProps();
 
     const handleClick = index => {
       currentActive.value = index;
-
-      if (props.onSelect) {
-        props.onSelect(index);
-      }
+      props.onSelect && props.onSelect(index);
     };
 
-    const passedContext = {
+    const passedContext = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)({
       index: currentActive.value,
       onSelect: handleClick,
-      mode: props.mode
-    };
-    (0,external_commonjs_vue_commonjs2_vue_root_Vue_.provide)(MenuKey, passedContext);
+      type: props.type
+    });
+    (0,external_commonjs_vue_commonjs2_vue_root_Vue_.provide)(MenuKey, passedContext.value);
+    (0,external_commonjs_vue_commonjs2_vue_root_Vue_.provide)("changeIndex", index => {
+      console.log('changeIndex', index);
+      passedContext.value.index = index;
+    });
 
     const renderChildren = () => {
       return slots.default().map((item, index) => {
-        if (item.type.name === "MenuItem" || item.type.name === "SubMenu") {
-          // 拷贝一个节点
+        if (item.type.name === "cMenuItem" || item.type.name === "cSubMenu") {
           return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.cloneVNode)(item, {
             index: index.toString()
           });
         } else {
-          console.error("Warning:Menu's child must be MenuItem or SubMenu");
+          console.error("Warning:Menu's child must be cMenuItem or cSubMenu");
         }
       });
     };
 
     return () => {
       const {
-        mode,
-        defaultIndex,
-        onSelect
+        type
       } = props;
       const classes = classnames_default()("c-menu", {
-        "menu-vertical": mode === "vertical",
-        "menu-horizontal": mode !== "vertical"
+        "menu-vertical": type === "vertical",
+        "menu-horizontal": type !== "vertical"
       });
       return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("ul", (0,external_commonjs_vue_commonjs2_vue_root_Vue_.mergeProps)(attrs, {
         "class": classes
@@ -3426,7 +3424,6 @@ cMenu.install = app => {
 
 
 
-
 const menuItem_props = MenuItemProps();
 const MenuItem = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.defineComponent)({
   name: "cMenuItem",
@@ -3438,6 +3435,7 @@ const MenuItem = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.defineComponen
     attrs
   }) {
     const parentContext = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.inject)(MenuKey);
+    const changeIndex = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.inject)("changeIndex");
     return () => {
       const {
         index,
@@ -3445,17 +3443,17 @@ const MenuItem = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.defineComponen
       } = props;
 
       const handleClick = () => {
-        if (parentContext?.onSelect && !disabled) {
-          parentContext.onSelect(index);
+        if (!disabled) {
+          changeIndex(index);
+          parentContext?.onSelect && parentContext.onSelect(index);
         }
       };
 
-      const classes = classnames_default()("menu-item", {
-        "is-disabled": disabled,
-        "is-active": parentContext?.index == index
-      });
       return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("li", (0,external_commonjs_vue_commonjs2_vue_root_Vue_.mergeProps)(attrs, {
-        "class": classes,
+        "class": ["menu-item", {
+          "is-disabled": disabled,
+          "is-active": parentContext?.index == index
+        }],
         "onClick": handleClick
       }), [slots.default()]);
     };
@@ -3491,31 +3489,29 @@ const subMenu_props = SubMenuProps();
     const menuOpen = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)(false);
     const subClass = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.reactive)({
       "c-submenu": true,
-      "menu-opened": parentCtx?.mode !== "vertical" ? menuOpen.value : !menuOpen.value
+      "menu-opened": parentCtx?.type !== "vertical" ? menuOpen.value : !menuOpen.value
     });
 
     const handleClick = e => {
-      e.preventDefault(); // menuOpen.value = !menuOpen.value;
-
+      e.preventDefault();
       subClass["menu-opened"] = !subClass["menu-opened"];
     };
 
-    let timer;
+    let timer; // handleMouse
 
     const handleMouse = (e, toggle) => {
-      console.log("handleMouse", toggle);
       clearTimeout(timer);
       e.preventDefault();
       timer = setTimeout(() => {
         subClass["menu-opened"] = toggle;
       }, 100);
-    };
+    }; // console.log(parentCtx?.type !== "vertical");
 
-    console.log(parentCtx?.mode !== "vertical");
-    const clickEvents = parentCtx?.mode === "vertical" ? {
+
+    const clickEvents = parentCtx?.type === "vertical" ? {
       onClick: handleClick
     } : {};
-    const hoverEvents = parentCtx?.mode !== "vertical" ? {
+    const hoverEvents = parentCtx?.type !== "vertical" ? {
       onMouseenter: e => {
         handleMouse(e, true);
       },
@@ -3526,12 +3522,12 @@ const subMenu_props = SubMenuProps();
     return () => {
       const renderChildren = () => {
         const items = slots.default().map((item, index) => {
-          if (item.type.name === "MenuItem") {
+          if (item.type.name === "cMenuItem") {
             return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.cloneVNode)(item, {
               index: `${props.index}-${index.toString()}`
             });
           } else {
-            console.error("must be a MenuItem");
+            console.error("must be a cMenuItem");
           }
         });
         return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("ul", {
@@ -3544,7 +3540,7 @@ const subMenu_props = SubMenuProps();
         title
       } = props;
       const classes = classnames_default()("menu-item submenu-item", {
-        "is-active": parentCtx.index === index
+        "is-active": parentCtx.index.split('-')[0] === index
       });
       return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("li", (0,external_commonjs_vue_commonjs2_vue_root_Vue_.mergeProps)(attrs, {
         "key": index,
@@ -3901,7 +3897,7 @@ const cTimeCircle_props = timeCircleProps();
     const clipAuto = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)(false);
     const wth0 = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)(true);
     const rotate = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)(0);
-    const time = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)(0);
+    const time = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)(props.timer);
     (0,external_commonjs_vue_commonjs2_vue_root_Vue_.onMounted)(() => {
       const loading = setInterval(() => {
         if (rotate.value >= 360) {
@@ -3915,7 +3911,7 @@ const cTimeCircle_props = timeCircleProps();
         }
 
         rotate.value += 360 / props.timer;
-        time.value++;
+        time.value--;
       }, 1000);
     });
     return () => {
@@ -3936,7 +3932,7 @@ const cTimeCircle_props = timeCircleProps();
         }]
       }, null)]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
         "class": "num"
-      }, [props.showNum && (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", null, [time.value, (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("s")])])]);
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.withDirectives)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", null, [time.value, (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("s")]), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, props.showNum]])])]);
     };
   }
 
@@ -3962,6 +3958,10 @@ const timeOutProps = () => ({
   textColor: {
     type: String,
     default: "#fff"
+  },
+  type: {
+    type: Number,
+    default: 1
   }
 });
 
@@ -4040,15 +4040,49 @@ const cTimeOut_props = timeOutProps();
     return () => {
       return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("section", {
         "class": "c-time-count"
-      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+      }, [props.type === 1 && (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
+        "class": "type1"
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+        "class": "timer",
         "style": styles.value
-      }, [timeData.value.day, (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("\u5929")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("em", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)(" : ")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+      }, [timeData.value.day, (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("\u5929")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+        "class": "dot"
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)(" : ")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+        "class": "timer",
         "style": styles.value
-      }, [timeData.value.hour, (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("\u65F6")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("em", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)(" : ")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+      }, [timeData.value.hour, (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("\u65F6")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+        "class": "dot"
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)(" : ")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+        "class": "timer",
         "style": styles.value
-      }, [timeData.value.minute, (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("\u5206")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("em", null, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)(" : ")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+      }, [timeData.value.minute, (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("\u5206")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+        "class": "dot"
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)(" : ")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+        "class": "timer",
         "style": styles.value
-      }, [timeData.value.second, (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("\u79D2")])])]);
+      }, [timeData.value.second, (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("\u79D2")])]), props.type === 2 && (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
+        "class": "type2"
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+        "class": "timer",
+        "style": styles.value
+      }, [timeData.value.day]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+        "class": "dot"
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("\u5929")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+        "class": "timer",
+        "style": styles.value
+      }, [timeData.value.hour]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+        "class": "dot"
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("\u65F6")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+        "class": "timer",
+        "style": styles.value
+      }, [timeData.value.minute]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+        "class": "dot"
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("\u5206")]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+        "class": "timer",
+        "style": styles.value
+      }, [timeData.value.second]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("span", {
+        "class": "dot"
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)("\u79D2")])])]);
     };
   }
 

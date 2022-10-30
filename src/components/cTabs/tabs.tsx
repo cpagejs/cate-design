@@ -41,6 +41,7 @@ export default defineComponent({
         );
       });
     };
+    
     return () => {
       return (
         <div class="c-tabs">

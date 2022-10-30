@@ -20,6 +20,11 @@ export default {
       control: "color",
       description: '背景颜色',
      },
+     type: { 
+      control: { type: "select" },
+      options: [1, 2],
+      description: '类型',
+     },
   },
 } as Meta<typeof cTimeOut>;
 
@@ -30,9 +35,12 @@ const Template: StoryFn<typeof cTimeOut> = (args) => ({
   },
   template: `
   <LayoutStory>
-    <LayoutStoryItem title="普通倒计时">
+    <LayoutStoryItem title="普通倒计时,类型1">
       <cTimeOut v-bind="args" />
-      <cTimeOut date="2023-10-26 23:15:26" textColor="#000" bgColor="green" />
+      <cTimeOut date="2023-10-26 23:15:26" textColor="#fff" bgColor="green" />
+    </LayoutStoryItem>
+    <LayoutStoryItem title="普通倒计时,类型2">
+      <cTimeOut date="2023-10-26 23:15:26" textColor="#fff" bgColor="#f60" :type="2" />
     </LayoutStoryItem>
   </LayoutStory>
   `,
@@ -41,7 +49,7 @@ const Template: StoryFn<typeof cTimeOut> = (args) => ({
 export const 示例 = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 示例.args = {
-  date: "2022-10-26 23:15:26",
+  date: "2023-3-26 23:15:26",
   textColor: "#fff",
   bgColor: "#fd7e10"
 };

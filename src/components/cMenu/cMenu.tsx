@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { cloneVNode, defineComponent, provide, ref } from "vue";
+import { cloneVNode, computed, defineComponent, provide, reactive, ref } from "vue";
 import { ItemType, MenuContext, MenuKey, MenuProps } from "./types";
 import "./index.scss";
 
@@ -10,45 +10,44 @@ export default defineComponent({
   props,
   setup(props, { emit, slots, attrs }) {
     const currentActive = ref<string>(props.defaultIndex);
-
     const handleClick = (index: string) => {
       currentActive.value = index;
-      if (props.onSelect) {
-        props.onSelect(index);
-      }
+      props.onSelect && props.onSelect(index);
     };
 
-    const passedContext: MenuContext = {
+    const passedContext = ref({
       index: currentActive.value,
       onSelect: handleClick,
-      mode: props.mode,
-    };
-    provide<MenuContext>(MenuKey, passedContext);
+      type: props.type,
+    });
+    provide<MenuContext>(MenuKey, passedContext.value);
+    provide("changeIndex", (index) => {
+      console.log('changeIndex', index);
+      passedContext.value.index = index;
+    });
 
     const renderChildren = () => {
       return slots.default!().map((item, index) => {
         if (
-          (item.type as ItemType).name === "MenuItem" ||
-          (item.type as ItemType).name === "SubMenu"
+          (item.type as ItemType).name === "cMenuItem" ||
+          (item.type as ItemType).name === "cSubMenu"
         ) {
-          // 拷贝一个节点
-          return cloneVNode(item, { index: index.toString() });
+          return cloneVNode(item, { index: index.toString()});
         } else {
-          console.error("Warning:Menu's child must be MenuItem or SubMenu");
+          console.error("Warning:Menu's child must be cMenuItem or cSubMenu");
         }
       });
     };
 
     return () => {
-      const { mode, defaultIndex, onSelect } = props;
+      const { type } = props;
       const classes = classNames("c-menu", {
-        "menu-vertical": mode === "vertical",
-        "menu-horizontal": mode !== "vertical",
+        "menu-vertical": type === "vertical",
+        "menu-horizontal": type !== "vertical",
       });
 
       return (
         <ul {...attrs} class={classes}>
-          {/* {slots.default!()} */}
           {renderChildren()}
         </ul>
       );

@@ -74,15 +74,24 @@ export default defineComponent({
     return () => {
       return (
         <section class="c-time-count">
-          <div>
-            <span style={styles.value}>{timeData.value.day}天</span>
-            <em> : </em>
-            <span style={styles.value}>{timeData.value.hour}时</span>
-            <em> : </em>
-            <span style={styles.value}>{timeData.value.minute}分</span>
-            <em> : </em>
-            <span style={styles.value}>{timeData.value.second}秒</span>
-          </div>
+          {props.type === 1 && <div  class="type1">
+            <span class="timer" style={styles.value}>{timeData.value.day}天</span>
+            <span class="dot"> : </span>
+            <span class="timer" style={styles.value}>{timeData.value.hour}时</span>
+            <span class="dot"> : </span>
+            <span class="timer" style={styles.value}>{timeData.value.minute}分</span>
+            <span class="dot"> : </span>
+            <span class="timer" style={styles.value}>{timeData.value.second}秒</span>
+          </div>}
+          {props.type === 2 && <div class="type2">
+            <span class="timer" style={styles.value}>{timeData.value.day}</span>
+            <span class="dot">天</span>
+            <span class="timer" style={styles.value}>{timeData.value.hour}</span>
+            <span class="dot">时</span>
+            <span class="timer" style={styles.value}>{timeData.value.minute}</span>
+            <span class="dot">分</span>
+            <span class="timer" style={styles.value}>{timeData.value.second}</span><span class="dot">秒</span>
+          </div>}
         </section>
       );
     };
