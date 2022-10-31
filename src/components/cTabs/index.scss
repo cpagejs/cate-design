@@ -5,6 +5,7 @@
   .navs {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     margin-bottom: 16px;
     background: $white;
     .c-tab-item {
@@ -13,7 +14,6 @@
       text-align: center;
       height: 32px;
       line-height: 32px;
-      border-bottom: $tab-border-width solid $border-color;
 
       cursor: pointer;
       transition: color 0.2s ease-in-out;
