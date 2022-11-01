@@ -24,12 +24,14 @@ const Template: StoryFn<typeof cConfirm> = (args) => ({
     const myConfirm = ref(null);
     const isShow = ref(false);
     const isShow2 = ref(false);
+    const ctype = ref(1);
     onMounted(() => {
       console.log(myConfirm.value)
     });
 
     const btnClick = () => {
       isShow.value = true;
+      ctype.value = 1;
     };
 
     const close = () => {
@@ -37,20 +39,26 @@ const Template: StoryFn<typeof cConfirm> = (args) => ({
     };
 
     const btnClick2 = () => {
-      isShow2.value = true;
+      ctype.value = 2;
+      isShow.value = true;
     };
     const close2 = () => {
-      isShow2.value = false;
+      isShow.value = false;
     };
 
-    return { args, btnClick, isShow, close, btnClick2, isShow2, close2 };
+    return { args, btnClick, isShow, ctype, close, btnClick2, isShow2, close2 };
   },
   template: `
   <div>
     <cCard title="点击显示弹窗" @click="btnClick">
       <cButton text="点击显示弹窗-类型1" @click="btnClick"/>
+      <p></p>
+      <cButton text="点击显示弹窗-类型2" @click="btnClick2"/>
     </cCard>
-    <cConfirm ref="myConfirm" v-bind="args" :isShow="isShow" @cancel="close" @confirm="close">
+    <cConfirm ref="myConfirm" v-bind="args" :type="ctype" :isShow="isShow" @cancel="close" @confirm="close">
+      <template #header>
+        title
+      </template>  
       <template #inner>
         <p>confirm info confirm info</p>
         <p>confirm info confirm info</p>
@@ -64,7 +72,9 @@ const Template: StoryFn<typeof cConfirm> = (args) => ({
 export const 示例 = Template.bind({});
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 示例.args = {
-  isShow: true,
-  type: 1
+  isShow: false,
+  type: 1,
+  showMask: true,
+  showBtn: true
 };
 

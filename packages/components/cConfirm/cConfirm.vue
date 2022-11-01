@@ -1,11 +1,8 @@
 /** 确认框组件 * @author 夏小宅 */
 <template>
-  <div class="c-confirm-container" v-if="isShow">
-    <transition name="confirm-fade">
-      <div
-        class="screen-fixed confirm-wrapper"
-        @click.prevent="closeConfirm($event)"
-      >
+  <transition name="c-confirm">
+    <div class="c-confirm-container" v-if="isShow">
+      <div class="screen-fixed confirm-wrapper" @click.prevent="closeConfirm($event)">
         <!-- 普通类型 -->
         <div class="confirm-content" v-if="type == 1">
           <div class="confirm-inner">
@@ -13,11 +10,7 @@
               <slot name="inner"></slot>
             </div>
             <div class="confirm-content-footer" v-if="showBtn">
-              <div
-                @click="cancel"
-                class="operate-btn left"
-                v-if="showCancelBtn"
-              >
+              <div @click="cancel" class="operate-btn left" v-if="showCancelBtn">
                 {{ cancelText }}
               </div>
               <div @click="confirm" class="operate-btn">{{ confirmText }}</div>
@@ -37,19 +30,10 @@
               <slot name="inner"></slot>
             </div>
             <div class="confirm-content-footer2" v-if="showBtn">
-              <div
-                @click="cancel"
-                class="operate-btn left"
-                :style="cancelBtnStyle"
-                v-if="showCancelBtn"
-              >
+              <div @click="cancel" class="operate-btn left" :style="cancelBtnStyle" v-if="showCancelBtn">
                 {{ cancelText }}
               </div>
-              <div
-                @click="confirm"
-                class="operate-btn right"
-                :style="confirmBtnStyle"
-              >
+              <div @click="confirm" class="operate-btn right" :style="confirmBtnStyle">
                 {{ confirmText }}
               </div>
             </div>
@@ -68,13 +52,9 @@
           </div>
         </div>
       </div>
-    </transition>
-    <div
-      class="screen-fixed confirm-bg"
-      v-show="showMask && isShow"
-      :style="{ backgroundColor: maskColor }"
-    ></div>
-  </div>
+      <div class="screen-fixed c-confirm-mask" v-if="showMask && isShow" :style="{ backgroundColor: maskColor }"></div>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -161,7 +141,7 @@ export default {
         e.target.children.length &&
         e.target.children[0].getAttribute("class") &&
         e.target.children[0].getAttribute("class").indexOf("confirm-content") >
-          -1
+        -1
       ) {
         this.hide();
       }

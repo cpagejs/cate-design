@@ -1811,6 +1811,7 @@ __webpack_require__.d(__webpack_exports__, {
   "cTabs": function() { return /* reexport */ cTabs; },
   "cTimeCircle": function() { return /* reexport */ components_cTimeCircle; },
   "cTimeOut": function() { return /* reexport */ components_cTimeOut; },
+  "cToast": function() { return /* reexport */ components_cToast; },
   "cTree": function() { return /* reexport */ components_cTree; },
   "default": function() { return /* binding */ entry_lib; },
   "useClickOutside": function() { return /* reexport */ useClickOutside; },
@@ -2130,7 +2131,7 @@ cCircle.install = app => {
 };
 
 /* harmony default export */ var components_cCircle = (cCircle);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-87.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./packages/components/cConfirm/cConfirm.vue?vue&type=template&id=489a3e4a
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-87.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[5]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./packages/components/cConfirm/cConfirm.vue?vue&type=template&id=2404c999
 
 const _hoisted_1 = {
   key: 0,
@@ -2176,10 +2177,10 @@ const _hoisted_12 = {
 };
 const _hoisted_13 = ["src"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return $props.isShow ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("div", _hoisted_1, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(external_commonjs_vue_commonjs2_vue_root_Vue_.Transition, {
-    name: "confirm-fade"
+  return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createBlock)(external_commonjs_vue_commonjs2_vue_root_Vue_.Transition, {
+    name: "c-confirm"
   }, {
-    default: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withCtx)(() => [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", {
+    default: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withCtx)(() => [$props.isShow ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("div", _hoisted_1, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", {
       class: "screen-fixed confirm-wrapper",
       onClick: _cache[5] || (_cache[5] = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withModifiers)($event => $options.closeConfirm($event), ["prevent"]))
     }, [$props.type == 1 ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("div", _hoisted_2, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", _hoisted_3, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", {
@@ -2211,16 +2212,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       src: $data.closeImg,
       alt: "",
       onClick: _cache[4] || (_cache[4] = (...args) => $options.closeImgFn && $options.closeImgFn(...args))
-    }, null, 8, _hoisted_13)])])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true)])]),
+    }, null, 8, _hoisted_13)])])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true)]), $props.showMask && $props.isShow ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("div", {
+      key: 0,
+      class: "screen-fixed c-confirm-mask",
+      style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeStyle)({
+        backgroundColor: $props.maskColor
+      })
+    }, null, 4)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true)])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true)]),
     _: 3
-  }), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withDirectives)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", {
-    class: "screen-fixed confirm-bg",
-    style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeStyle)({
-      backgroundColor: $props.maskColor
-    })
-  }, null, 4), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, $props.showMask && $props.isShow]])])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true);
+  });
 }
-;// CONCATENATED MODULE: ./packages/components/cConfirm/cConfirm.vue?vue&type=template&id=489a3e4a
+;// CONCATENATED MODULE: ./packages/components/cConfirm/cConfirm.vue?vue&type=template&id=2404c999
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-87.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./packages/components/cConfirm/cConfirm.vue?vue&type=script&lang=js
 /* harmony default export */ var cConfirmvue_type_script_lang_js = ({
@@ -2323,10 +2325,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 });
 ;// CONCATENATED MODULE: ./packages/components/cConfirm/cConfirm.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-69.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-69.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-69.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-69.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-69.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./packages/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=489a3e4a&lang=scss
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-69.use[0]!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??clonedRuleSet-69.use[1]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-69.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-69.use[3]!./node_modules/style-resources-loader/lib/index.js??clonedRuleSet-69.use[4]!./node_modules/@vue/cli-service/node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./packages/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=2404c999&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./packages/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=489a3e4a&lang=scss
+;// CONCATENATED MODULE: ./packages/components/cConfirm/cConfirm.vue?vue&type=style&index=0&id=2404c999&lang=scss
 
 // EXTERNAL MODULE: ./node_modules/@vue/cli-service/node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(8118);
@@ -4667,6 +4669,70 @@ cCard.install = app => {
 };
 
 /* harmony default export */ var components_cCard = (cCard);
+;// CONCATENATED MODULE: ./packages/components/cToast/cToast.tsx
+
+
+/**@author 夏小宅
+ * 倒计时效果
+ */
+
+
+/* harmony default export */ var cToast = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.defineComponent)({
+  name: "cToast",
+  props: {
+    msg: {
+      type: String,
+      default: "msg"
+    },
+    delay: {
+      type: Number,
+      default: 2000
+    }
+  },
+
+  // exposes: ["open", "close"],
+  setup(props, ctx) {
+    const isShow = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)(false);
+
+    const open = () => {
+      isShow.value = true;
+      setTimeout(() => {
+        isShow.value = false;
+      }, props.delay);
+    };
+
+    const close = () => {
+      isShow.value = false;
+    };
+
+    ctx.expose({
+      open,
+      close
+    });
+    return () => {
+      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
+        "class": "c-toast"
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(external_commonjs_vue_commonjs2_vue_root_Vue_.Transition, {
+        "name": "c-toast"
+      }, {
+        default: () => [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.withDirectives)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
+          "class": "c-toast-inner"
+        }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
+          "class": "c-toast_msg"
+        }, [props.msg])]), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, isShow.value]])]
+      })]);
+    };
+  }
+
+}));
+;// CONCATENATED MODULE: ./packages/components/cToast/index.ts
+
+
+cToast.install = app => {
+  app.component(cToast.name, cToast);
+};
+
+/* harmony default export */ var components_cToast = (cToast);
 ;// CONCATENATED MODULE: ./packages/hooks/useDebounce.tsx
 
 function useDebounce(value, delay = 200) {
@@ -4717,7 +4783,8 @@ function useDebounce(value, delay = 200) {
 
 
 
-const components = [components_cBar, components_cButton, components_cButtonFooter, components_cCircle, components_cConfirm, components_cHeaderBack, components_cInput, components_cInputPassword, components_cCheckBox, components_cSwitch, components_cItem, components_cLoading, components_cSlide, components_cForm, components_cFormItem, components_cMenu, cMenuItem, cSubMenu, cTabs, cTabItem, components_cAutoComplete, components_cTimeCircle, components_cTimeOut, components_cTree, components_cSpace, components_cCard];
+
+const components = [components_cBar, components_cButton, components_cButtonFooter, components_cCircle, components_cConfirm, components_cHeaderBack, components_cInput, components_cInputPassword, components_cCheckBox, components_cSwitch, components_cItem, components_cLoading, components_cSlide, components_cForm, components_cFormItem, components_cMenu, cMenuItem, cSubMenu, cTabs, cTabItem, components_cAutoComplete, components_cTimeCircle, components_cTimeOut, components_cTree, components_cSpace, components_cCard, components_cToast];
 
 /* harmony default export */ function packages_0(app) {
   components.forEach(item => {

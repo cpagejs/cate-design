@@ -1,4 +1,42 @@
 @import '../../assets/styles/variable.scss';
+
 .c-toast {
-  font-size: 16px;
+  position: fixed;
+  font-size: 18px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 1999;
+
+  &-inner {
+    position: relative;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 10px;
+    background: rgba($color: #000000, $alpha: 0.5);
+  }
+}
+
+.c-toast-enter-active,
+.c-toast-leave-active {
+  transition: all 1s;
+}
+
+.c-toast-enter-from,
+.c-toast-leave-to {
+  opacity: 0;
+  transform: translateY(100%);
+  transform: scale(0);
+}
+
+.c-toast-enter-to,
+.c-toast-leave-from {
+  opacity: 1;
+  transform: scale(1);
 }

@@ -6,29 +6,28 @@
     @include flex-justify();
     width: 100%;
     background: transparent;
-    
-
-    &.confirm-fade-enter-active {
-      animation: confirm-fadein 0.3s;
-
-      .confirm-content {
-        animation: confirm-zoom 0.3s;
-      }
-    }
 
     .confirm-content {
       color: #757575;
+      border-radius: 12px;
+      border: 1px solid #d3d3d3;
+      background: #fff;
       z-index: 998;
+      .confirm-header {
+        text-align: left;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 15px;
+        border-bottom: 1px solid #d3d3d3;
+        color: #000;
+      }
       .confirm-inner {
         margin: 0 auto;
         width: 350px;
-        border-radius: 12px;
         padding: 0;
-        background: #fff;
-
         .confirm-content-body {
           // @include flex-justify();
-          padding: 19px 15px;
+          padding: 15px;
           text-align: center;
           font-size: $font-size-mid;
           color: #000;
@@ -54,10 +53,6 @@
     }
 
     .confirm-content2 {
-      .confirm-header {
-        text-align: center;
-      }
-
       .confirm-inner {
         padding-bottom: 1px;
 
@@ -105,40 +100,30 @@
       }
     }
   }
-
-  .confirm-bg {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-    z-index: 997;
-  }
+}
+.c-confirm-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  z-index: 997;
+}
+.c-confirm-enter-active,
+.c-confirm-leave-active {
+  transition: all .3s;
 }
 
-
-@keyframes confirm-fadein {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+.c-confirm-enter-from,
+.c-confirm-leave-to {
+  opacity: 0;
+  transform: translateY(-100%);
 }
 
-@keyframes confirm-zoom {
-  0% {
-    transform: scale(0);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+.c-confirm-enter-to,
+.c-confirm-leave-from {
+  opacity: 1;
+  transform: translateY(0);
 }

@@ -1,6 +1,6 @@
 {
   "name": "cate-design",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "publish": true,
   "main": "dist/index.common.js",
   "types": "index.d.ts",
