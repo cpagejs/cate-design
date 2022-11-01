@@ -25,7 +25,7 @@ import cTimeOut from "./components/cTimeOut";
 import cTree from "./components/cTree";
 import cSpace from "./components/cSpace";
 import cCard from "./components/cCard";
-import cToast from "./components/cToast";
+import cToast, { useToast } from "./components/cToast";
 
 import { useClickOutside } from "./hooks/useClickOutside";
 import { useDebounce } from "./hooks/useDebounce";
@@ -88,6 +88,7 @@ export {
   cSpace,
   cCard,
   cToast,
+  useToast,
   useClickOutside,
   useDebounce,
 };

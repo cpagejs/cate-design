@@ -16,7 +16,6 @@
       default: 2000
     },
   },
-  // exposes: ["open", "close"],
   setup(props, ctx) {
     const isShow = ref(false);
 

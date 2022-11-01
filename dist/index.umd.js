@@ -1815,7 +1815,8 @@ __webpack_require__.d(__webpack_exports__, {
   "cTree": function() { return /* reexport */ components_cTree; },
   "default": function() { return /* binding */ entry_lib; },
   "useClickOutside": function() { return /* reexport */ useClickOutside; },
-  "useDebounce": function() { return /* reexport */ useDebounce; }
+  "useDebounce": function() { return /* reexport */ useDebounce; },
+  "useToast": function() { return /* reexport */ useToast; }
 });
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
@@ -4690,7 +4691,6 @@ cCard.install = app => {
     }
   },
 
-  // exposes: ["open", "close"],
   setup(props, ctx) {
     const isShow = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)(false);
 
@@ -4728,10 +4728,24 @@ cCard.install = app => {
 ;// CONCATENATED MODULE: ./packages/components/cToast/index.ts
 
 
+
 cToast.install = app => {
   app.component(cToast.name, cToast);
 };
 
+function useToast({
+  msg,
+  delay
+}) {
+  const vm = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(cToast, {
+    msg,
+    delay
+  });
+  const container = document.createElement("div");
+  (0,external_commonjs_vue_commonjs2_vue_root_Vue_.render)(vm, container);
+  document.body.append(container);
+  vm.component?.exposed?.open();
+}
 /* harmony default export */ var components_cToast = (cToast);
 ;// CONCATENATED MODULE: ./packages/hooks/useDebounce.tsx
 

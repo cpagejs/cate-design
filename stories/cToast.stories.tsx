@@ -1,6 +1,7 @@
 import { Meta, StoryFn } from '@storybook/vue3';
 import cButton from "../packages/components/cButton/cButton";
 import cToast from "../packages/components/cToast/cToast";
+import { useToast } from "../packages/components/cToast/index";
 import { ref, onMounted } from 'vue';
 
 export default {
@@ -24,11 +25,21 @@ const Template: StoryFn<typeof cToast> = (args) => ({
     const click1 = () => {
       tRef.value.open()
     };
-    return { args, tRef, click1 };
+
+    const click2 = () => {
+      // import { useToast } from "cate-design";
+      useToast({
+        msg: "使用useToast方式显示消息",
+        delay: 3000
+      })
+    };
+    return { args, tRef, click1, click2 };
   },
   template: `
   <div>
     <cButton text="默认效果" @click="click1"/>
+    <p></p>
+    <cButton text="使用useToast" @click="click2" type="info"/>
     <cToast v-bind="args" ref="tRef"/>
   </div>
   `,
