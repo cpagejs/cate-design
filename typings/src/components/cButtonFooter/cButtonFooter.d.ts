@@ -36,9 +36,9 @@ declare const _default: import("vue").DefineComponent<{
 }>> & {
     onOnClick?: ((...args: any[]) => any) | undefined;
 }, {
+    disabled: boolean;
     text: string;
     textColor: string;
-    disabled: boolean;
     backgroungColor: string;
 }>;
 export default _default;

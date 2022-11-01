@@ -36,8 +36,8 @@ declare const _default: SFCWithInstall<import("vue").DefineComponent<{
 }>> & {
     onOnClick?: ((...args: any[]) => any) | undefined;
 }, {
-    type: import("./types").ButtonType;
     disabled: boolean;
     size: import("./types").ButtonSize;
+    type: import("./types").ButtonType;
 }>>;
 export default _default;

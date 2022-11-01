@@ -42,8 +42,8 @@ declare const _default: SFCWithInstall<import("vue").DefineComponent<{
         default: string;
     };
 }>>, {
-    color: string;
     type: string;
+    color: string;
     styleLoading: Record<string, any>;
     huanLeftColor: string;
     huanRightColor: string;

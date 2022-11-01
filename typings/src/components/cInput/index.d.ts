@@ -38,9 +38,9 @@ declare const _default: SFCWithInstall<import("vue").DefineComponent<{
         type: import("vue").PropType<(e: KeyboardEvent) => void>;
     };
 }>> & {
+    "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
     onChange?: ((...args: any[]) => any) | undefined;
     onKeydown?: ((...args: any[]) => any) | undefined;
-    "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
     disabled: boolean;
     size: "lg" | "sm";

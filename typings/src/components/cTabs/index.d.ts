@@ -10,8 +10,8 @@ declare const _default: SFCWithInstall<import("vue").DefineComponent<{
         default: string;
     };
 }>> & {
-    onClick?: ((...args: any[]) => any) | undefined;
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
+    onClick?: ((...args: any[]) => any) | undefined;
 }, {
     modelValue: string;
 }>>;

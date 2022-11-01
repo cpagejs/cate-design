@@ -1,6 +1,6 @@
 import { ref, watch } from "vue";
 
-export function useDebounce(value: any, delay = 400) {
+export function useDebounce(value: any, delay = 200) {
   const debounceValue = ref(value);
 
   watch(
@@ -13,7 +13,6 @@ export function useDebounce(value: any, delay = 400) {
         }
 
         handler = window.setTimeout(() => {
-          console.log("过了delay 执行请求");
           debounceValue.value = newValue;
           handler = null;
         }, delay);

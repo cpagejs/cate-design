@@ -1810,7 +1810,9 @@ __webpack_require__.d(__webpack_exports__, {
   "cTimeCircle": function() { return /* reexport */ components_cTimeCircle; },
   "cTimeOut": function() { return /* reexport */ components_cTimeOut; },
   "cTree": function() { return /* reexport */ components_cTree; },
-  "default": function() { return /* binding */ entry_lib; }
+  "default": function() { return /* binding */ entry_lib; },
+  "useClickOutside": function() { return /* reexport */ useClickOutside; },
+  "useDebounce": function() { return /* reexport */ useDebounce; }
 });
 
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
@@ -4575,7 +4577,30 @@ cTree.install = app => {
 };
 
 /* harmony default export */ var components_cTree = (cTree);
-;// CONCATENATED MODULE: ./src/components/index.ts
+;// CONCATENATED MODULE: ./src/hooks/useDebounce.tsx
+
+function useDebounce(value, delay = 200) {
+  const debounceValue = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.ref)(value);
+  (0,external_commonjs_vue_commonjs2_vue_root_Vue_.watch)(() => debounceValue.value, newValue => {
+    let handler = null;
+    return function () {
+      if (handler) {
+        clearTimeout(handler);
+      }
+
+      handler = window.setTimeout(() => {
+        debounceValue.value = newValue;
+        handler = null;
+      }, delay);
+    };
+  }, {
+    immediate: true
+  });
+  return debounceValue.value;
+}
+;// CONCATENATED MODULE: ./src/index.ts
+
+
 
 
 
@@ -4602,7 +4627,7 @@ cTree.install = app => {
 
 const components = [components_cBar, components_cButton, components_cButtonFooter, components_cCircle, components_cConfirm, components_cHeaderBack, components_cInput, components_cInputPassword, components_cCheckBox, components_cSwitch, components_cItem, components_cLoading, components_cSlide, components_cForm, components_cFormItem, components_cMenu, cMenuItem, cSubMenu, cTabs, cTabItem, components_cAutoComplete, components_cTimeCircle, components_cTimeOut, components_cTree];
 
-/* harmony default export */ function src_components(app) {
+/* harmony default export */ function src_0(app) {
   components.forEach(item => {
     app.component(item.name, item);
   });
@@ -4610,7 +4635,7 @@ const components = [components_cBar, components_cButton, components_cButtonFoote
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
-/* harmony default export */ var entry_lib = (src_components);
+/* harmony default export */ var entry_lib = (src_0);
 
 
 }();
