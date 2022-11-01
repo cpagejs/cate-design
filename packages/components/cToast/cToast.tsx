@@ -1,10 +1,10 @@
 /**@author 夏小宅
- * 倒计时效果
+ * toast
  */
- import { defineComponent, ref, Transition, computed } from "vue";
- import "./index.scss";
+import { defineComponent, ref, Transition, computed } from "vue";
+import "./index.scss";
 
- export default defineComponent({
+export default defineComponent({
   name: "cToast",
   props: {
     msg: { // 提示信息
@@ -15,6 +15,13 @@
       type: Number,
       default: 2000
     },
+    onEnd: {
+      type: Function
+    },
+    showMask: {
+      type: Boolean,
+      default: true
+    },
   },
   setup(props, ctx) {
     const isShow = ref(false);
@@ -23,6 +30,7 @@
       isShow.value = true;
       setTimeout(() => {
         isShow.value = false;
+        props.onEnd?.();
       }, props.delay);
     };
 
@@ -30,17 +38,16 @@
       isShow.value = false;
     };
 
-    ctx.expose({open, close});
+    ctx.expose({ open, close });
     return () => {
       return (
-        <div class="c-toast">
-          <Transition name="c-toast">
-            <div class="c-toast-inner" v-show={isShow.value}>
-              <div class="c-toast_msg">{props.msg}</div>
-            </div>
-          </Transition>
-        </div>
+        <Transition name="c-toast">
+          <div class={["c-toast"]} v-show={isShow.value}>
+            <div class="c-toast-msg">{props.msg}</div>
+            <div class="c-toast-mask" v-show={props.showMask}></div>
+          </div>
+        </Transition>
       );
     };
   },
- });
+});

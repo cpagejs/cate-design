@@ -7,6 +7,10 @@ const loadingProps = () => ({
     type: Boolean,
     default: true,
   },
+  position: {
+    type: String,
+    default: "left",
+  },
 });
 
 export { loadingProps };

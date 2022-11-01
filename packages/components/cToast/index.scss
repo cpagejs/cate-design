@@ -12,16 +12,27 @@
   justify-content: center;
   align-items: center;
   pointer-events: none;
-  z-index: 1999;
 
-  &-inner {
+  &-msg {
     position: relative;
     padding: 10px 20px;
     color: #fff;
     border-radius: 10px;
     background: rgba($color: #000000, $alpha: 0.5);
+    z-index: 2000;
+  }
+
+  &-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba($color: #000000, $alpha: 0.5);
+    z-index: 1999;
   }
 }
+
 
 .c-toast-enter-active,
 .c-toast-leave-active {

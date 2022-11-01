@@ -199,19 +199,25 @@ import { cLoading } from 'cate-design';
 | 属性 | 类型 | 作用 |
 | :------ | :------ | :------ |
 | color | 类型String  默认'#6284e2' | loading颜色 |
-| styleLoading | 类型Object  默认{} | 自定义样式 |
+| styleLoading | 类型Object  默认{} | 自定义样式 | 
 
-## 11，cSlide 抽屉组件
+## 11，cDrawer 抽屉组件
 ```js
-import { cSlide } from 'cate-design';
-<c-slide>
+import { cDrawer } from 'cate-design';
+<c-drawer>
     内容
-</c-slide>
+</c-drawer>
 ```
+### 属性
+| 属性 | 类型 | 作用 |
+| :------ | :------ | :------ |
+| isShow | 类型Boolean  默认false | 是否显示Drawer |
+| showMask | 类型Boolean  默认true | 是否显示遮罩层 | 
+| position | 类型String  默认left | 抽屉的位置，左边还是右边，默认左边left | 
 ### 事件
 | 事件 | 作用 |
 | :------ | :------ |
-| onBgClick | 背景区域被点击后触发 |
+| onMaskClick | 背景区域被点击后触发 | 
 
 ## 12，cSwitch 开关组件
 ```js
@@ -315,17 +321,17 @@ import { cTimeCount } from 'cate-design';
 
 ## 18，提示框组件
 ```js
-需要全局引入可用
-this.$toast({
-    text: 'loading'
+// import { useToast } from "cate-design";
+useToast({
+    msg: 'loading'
 })
 ```
 ### 属性
 | 属性 | 类型 | 作用 |
 | :------ | :------ | :------ |
-| text | 类型String | 默认'loading' 提示文案 |
+| msg | 类型String | 默认'loading' 提示文案 |
 | shape | 类型String | 默认'square' 提示框形状，'square'正方形，'rect'长方形 |
 | type | 类型String | 默认'tip' 提示框icon显示类型，'tip'：没有icon，'success'：成功,  'error'：失败，'loading'：loading |
 | delay | 类型Number | 默认1500 提示框显示时间，单位ms |
-| showBg | 类型Boolean | 默认false 是否显示遮罩层 |
+| showMask | 类型Boolean | 默认false 是否显示遮罩层 |
 | position | 类型String | 默认'center' 提示框显示位置，'center'：居中，'top'：顶部，'bottom'：底部 |

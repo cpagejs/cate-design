@@ -11,7 +11,7 @@ import cCheckBox from "./components/cCheckBox";
 import cSwitch from "./components/cSwitch";
 import cItem from "./components/cItem";
 import cLoading from "./components/cLoading";
-import cSlide from "./components/cSlide";
+import cDrawer from "./components/cDrawer";
 import cForm from "./components/cForm";
 import cFormItem from "./components/cFormItem/index";
 import cMenu from "./components/cMenu";
@@ -43,7 +43,7 @@ const components = [
   cSwitch,
   cItem,
   cLoading,
-  cSlide,
+  cDrawer,
   cForm,
   cFormItem,
   cMenu,
@@ -73,7 +73,7 @@ export {
   cSwitch,
   cItem,
   cLoading,
-  cSlide,
+  cDrawer,
   cForm,
   cFormItem,
   cMenu,

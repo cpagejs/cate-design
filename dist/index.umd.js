@@ -1794,6 +1794,7 @@ __webpack_require__.d(__webpack_exports__, {
   "cCheckBox": function() { return /* reexport */ components_cCheckBox; },
   "cCircle": function() { return /* reexport */ components_cCircle; },
   "cConfirm": function() { return /* reexport */ components_cConfirm; },
+  "cDrawer": function() { return /* reexport */ components_cDrawer; },
   "cForm": function() { return /* reexport */ components_cForm; },
   "cFormItem": function() { return /* reexport */ components_cFormItem; },
   "cHeaderBack": function() { return /* reexport */ components_cHeaderBack; },
@@ -1803,7 +1804,6 @@ __webpack_require__.d(__webpack_exports__, {
   "cLoading": function() { return /* reexport */ components_cLoading; },
   "cMenu": function() { return /* reexport */ components_cMenu; },
   "cMenuItem": function() { return /* reexport */ cMenuItem; },
-  "cSlide": function() { return /* reexport */ components_cSlide; },
   "cSpace": function() { return /* reexport */ components_cSpace; },
   "cSubItem": function() { return /* reexport */ cSubMenu; },
   "cSwitch": function() { return /* reexport */ components_cSwitch; },
@@ -3067,7 +3067,7 @@ cLoading.install = app => {
 };
 
 /* harmony default export */ var components_cLoading = (cLoading);
-;// CONCATENATED MODULE: ./packages/components/cSlide/types.ts
+;// CONCATENATED MODULE: ./packages/components/cDrawer/types.ts
 const types_loadingProps = () => ({
   isShow: {
     type: Boolean,
@@ -3076,11 +3076,15 @@ const types_loadingProps = () => ({
   showMask: {
     type: Boolean,
     default: true
+  },
+  position: {
+    type: String,
+    default: "left"
   }
 });
 
 
-;// CONCATENATED MODULE: ./packages/components/cSlide/cSlide.tsx
+;// CONCATENATED MODULE: ./packages/components/cDrawer/cDrawer.tsx
 
 
 /** 侧滑组件
@@ -3089,43 +3093,42 @@ const types_loadingProps = () => ({
 
 
 
-const cSlide_props = types_loadingProps();
-/* harmony default export */ var cSlide = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.defineComponent)({
-  name: "cHeaderBack",
-  props: cSlide_props,
-  emits: ["bgClick"],
+const cDrawer_props = types_loadingProps();
+/* harmony default export */ var cDrawer = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.defineComponent)({
+  name: "cDrawer",
+  props: cDrawer_props,
+  emits: ["maskClick"],
 
   setup(props, ctx) {
     const hide = e => {
       e.stopPropagation();
-      ctx.emit("bgClick");
+      ctx.emit("maskClick");
     };
 
     return () => {
-      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(external_commonjs_vue_commonjs2_vue_root_Vue_.Fragment, null, [props.isShow && (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("section", {
-        "class": "c-slide-container"
-      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.resolveComponent)("transition"), {
-        "name": "slide-fade"
-      }, {
-        default: () => [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
-          "class": "slide-inner"
-        }, [ctx.slots.default?.()])]
-      }), props.showMask && (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
-        "class": "slide-bg",
+      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withDirectives)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("section", {
+        "class": "c-drawer-container"
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
+        "class": ["drawer-inner", {
+          "drawer-inner_left": props.position === 'left',
+          "drawer-inner_right": props.position === 'right'
+        }]
+      }, [ctx.slots.default?.()]), props.showMask && (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
+        "class": "drawer-mask",
         "onClick": hide
-      }, null)])]);
+      }, null)]), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, props.isShow]]);
     };
   }
 
 }));
-;// CONCATENATED MODULE: ./packages/components/cSlide/index.ts
+;// CONCATENATED MODULE: ./packages/components/cDrawer/index.ts
 
 
-cSlide.install = app => {
-  app.component(cSlide.name, cSlide);
+cDrawer.install = app => {
+  app.component(cDrawer.name, cDrawer);
 };
 
-/* harmony default export */ var components_cSlide = (cSlide);
+/* harmony default export */ var components_cDrawer = (cDrawer);
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__(7658);
 ;// CONCATENATED MODULE: ./packages/components/cFormItem/types.ts
@@ -4674,7 +4677,7 @@ cCard.install = app => {
 
 
 /**@author 夏小宅
- * 倒计时效果
+ * toast
  */
 
 
@@ -4688,6 +4691,13 @@ cCard.install = app => {
     delay: {
       type: Number,
       default: 2000
+    },
+    onEnd: {
+      type: Function
+    },
+    showMask: {
+      type: Boolean,
+      default: true
     }
   },
 
@@ -4698,6 +4708,7 @@ cCard.install = app => {
       isShow.value = true;
       setTimeout(() => {
         isShow.value = false;
+        props.onEnd?.();
       }, props.delay);
     };
 
@@ -4710,17 +4721,17 @@ cCard.install = app => {
       close
     });
     return () => {
-      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
-        "class": "c-toast"
-      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(external_commonjs_vue_commonjs2_vue_root_Vue_.Transition, {
+      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(external_commonjs_vue_commonjs2_vue_root_Vue_.Transition, {
         "name": "c-toast"
       }, {
         default: () => [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.withDirectives)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
-          "class": "c-toast-inner"
+          "class": ["c-toast"]
         }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
-          "class": "c-toast_msg"
-        }, [props.msg])]), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, isShow.value]])]
-      })]);
+          "class": "c-toast-msg"
+        }, [props.msg]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.withDirectives)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("div", {
+          "class": "c-toast-mask"
+        }, null), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, props.showMask]])]), [[external_commonjs_vue_commonjs2_vue_root_Vue_.vShow, isShow.value]])]
+      });
     };
   }
 
@@ -4735,16 +4746,21 @@ cToast.install = app => {
 
 function useToast({
   msg,
-  delay
+  delay,
+  showMask = false,
+  onEnd
 }) {
   const vm = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(cToast, {
     msg,
-    delay
+    delay,
+    showMask,
+    onEnd
   });
   const container = document.createElement("div");
   (0,external_commonjs_vue_commonjs2_vue_root_Vue_.render)(vm, container);
   document.body.append(container);
   vm.component?.exposed?.open();
+  return vm;
 }
 /* harmony default export */ var components_cToast = (cToast);
 ;// CONCATENATED MODULE: ./packages/hooks/useDebounce.tsx
@@ -4798,7 +4814,7 @@ function useDebounce(value, delay = 200) {
 
 
 
-const components = [components_cBar, components_cButton, components_cButtonFooter, components_cCircle, components_cConfirm, components_cHeaderBack, components_cInput, components_cInputPassword, components_cCheckBox, components_cSwitch, components_cItem, components_cLoading, components_cSlide, components_cForm, components_cFormItem, components_cMenu, cMenuItem, cSubMenu, cTabs, cTabItem, components_cAutoComplete, components_cTimeCircle, components_cTimeOut, components_cTree, components_cSpace, components_cCard, components_cToast];
+const components = [components_cBar, components_cButton, components_cButtonFooter, components_cCircle, components_cConfirm, components_cHeaderBack, components_cInput, components_cInputPassword, components_cCheckBox, components_cSwitch, components_cItem, components_cLoading, components_cDrawer, components_cForm, components_cFormItem, components_cMenu, cMenuItem, cSubMenu, cTabs, cTabItem, components_cAutoComplete, components_cTimeCircle, components_cTimeOut, components_cTree, components_cSpace, components_cCard, components_cToast];
 
 /* harmony default export */ function packages_0(app) {
   components.forEach(item => {

@@ -8,14 +8,18 @@ cToast.install = (app: App) => {
 
 interface IToastConfig {
   msg: string,
-  delay?: number
+  delay?: number,
+  showMask?: boolean,
+  onEnd?: () => void
 }
-export function useToast({msg, delay}: IToastConfig) {
-  const vm = createVNode(cToast, { msg, delay });
+export function useToast({msg, delay, showMask=false, onEnd}: IToastConfig) {
+  const vm = createVNode(cToast, { msg, delay, showMask, onEnd });
   const container = document.createElement("div");
   render(vm, container);
   document.body.append(container);
   vm.component?.exposed?.open();
+
+  return vm;
 }
 
 export default cToast as SFCWithInstall<typeof cToast>;

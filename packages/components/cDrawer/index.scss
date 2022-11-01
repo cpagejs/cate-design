@@ -1,0 +1,56 @@
+@import '../../assets/styles/variable.scss';
+
+.c-drawer-container {
+  .drawer-inner {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 60%;
+    background: #fff;
+    z-index: 1000;
+  }
+
+  .drawer-inner_left {
+    left: 0;
+    animation: aniLeft 0.5s ease-in;
+  }
+  .drawer-inner_right {
+    right: 0;
+    animation: aniRight 0.5s ease-in;
+  }
+
+  .drawer-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+}
+
+@keyframes aniLeft {
+  0% {
+    transform: translateX(-1000px);
+  }
+  50% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes aniRight {
+  0% {
+    transform: translateX(1000px);
+  }
+  50% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
