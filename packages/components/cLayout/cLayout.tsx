@@ -2,7 +2,7 @@ import { computed, defineComponent } from "vue";
 import "./index.scss";
 
 export default defineComponent({
-  name: "cSpace",
+  name: "cLayout",
   props: {
     height: {
       type: String,
@@ -19,15 +19,15 @@ export default defineComponent({
   },
   setup(props, ctx) {
     return () => {
-      const { height, bgColor, showLine } = props;
+      const { height, bgColor } = props;
       const styles = computed(() => ({
         height,
         background: bgColor
       }));
 
       return (
-        <div class="c-space" style={styles.value}>
-          {showLine && <div class="c-space_line"></div>}
+        <div>
+          {ctx.slots?.default!()}
         </div>
       );
     };

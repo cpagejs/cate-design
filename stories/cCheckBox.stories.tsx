@@ -1,9 +1,8 @@
-import cCheckBox from "../src/components/cCheckBox/cCheckBox";
+import cCheckBox from "../packages/components/cCheckBox/cCheckBox";
 import { Meta, StoryFn } from '@storybook/vue3';
 import { ref } from "vue";
-import LayoutStory from "./LayoutStory";
-import LayoutStoryItem from "./LayoutStoryItem";
-import cSpace from "../src/components/cSpace/cSpace";
+import cSpace from "../packages/components/cSpace/cSpace";
+import cCard from "../packages/components/cCard/cCard";
 
 export default {
   title: "表单组件/复选框 cCheckBox",
@@ -29,7 +28,7 @@ export default {
 
 
 const Template: StoryFn = (args) => ({
-  components: { LayoutStory, LayoutStoryItem, cCheckBox, cSpace },
+  components: { cCard, cCheckBox, cSpace },
   setup() {
     const check = ref(true);
     const check2 = ref(false);
@@ -38,18 +37,18 @@ const Template: StoryFn = (args) => ({
     return { args, check, check2, check3, bgColor };
   },
   template: `
-  <LayoutStory>
-    <LayoutStoryItem title="方形选择框">
+  <div>
+    <cCard title="方形选择框">
       <div><cCheckBox v-bind="args" v-model="check" bgColor="#f90" borderColor="#dedede"/>{{check}}</div>
       <div><cCheckBox v-bind="args" v-model="check2" borderColor="#dedede"/>{{check2}}</div>
       <div><cCheckBox v-bind="args" v-model="check3" bgColor="bgColor" borderColor="#dedede"/>{{check3}}</div>
-    </LayoutStoryItem>
+    </cCard>
     <cSpace />
-    <LayoutStoryItem title="圆形选择框">
+    <cCard title="圆形选择框">
       <div><cCheckBox v-bind="args" v-model="check" bgColor="#f60" round/></div>
       <div><cCheckBox v-bind="args" v-model="check" bgColor="green" round/></div>
-    </LayoutStoryItem>
-  </LayoutStory>
+    </cCard>
+  </div>
   `,
 });
 

@@ -1,8 +1,6 @@
 import { ref } from "vue";
-import cInput from "../src/components/cInput/cInput";
+import cInput from "../packages/components/cInput/cInput";
 import { Meta, StoryFn } from '@storybook/vue3';
-import LayoutStory from "./LayoutStory";
-import LayoutStoryItem from "./LayoutStoryItem";
 
 export default {
   title: "表单组件/输入框 cInput",
@@ -20,7 +18,7 @@ export default {
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template: StoryFn<typeof cInput> = (args: any) => ({
   // Components used in your story `template` are defined in the `components` object
-  components: { LayoutStory, cInput },
+  components: {cInput },
   // The story's `args` need to be mapped into the template through the `setup()` method
   setup() {
     const inputValue = ref("123");
@@ -28,12 +26,12 @@ const Template: StoryFn<typeof cInput> = (args: any) => ({
     return { inputValue, args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<LayoutStory><c-input v-bind="args">按钮</c-input></LayoutStory>',
+  template: '<div><c-input v-bind="args">按钮</c-input></div>',
 });
 
 const Template2 = (args: any) => ({
   // Components used in your story `template` are defined in the `components` object
-  components: { LayoutStory, cInput },
+  components: { cInput },
   // The story's `args` need to be mapped into the template through the `setup()` method
   setup() {
     const inputValue = ref("123");
@@ -42,7 +40,7 @@ const Template2 = (args: any) => ({
   },
   // And then the `args` are bound to your component with `v-bind="args"`
   template:
-    '<LayoutStory><c-input v-bind="args" v-model="inputValue">按钮</c-input> {{inputValue}} </LayoutStory>',
+    '<div><c-input v-bind="args" v-model="inputValue">按钮</c-input> {{inputValue}} </div>',
 });
 
 export const Primary = Template.bind({});

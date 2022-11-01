@@ -32,9 +32,12 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
+    "packages/**/*.ts",
+    "packages/**/*.tsx",
+    "packages/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-, "stories/LayoutStory.tsx", "stories/LayoutStory.tsx"  ],
+  ],
   "exclude": [
     "node_modules"
   ]

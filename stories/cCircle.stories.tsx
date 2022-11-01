@@ -1,10 +1,9 @@
-import cCircle from "../src/components/cCircle/cCircle";
+import cCircle from "../packages/components/cCircle/cCircle";
 import { Meta, StoryFn } from '@storybook/vue3';
-import LayoutStory from "./LayoutStory";
-import LayoutStoryItem from "./LayoutStoryItem";
+import cCard from "../packages/components/cCard/cCard";
 
 export default {
-  title: "组件/圆环进度 cCircle",
+  title: "进度组件/圆环进度 cCircle",
   component: cCircle,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -20,16 +19,16 @@ export default {
 } as Meta<typeof cCircle>;
 
 const Template: StoryFn<typeof cCircle> = (args) => ({
-  components: { LayoutStory, LayoutStoryItem, cCircle },
+  components: { cCard, cCircle },
   setup() {
     return { args };
   },
   template: `
-  <LayoutStory>
-    <LayoutStoryItem title="圆环进度">
-    <c-circle v-bind="args" />
-    </LayoutStoryItem>
-  </LayoutStory>
+  <div>
+    <cCard title="圆环进度">
+      <c-circle v-bind="args" />
+    </cCard>
+  </div>
   `,
 });
 

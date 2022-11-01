@@ -1,10 +1,9 @@
-import cTimeCircle from "../src/components/cTimeCircle/cTimeCircle";
+import cTimeCircle from "../packages/components/cTimeCircle/cTimeCircle";
 import { Meta, StoryFn } from '@storybook/vue3';
-import LayoutStory from "./LayoutStory";
-import LayoutStoryItem from "./LayoutStoryItem";
+import cCard from "../packages/components/cCard/cCard";
 
 export default {
-  title: "组件/圆环倒计时 cTimeCircle",
+  title: "进度组件/圆环倒计时 cTimeCircle",
   component: cTimeCircle,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -20,22 +19,22 @@ export default {
 } as Meta<typeof cTimeCircle>;
 
 const Template: StoryFn<typeof cTimeCircle> = (args) => ({
-  components: { LayoutStory, LayoutStoryItem, cTimeCircle },
+  components: { cCard, cTimeCircle },
   setup() {
     return { args };
   },
   template: `
-  <LayoutStory>
-    <LayoutStoryItem title="圆环倒计时">
+  <div>
+    <cCard title="圆环倒计时">
       <cTimeCircle v-bind="args" />
-    </LayoutStoryItem>
-    <LayoutStoryItem title="圆环倒计时">
+    </cCard>
+    <cCard title="圆环倒计时">
       <cTimeCircle timer="10" />
-    </LayoutStoryItem>
-    <LayoutStoryItem title="圆环倒计时:隐藏数字">
+    </cCard>
+    <cCard title="圆环倒计时:隐藏数字">
       <cTimeCircle timer="5" :showNum="false"/>
-    </LayoutStoryItem>
-  </LayoutStory>
+    </cCard>
+  </div>
   `,
 });
 

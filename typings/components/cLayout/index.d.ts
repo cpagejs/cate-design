@@ -1,5 +1,5 @@
-import "./index.scss";
-declare const _default: import("vue").DefineComponent<{
+import { SFCWithInstall } from "../utils/types";
+declare const _default: SFCWithInstall<import("vue").DefineComponent<{
     height: {
         type: StringConstructor;
         default: string;
@@ -29,5 +29,5 @@ declare const _default: import("vue").DefineComponent<{
     bgColor: string;
     height: string;
     showLine: boolean;
-}>;
+}>>;
 export default _default;

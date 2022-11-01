@@ -23,6 +23,8 @@ import cAutoComplete from "./components/cAutoComplete";
 import cTimeCircle from "./components/cTimeCircle";
 import cTimeOut from "./components/cTimeOut";
 import cTree from "./components/cTree";
+import cSpace from "./components/cSpace";
+import cCard from "./components/cCard";
 
 import { useClickOutside } from "./hooks/useClickOutside";
 import { useDebounce } from "./hooks/useDebounce";
@@ -52,6 +54,8 @@ const components = [
   cTimeCircle,
   cTimeOut,
   cTree,
+  cSpace,
+  cCard,
 ];
 
 export {
@@ -79,6 +83,8 @@ export {
   cTimeCircle,
   cTimeOut,
   cTree,
+  cSpace,
+  cCard,
   useClickOutside,
   useDebounce,
 };

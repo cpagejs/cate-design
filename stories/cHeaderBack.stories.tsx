@@ -1,9 +1,8 @@
-import cHeaderBack from "../src/components/cHeaderBack/cHeaderBack";
+import cHeaderBack from "../packages/components/cHeaderBack/cHeaderBack";
 import { Meta, StoryFn } from '@storybook/vue3';
-import LayoutStory from "./LayoutStory";
 
 export default {
-  title: "基础组件/顶部导航 cHeaderBack",
+  title: "导航组件/顶部导航 cHeaderBack",
   component: cHeaderBack,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -21,11 +20,11 @@ export default {
 } as Meta<typeof cHeaderBack>;
 
 const Template: StoryFn<typeof cHeaderBack> = (args) => ({
-  components: { LayoutStory, cHeaderBack },
+  components: { cHeaderBack },
   setup() {
     return { args };
   },
-  template: '<LayoutStory><c-header-back @onBack="onBack" v-bind="args" /></LayoutStory>',
+  template: '<div><c-header-back @onBack="onBack" v-bind="args" /></div>',
 });
 
 export const 示例 = Template.bind({});

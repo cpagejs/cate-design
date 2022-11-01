@@ -1,6 +1,5 @@
-import cButton from "../src/components/cButton/cButton";
-import LayoutStory from "./LayoutStory";
-import LayoutStoryItem from "./LayoutStoryItem";
+import cButton from "../packages/components/cButton/cButton";
+import cCard from "../packages/components/cCard/cCard";
 
 export default {
   title: "基础组件/按钮 cButton",
@@ -34,27 +33,27 @@ export default {
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template = (args) => ({
   // Components used in your story `template` are defined in the `components` object
-  components: { LayoutStory, LayoutStoryItem, cButton },
+  components: { cCard, cButton },
   // The story's `args` need to be mapped into the template through the `setup()` method
   setup() {
     return { args };
   },
   // And then the `args` are bound to your component with `v-bind="args"`
   template: `
-  <LayoutStory>
-    <LayoutStoryItem title="普通按钮">
+  <div>
+    <cCard title="普通按钮">
       <c-button @onClick="onClick" v-bind="args" />
       <c-button text="info" type="info" />
       <c-button text="danger" type="danger" />
       <c-button text="link" type="link" />
-    </LayoutStoryItem>
-    <LayoutStoryItem title="普通按钮：disabled">
+    </cCard>
+    <cCard title="普通按钮：disabled">
       <c-button text="primary" type="primary" disabled />
       <c-button text="info" type="info" disabled />
       <c-button text="danger" type="danger" disabled />
       <c-button text="link" type="link" disabled />
-    </LayoutStoryItem>
-  </LayoutStory>
+    </cCard>
+  </div>
   `,
 });
 

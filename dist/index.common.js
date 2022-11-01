@@ -1772,6 +1772,7 @@ __webpack_require__.d(__webpack_exports__, {
   "cBar": function() { return /* reexport */ components_cBar; },
   "cButton": function() { return /* reexport */ components_cButton; },
   "cButtonFooter": function() { return /* reexport */ components_cButtonFooter; },
+  "cCard": function() { return /* reexport */ components_cCard; },
   "cCheckBox": function() { return /* reexport */ components_cCheckBox; },
   "cCircle": function() { return /* reexport */ components_cCircle; },
   "cConfirm": function() { return /* reexport */ components_cConfirm; },
@@ -1785,6 +1786,7 @@ __webpack_require__.d(__webpack_exports__, {
   "cMenu": function() { return /* reexport */ components_cMenu; },
   "cMenuItem": function() { return /* reexport */ cMenuItem; },
   "cSlide": function() { return /* reexport */ components_cSlide; },
+  "cSpace": function() { return /* reexport */ components_cSpace; },
   "cSubItem": function() { return /* reexport */ cSubMenu; },
   "cSwitch": function() { return /* reexport */ components_cSwitch; },
   "cTabItem": function() { return /* reexport */ cTabItem; },
@@ -4559,6 +4561,94 @@ cTree.install = app => {
 };
 
 /* harmony default export */ var components_cTree = (cTree);
+;// CONCATENATED MODULE: ./packages/components/cSpace/cSpace.tsx
+
+
+
+/* harmony default export */ var cSpace = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.defineComponent)({
+  name: "cSpace",
+  props: {
+    height: {
+      type: String,
+      default: "20px"
+    },
+    showLine: {
+      type: Boolean,
+      default: false
+    },
+    bgColor: {
+      type: String,
+      default: "#fff"
+    }
+  },
+
+  setup(props, ctx) {
+    return () => {
+      const {
+        height,
+        bgColor,
+        showLine
+      } = props;
+      const styles = (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.computed)(() => ({
+        height,
+        background: bgColor
+      }));
+      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        "class": "c-space",
+        "style": styles.value
+      }, [showLine && (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        "class": "c-space_line"
+      }, null)]);
+    };
+  }
+
+}));
+;// CONCATENATED MODULE: ./packages/components/cSpace/index.ts
+
+
+cSpace.install = app => {
+  app.component(cSpace.name, cSpace);
+};
+
+/* harmony default export */ var components_cSpace = (cSpace);
+;// CONCATENATED MODULE: ./packages/components/cCard/cCard.tsx
+
+
+
+/* harmony default export */ var cCard = ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.defineComponent)({
+  props: {
+    title: {
+      type: String
+    }
+  },
+  emits: ["click"],
+
+  setup(props, ctx) {
+    const handleClick = () => {
+      ctx.emit("click");
+    };
+
+    return () => {
+      return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        "class": "c-card",
+        "onClick": handleClick
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        "class": "c-card_title"
+      }, [props?.title]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createVNode)("div", {
+        "class": "c-card_body"
+      }, [ctx.slots?.default?.()])]);
+    };
+  }
+
+}));
+;// CONCATENATED MODULE: ./packages/components/cCard/index.ts
+
+
+cCard.install = app => {
+  app.component(cCard.name, cCard);
+};
+
+/* harmony default export */ var components_cCard = (cCard);
 ;// CONCATENATED MODULE: ./packages/hooks/useDebounce.tsx
 
 function useDebounce(value, delay = 200) {
@@ -4607,7 +4697,9 @@ function useDebounce(value, delay = 200) {
 
 
 
-const components = [components_cBar, components_cButton, components_cButtonFooter, components_cCircle, components_cConfirm, components_cHeaderBack, components_cInput, components_cInputPassword, components_cCheckBox, components_cSwitch, components_cItem, components_cLoading, components_cSlide, components_cForm, components_cFormItem, components_cMenu, cMenuItem, cSubMenu, cTabs, cTabItem, components_cAutoComplete, components_cTimeCircle, components_cTimeOut, components_cTree];
+
+
+const components = [components_cBar, components_cButton, components_cButtonFooter, components_cCircle, components_cConfirm, components_cHeaderBack, components_cInput, components_cInputPassword, components_cCheckBox, components_cSwitch, components_cItem, components_cLoading, components_cSlide, components_cForm, components_cFormItem, components_cMenu, cMenuItem, cSubMenu, cTabs, cTabItem, components_cAutoComplete, components_cTimeCircle, components_cTimeOut, components_cTree, components_cSpace, components_cCard];
 
 /* harmony default export */ function packages_0(app) {
   components.forEach(item => {

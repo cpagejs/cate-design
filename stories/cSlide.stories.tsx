@@ -1,11 +1,10 @@
-import cSlide from "../src/components/cSlide/cSlide";
+import cSlide from "../packages/components/cSlide/cSlide";
 import { Meta, StoryFn } from '@storybook/vue3';
 import { ref, onMounted } from 'vue';
-import cButton from "../src/components/cButton/cButton";
-import LayoutStory from "./LayoutStory";
+import cButton from "../packages/components/cButton/cButton";
 
 export default {
-  title: "组件/抽屉 cSlide",
+  title: "反馈组件/抽屉 cSlide",
   component: cSlide,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -29,7 +28,7 @@ export default {
 } as Meta<typeof cSlide>;
 
 const Template: StoryFn<typeof cSlide> = (args) => ({
-  components: { LayoutStory, cSlide, cButton },
+  components: { cSlide, cButton },
   setup() {
     const mySlide = ref(null);
     const isShow = ref(false);
@@ -48,10 +47,10 @@ const Template: StoryFn<typeof cSlide> = (args) => ({
     return { args, isShow, btnClick, close };
   },
   template: `
-  <LayoutStory>
+  <div>
     <cButton text="显示slide" @click="btnClick"/>
     <cSlide v-bind="args" ref="mySlide" :isShow="isShow" @bgClick="close">slide content</cSlide>
-  </LayoutStory>
+  </div>
   `,
 });
 

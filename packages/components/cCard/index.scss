@@ -1,0 +1,15 @@
+@import '../../assets/styles/variable.scss';
+.c-card {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  &_title {
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    border-bottom: 1px solid #dedede;
+    padding-left: 10px;
+  }
+  &_body {
+    padding: 10px;
+  }
+}

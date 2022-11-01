@@ -1,12 +1,11 @@
-import cTabs from "../src/components/cTabs/tabs";
-import cTabItem from "../src/components/cTabs/tabItem"
+import cTabs from "../packages/components/cTabs/tabs";
+import cTabItem from "../packages/components/cTabs/tabItem"
 import { Meta, StoryFn } from '@storybook/vue3';
 import { ref } from "vue";
-import LayoutStory from "./LayoutStory";
-import LayoutStoryItem from "./LayoutStoryItem";
+import cCard from "../packages/components/cCard/cCard";
 
 export default {
-  title: "组件/标签页 cTabs",
+  title: "导航组件/标签页 cTabs",
   component: cTabs,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -25,7 +24,7 @@ export default {
 } as Meta<typeof cTabs>;
 
 const Template: StoryFn<typeof cTabs> = (args) => ({
-  components: { LayoutStory, LayoutStoryItem, cTabs, cTabItem },
+  components: { cCard, cTabs, cTabItem },
   setup() {
     const currentTabName = ref("Vue");
     const onClick = (txt) => {
@@ -34,8 +33,8 @@ const Template: StoryFn<typeof cTabs> = (args) => ({
     return { args, currentTabName, onClick };
   },
   template: `
-    <LayoutStory>
-      <LayoutStoryItem title="普通tab">
+    <div>
+      <cCard title="普通tab">
         <c-tabs v-model="currentTabName" @onClick="onClick">
           <c-tab-item name="React">
             react todo
@@ -43,8 +42,8 @@ const Template: StoryFn<typeof cTabs> = (args) => ({
           <c-tab-item name="Vue">vue todo</c-tab-item>
           <c-tab-item name="Cpage">cpage todo</c-tab-item>
         </c-tabs>
-      </LayoutStoryItem>
-      <LayoutStoryItem title="自定义tab的title">
+      </cCard>
+      <cCard title="自定义tab的title">
         <c-tabs v-model="currentTabName" @onClick="onClick">
           <c-tab-item name="React">
             <template #title>
@@ -55,8 +54,8 @@ const Template: StoryFn<typeof cTabs> = (args) => ({
           <c-tab-item name="Vue">vue todo</c-tab-item>
           <c-tab-item name="Cpage">cpage todo</c-tab-item>
         </c-tabs>
-      </LayoutStoryItem>
-    </LayoutStory>
+      </cCard>
+    </div>
   `,
 });
 

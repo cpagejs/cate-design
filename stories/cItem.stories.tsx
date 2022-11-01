@@ -1,9 +1,9 @@
-import cItem from "../src/components/cItem/cItem";
+import cItem from "../packages/components/cItem/cItem";
 import { Meta, StoryFn } from '@storybook/vue3';
-import LayoutStory from "./LayoutStory";
+import cCard from "../packages/components/cCard/cCard";
 
 export default {
-  title: "组件/列表 cItem",
+  title: "基础组件/列表 cItem",
   component: cItem,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -24,11 +24,17 @@ export default {
 } as Meta<typeof cItem>;
 
 const Template: StoryFn<typeof cItem> = (args) => ({
-  components: { LayoutStory, cItem },
+  components: { cCard, cItem },
   setup() {
     return { args };
   },
-  template: '<LayoutStory><cItem v-bind="args" /></LayoutStory>',
+  template: `
+  <div>
+    <cCard title="普通item">
+      <cItem v-bind="args" />
+    </cCard>
+  </div>
+  `,
 });
 
 export const 示例 = Template.bind({});

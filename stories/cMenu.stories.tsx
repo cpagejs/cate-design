@@ -1,10 +1,9 @@
-import cMenu from "../src/components/cMenu/demo.vue";
+import cMenu from "../packages/components/cMenu/demo.vue";
 import { Meta, StoryFn } from '@storybook/vue3';
-import LayoutStory from "./LayoutStory";
-import cSpace from "../src/components/cSpace/cSpace";
+import cSpace from "../packages/components/cSpace/cSpace";
 
 export default {
-  title: "组件/菜单 cMenu",
+  title: "导航组件/菜单 cMenu",
   component: cMenu,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -20,14 +19,14 @@ export default {
 } as Meta<typeof cMenu>;
 
 const Template: StoryFn<typeof cMenu> = (args) => ({
-  components: { LayoutStory, cMenu, cSpace },
+  components: { cMenu, cSpace },
   setup() {
     return { args };
   },
   template: `
-  <LayoutStory>
+  <div>
     <cMenu />
-  </LayoutStory>
+  </div>
   `,
 });
 

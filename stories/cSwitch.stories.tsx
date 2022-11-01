@@ -1,7 +1,5 @@
-import cSwitch from "../src/components/cSwitch/cSwitch.vue";
+import cSwitch from "../packages/components/cSwitch/cSwitch.vue";
 import { Meta, StoryFn } from '@storybook/vue3';
-import LayoutStory from "./LayoutStory";
-import LayoutStoryItem from "./LayoutStoryItem";
 
 export default {
   title: "表单组件/开关 cSwitch",
@@ -23,7 +21,7 @@ export default {
 } as Meta<typeof cSwitch>;
 
 const Template: StoryFn<typeof cSwitch> = (args) => ({
-  components: { LayoutStory, LayoutStoryItem, cSwitch },
+  components: { cSwitch },
   setup() {
     const onSwitch = (msg) => {
       console.log(msg)
@@ -31,9 +29,9 @@ const Template: StoryFn<typeof cSwitch> = (args) => ({
     return { args, onSwitch };
   },
   template: `
-  <LayoutStory>
+  <div>
     <cSwitch v-bind="args" @onSwitch="onSwitch" />
-  </LayoutStory>
+  </div>
   `,
 });
 

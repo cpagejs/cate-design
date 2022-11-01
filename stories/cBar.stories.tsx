@@ -1,10 +1,9 @@
-import cBar from "../src/components/cBar/cBar";
+import cBar from "../packages/components/cBar/cBar";
 import { Meta, StoryFn } from '@storybook/vue3';
-import LayoutStory from "./LayoutStory";
-import cSpace from "../src/components/cSpace/cSpace";
+import cSpace from "../packages/components/cSpace/cSpace";
 
 export default {
-  title: "组件/水平进度条 cBar",
+  title: "进度组件/水平进度条 cBar",
   component: cBar,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -14,12 +13,12 @@ export default {
 } as Meta<typeof cBar>;
 
 const Template: StoryFn<typeof cBar> = (args) => ({
-  components: { LayoutStory, cBar, cSpace },
+  components: { cBar, cSpace },
   setup() {
     return { args };
   },
   template: `
-  <LayoutStory>
+  <div>
     <cSpace />
     <c-bar v-bind="args" />
     <cSpace />
@@ -28,7 +27,7 @@ const Template: StoryFn<typeof cBar> = (args) => ({
     <c-bar color="#0094ff" percent="80" />
     <cSpace />
     <c-bar color="#ff0091" percent="100" />
-  </LayoutStory>
+  </div>
   `,
 });
 

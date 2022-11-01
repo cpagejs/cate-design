@@ -1,0 +1,33 @@
+@import '../../assets/styles/variable.scss';
+.c-space {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  &_line {
+    width: 3px;
+    height: 3px;
+    background: #afafaf;
+    border-radius: 50%;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 1px;
+      border-top: 1px dashed #afafaf;
+      top: 1px;
+      right: 10px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 1px;
+      border-top: 1px dashed #afafaf;
+      top: 1px;
+      left: 10px;
+    }
+  }
+}

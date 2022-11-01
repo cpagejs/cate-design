@@ -1,10 +1,9 @@
-import cTimeOut from "../src/components/cTimeOut/cTimeOut";
+import cTimeOut from "../packages/components/cTimeOut/cTimeOut";
 import { Meta, StoryFn } from '@storybook/vue3';
-import LayoutStory from "./LayoutStory";
-import LayoutStoryItem from "./LayoutStoryItem";
+import cCard from "../packages/components/cCard/cCard";
 
 export default {
-  title: "组件/时分秒倒计时 cTimeOut",
+  title: "进度组件/时分秒倒计时 cTimeOut",
   component: cTimeOut,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -29,20 +28,20 @@ export default {
 } as Meta<typeof cTimeOut>;
 
 const Template: StoryFn<typeof cTimeOut> = (args) => ({
-  components: { LayoutStory, LayoutStoryItem, cTimeOut },
+  components: { cCard, cTimeOut },
   setup() {
     return { args };
   },
   template: `
-  <LayoutStory>
-    <LayoutStoryItem title="普通倒计时,类型1">
+  <div>
+    <cCard title="普通倒计时,类型1">
       <cTimeOut v-bind="args" />
       <cTimeOut date="2023-10-26 23:15:26" textColor="#fff" bgColor="green" />
-    </LayoutStoryItem>
-    <LayoutStoryItem title="普通倒计时,类型2">
+    </cCard>
+    <cCard title="普通倒计时,类型2">
       <cTimeOut date="2023-10-26 23:15:26" textColor="#fff" bgColor="#f60" :type="2" />
-    </LayoutStoryItem>
-  </LayoutStory>
+    </cCard>
+  </div>
   `,
 });
 

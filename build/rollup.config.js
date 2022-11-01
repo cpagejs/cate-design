@@ -7,7 +7,7 @@ export default {
   output: {
     format: 'esm',
     file: 'lib/esm/index.js',
-    name: 'ui-vue',
+    name: 'cate-design',
     exports: 'named',
   },
   plugins: [terser(), nodeResolve()],

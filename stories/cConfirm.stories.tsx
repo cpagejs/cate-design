@@ -1,12 +1,11 @@
-import cConfirm from "../src/components/cConfirm/cConfirm.vue";
+import cConfirm from "../packages/components/cConfirm/cConfirm.vue";
 import { Meta, StoryFn } from '@storybook/vue3';
 import { ref, onMounted } from 'vue';
-import cButton from "../src/components/cButton/cButton";
-import LayoutStory from "./LayoutStory";
-import LayoutStoryItem from "./LayoutStoryItem";
+import cCard from "../packages/components/cCard/cCard";
+import cButton from "../packages/components/cButton/cButton";
 
 export default {
-  title: "组件/确认框 cConfirm",
+  title: "反馈组件/确认框 cConfirm",
   component: cConfirm,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -20,7 +19,7 @@ export default {
 } as Meta<typeof cConfirm>;
 
 const Template: StoryFn<typeof cConfirm> = (args) => ({
-  components: { LayoutStory, LayoutStoryItem, cConfirm },
+  components: { cCard, cButton, cConfirm },
   setup() {
     const myConfirm = ref(null);
     const isShow = ref(false);
@@ -47,9 +46,10 @@ const Template: StoryFn<typeof cConfirm> = (args) => ({
     return { args, btnClick, isShow, close, btnClick2, isShow2, close2 };
   },
   template: `
-  <LayoutStory>
-    <LayoutStoryItem title="点击显示弹窗-类型1" @click="btnClick"></LayoutStoryItem>
-    <LayoutStoryItem title="点击显示弹窗-类型2" @click="btnClick2"></LayoutStoryItem>
+  <div>
+    <cCard title="点击显示弹窗" @click="btnClick">
+      <cButton text="点击显示弹窗-类型1" @click="btnClick"/>
+    </cCard>
     <cConfirm ref="myConfirm" v-bind="args" :isShow="isShow" @cancel="close" @confirm="close">
       <template #inner>
         <p>confirm info confirm info</p>
@@ -57,14 +57,7 @@ const Template: StoryFn<typeof cConfirm> = (args) => ({
         <p>confirm info confirm info</p>
       </template>
     </cConfirm>
-    <cConfirm :isShow="isShow2" @cancel="close2" @confirm="close2" type="2">
-      <template #inner>
-        <p>confirm info confirm info</p>
-        <p>confirm info confirm info</p>
-        <p>confirm info confirm info</p>
-      </template>
-    </cConfirm>
-  </LayoutStory>
+  </div>
   `,
 });
 

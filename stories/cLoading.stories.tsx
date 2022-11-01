@@ -1,10 +1,9 @@
-import cLoading from "../src/components/cLoading/cLoading";
+import cLoading from "../packages/components/cLoading/cLoading";
 import { Meta, StoryFn } from '@storybook/vue3';
-import LayoutStory from "./LayoutStory";
-import LayoutStoryItem from "./LayoutStoryItem";
+import cCard from "../packages/components/cCard/cCard";
 
 export default {
-  title: "组件/加载 cLoading",
+  title: "进度组件/加载 cLoading",
   component: cLoading,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
@@ -33,19 +32,19 @@ export default {
 } as Meta<typeof cLoading>;
 
 const Template: StoryFn<typeof cLoading> = (args) => ({
-  components: { LayoutStory, LayoutStoryItem, cLoading },
+  components: { cCard, cLoading },
   setup() {
     return { args };
   },
   template: `
-  <LayoutStory>
-    <LayoutStoryItem title="圆点loading">
+  <div>
+    <cCard title="圆点loading">
       <c-loading v-bind="args" />
-    </LayoutStoryItem>
-    <LayoutStoryItem title="圆环loading">
+    </cCard>
+    <cCard title="圆环loading">
       <c-loading v-bind="args" type="huan" />
-    </LayoutStoryItem>
-  </LayoutStory>
+    </cCard>
+  </div>
   `,
 });
 
