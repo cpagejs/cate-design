@@ -7,7 +7,7 @@ declare const MenuProps: () => {
         type: StringConstructor;
         default: string;
     };
-    mode: {
+    type: {
         type: PropType<MenuMode>;
         default: string;
     };
@@ -32,7 +32,7 @@ interface ItemType {
 }
 interface MenuContext {
     index: string;
-    onSelect?: SelectFunc;
-    mode?: MenuMode;
+    onSelect: SelectFunc;
+    type?: MenuMode;
 }
 export { SubMenuProps, ItemType, MenuKey, MenuProps, MenuItemProps, MenuContext, };

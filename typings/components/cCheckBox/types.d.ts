@@ -20,6 +20,10 @@ declare const checkBoxProps: () => {
         type: StringConstructor;
         default: string;
     };
+    round: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     onChange: CustomEventFuncType<boolean>;
 };
 export { checkBoxProps };

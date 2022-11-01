@@ -4,7 +4,7 @@ declare const _default: SFCWithInstall<import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
-    mode: {
+    type: {
         type: import("vue").PropType<"horizontal" | "vertical">;
         default: string;
     };
@@ -14,13 +14,13 @@ declare const _default: SFCWithInstall<import("vue").DefineComponent<{
         type: StringConstructor;
         default: string;
     };
-    mode: {
+    type: {
         type: import("vue").PropType<"horizontal" | "vertical">;
         default: string;
     };
     onSelect: import("vue").PropType<(selectedIndex: string) => void>;
 }>>, {
+    type: "horizontal" | "vertical";
     defaultIndex: string;
-    mode: "horizontal" | "vertical";
 }>>;
 export default _default;

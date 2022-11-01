@@ -1,7 +1,7 @@
 declare const barProps: () => {
     percent: {
-        type: StringConstructor;
-        default: string;
+        type: NumberConstructor;
+        default: number;
     };
     color: {
         type: StringConstructor;

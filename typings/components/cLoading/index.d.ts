@@ -8,6 +8,18 @@ declare const _default: SFCWithInstall<import("vue").DefineComponent<{
         type: ObjectConstructor;
         default(): {};
     };
+    type: {
+        type: StringConstructor;
+        default: string;
+    };
+    huanLeftColor: {
+        type: StringConstructor;
+        default: string;
+    };
+    huanRightColor: {
+        type: StringConstructor;
+        default: string;
+    };
 }, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     color: {
         type: StringConstructor;
@@ -17,8 +29,23 @@ declare const _default: SFCWithInstall<import("vue").DefineComponent<{
         type: ObjectConstructor;
         default(): {};
     };
+    type: {
+        type: StringConstructor;
+        default: string;
+    };
+    huanLeftColor: {
+        type: StringConstructor;
+        default: string;
+    };
+    huanRightColor: {
+        type: StringConstructor;
+        default: string;
+    };
 }>>, {
     color: string;
+    type: string;
     styleLoading: Record<string, any>;
+    huanLeftColor: string;
+    huanRightColor: string;
 }>>;
 export default _default;

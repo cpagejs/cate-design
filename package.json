@@ -1,6 +1,6 @@
 {
   "name": "cate-design",
-  "version": "2.0.7-2",
+  "version": "2.0.9",
   "publish": true,
   "main": "dist/index.common.js",
   "types": "index.d.ts",
@@ -11,8 +11,8 @@
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build:ui": "vue-cli-service build --target lib --name index --dest dist ./src/index.ts",
-    "build:types": "tsc --project src/components/tsconfig.json",
+    "build:ui": "vue-cli-service build --target lib --name index --dest dist ./packages/index.ts",
+    "build:types": "tsc --project packages/tsconfig.json",
     "lint": "vue-cli-service lint",
     "test": "jest",
     "storybook": "start-storybook -p 3001",
