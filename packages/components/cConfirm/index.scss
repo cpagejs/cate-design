@@ -1,5 +1,5 @@
-@import '../../assets/styles/variable.scss';
-@import '../../assets/styles/mixin.scss';
+@use "../../assets/styles/variable.scss" as *;
+@use "../../assets/styles/mixin.scss" as *;
 
 .c-confirm-container {
   .confirm-wrapper {
@@ -81,12 +81,11 @@
           }
         }
       }
-
     }
 
     .confirm-content3 {
       .confirm-inner {
-        padding: 10px
+        padding: 10px;
       }
       .confirm-close {
         text-align: center;
@@ -113,7 +112,7 @@
 }
 .c-confirm-enter-active,
 .c-confirm-leave-active {
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .c-confirm-enter-from,

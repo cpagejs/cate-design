@@ -22,7 +22,7 @@ interface TreeNodeOptions {
 // 组件内部使用
 type RequiredTreeNodeOptions = Required<TreeNodeOptions>;
 
-export type renderFunc<T> = PropType<(node: T) => JSX.Element>;
+export type renderFunc<T> = PropType<(node: T) => any>;
 
 interface TreeNodeInstance {
   node: RequiredTreeNodeOptions;

@@ -1,5 +1,5 @@
 /** 导航条--返回
- * @author 夏小宅
+ * @author cpagejs
  */
 import { defineComponent } from "vue";
 import { headerBackProps } from "./types";
@@ -18,7 +18,10 @@ export default defineComponent({
     return () => {
       return (
         <header class="c-header-back">
-          <i class="icon_left" onClick={handleClickBack}></i>
+          <i
+            class="icon_left"
+            onClick={handleClickBack}
+          ></i>
           <div class="ellipsis">{props.title}</div>
         </header>
       );

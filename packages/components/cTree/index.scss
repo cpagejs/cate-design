@@ -1,5 +1,5 @@
-@import './iconfont.css';
-@import '../../assets/styles/variable.scss';
+@use "../../assets/styles/iconfont.css" as *;
+@use "../../assets/styles/variable.scss" as *;
 
 .#{$c-pre}tree-wrap {
   position: relative;

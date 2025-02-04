@@ -1,4 +1,4 @@
-@import '../../assets/styles/variable.scss';
+@use "../../assets/styles/variable.scss" as *;
 .c-card {
   border: 1px solid #dedede;
   border-radius: 5px;

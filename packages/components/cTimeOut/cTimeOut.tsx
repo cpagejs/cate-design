@@ -1,4 +1,4 @@
-/**@author 夏小宅
+/**@author cpagejs
  * 倒计时效果
  */
 import { defineComponent, ref, onMounted, computed } from "vue";
@@ -53,10 +53,10 @@ export default defineComponent({
     };
 
     onMounted(() => {
-      clearInterval(timer);
+      clearInterval(timer as any);
       timer.value = setInterval(() => {
         if (Date.parse(props.date) < Date.parse(new Date().toString())) {
-          clearInterval(timer);
+          clearInterval(timer as any);
         } else {
           const _timer = new Date(props.date);
           leftTimer(
@@ -74,24 +74,69 @@ export default defineComponent({
     return () => {
       return (
         <section class="c-time-count">
-          {props.type === 1 && <div  class="type1">
-            <span class="timer" style={styles.value}>{timeData.value.day}天</span>
-            <span class="dot"> : </span>
-            <span class="timer" style={styles.value}>{timeData.value.hour}时</span>
-            <span class="dot"> : </span>
-            <span class="timer" style={styles.value}>{timeData.value.minute}分</span>
-            <span class="dot"> : </span>
-            <span class="timer" style={styles.value}>{timeData.value.second}秒</span>
-          </div>}
-          {props.type === 2 && <div class="type2">
-            <span class="timer" style={styles.value}>{timeData.value.day}</span>
-            <span class="dot">天</span>
-            <span class="timer" style={styles.value}>{timeData.value.hour}</span>
-            <span class="dot">时</span>
-            <span class="timer" style={styles.value}>{timeData.value.minute}</span>
-            <span class="dot">分</span>
-            <span class="timer" style={styles.value}>{timeData.value.second}</span><span class="dot">秒</span>
-          </div>}
+          {props.type === 1 && (
+            <div class="type1">
+              <span
+                class="timer"
+                style={styles.value}
+              >
+                {timeData.value.day}天
+              </span>
+              <span class="dot"> : </span>
+              <span
+                class="timer"
+                style={styles.value}
+              >
+                {timeData.value.hour}时
+              </span>
+              <span class="dot"> : </span>
+              <span
+                class="timer"
+                style={styles.value}
+              >
+                {timeData.value.minute}分
+              </span>
+              <span class="dot"> : </span>
+              <span
+                class="timer"
+                style={styles.value}
+              >
+                {timeData.value.second}秒
+              </span>
+            </div>
+          )}
+          {props.type === 2 && (
+            <div class="type2">
+              <span
+                class="timer"
+                style={styles.value}
+              >
+                {timeData.value.day}
+              </span>
+              <span class="dot">天</span>
+              <span
+                class="timer"
+                style={styles.value}
+              >
+                {timeData.value.hour}
+              </span>
+              <span class="dot">时</span>
+              <span
+                class="timer"
+                style={styles.value}
+              >
+                {timeData.value.minute}
+              </span>
+              <span class="dot">分</span>
+              <span
+                class="timer"
+                style={styles.value}
+              >
+                {timeData.value.second}
+              </span>
+              <span class="dot">秒</span>
+            </div>
+          )}
         </section>
       );
     };

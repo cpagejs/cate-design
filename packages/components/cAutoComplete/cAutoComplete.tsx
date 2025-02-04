@@ -86,7 +86,7 @@ export default defineComponent({
       return props.renderOption ? props.renderOption(item) : item.value;
     };
 
-    const generateDropdown = (): JSX.Element => {
+    const generateDropdown = () => {
       return (
         <ul class="c-suggestion-list">
           {suggestions.value.map((item, index) => {
@@ -143,7 +143,11 @@ export default defineComponent({
       const { onSelect, modelValue, style } = props;
 
       return (
-        <div class="c-auto-complete" style={style} ref={componentRef}>
+        <div
+          class="c-auto-complete"
+          style={style}
+          ref={componentRef}
+        >
           <c-Input
             {...attrs}
             modelValue={inputModelValue.value}

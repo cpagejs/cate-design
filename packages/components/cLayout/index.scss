@@ -1,6 +1,6 @@
-@import '../../assets/styles/variable.scss';
+@use "../../assets/styles/variable.scss" as *;
 .c-space {
-  width: "375px",;
+  width: "375px";
   margin: "0 auto";
   min-height: "600px";
   background: "#dedede";

@@ -1,4 +1,4 @@
-@import '../../assets/styles/variable.scss';
+@use "../../assets/styles/variable.scss" as *;
 
 .c-drawer-container {
   .drawer-inner {

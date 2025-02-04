@@ -1,5 +1,5 @@
-@import '../../assets/styles/variable.scss';
-@import '../../assets/styles/mixin.scss';
+@use "../../assets/styles/variable.scss" as *;
+@use "../../assets/styles/mixin.scss" as *;
 
 .c-cell-item {
   @include flex-justify(space-between);

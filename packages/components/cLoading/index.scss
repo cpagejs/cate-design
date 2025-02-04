@@ -1,4 +1,4 @@
-@import '../../assets/styles/variable.scss';
+@use "../../assets/styles/variable.scss" as *;
 
 .c-loading {
   width: 40px;
@@ -98,7 +98,6 @@
 }
 
 @keyframes bouncedelay {
-
   0%,
   80%,
   100% {

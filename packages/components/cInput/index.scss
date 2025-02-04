@@ -1,4 +1,4 @@
-@import '../../assets/styles/variable.scss';
+@use "../../assets/styles/variable.scss" as *;
 @mixin border-right-radius($raduis) {
   border-top-right-radius: $raduis;
   border-bottom-right-radius: $raduis;
@@ -32,8 +32,8 @@
   box-shadow: $input-box-shadow;
   transition: $input-transition;
   outline: none;
-  appearance: none;/*去除阴影边框*/
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  appearance: none; /*去除阴影边框*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   box-shadow: none;
 
   &:focus {

@@ -1,4 +1,5 @@
-@import '../../assets/styles/variable.scss';
+@use "sass:color";
+@use "../../assets/styles/variable.scss" as *;
 
 @mixin button-size($padding-y, $padding-x, $font-size, $border-raduis) {
   padding: $padding-y $padding-x;
@@ -9,8 +10,8 @@
   $background,
   $border,
   $color,
-  $hover-background: lighten($background, 7.5%),
-  $hover-border: lighten($border, 10%),
+  $hover-background: color.adjust($background, $lightness: 7.5%),
+  $hover-border: color.adjust($border, $lightness: 10%),
   $hover-color: $color
 ) {
   color: $color;

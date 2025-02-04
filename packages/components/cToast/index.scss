@@ -1,4 +1,4 @@
-@import '../../assets/styles/variable.scss';
+@use "../../assets/styles/variable.scss" as *;
 
 .c-toast {
   position: fixed;
@@ -32,7 +32,6 @@
     z-index: 1999;
   }
 }
-
 
 .c-toast-enter-active,
 .c-toast-leave-active {

@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $c-pre: c-;
 $white-color: #fff;
 $border-color: #d9d9d9;
@@ -15,7 +17,7 @@ $font-size-mid: $font-size-base + 2;
 $font-size-large: $font-size-base + 4;
 $font-size-huge: $font-size-base + 10;
 
-$lib-pre: 'c-';
+$lib-pre: "c-";
 
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
@@ -50,21 +52,21 @@ $light: $gray-100 !default;
 $dark: $gray-800 !default;
 
 $theme-colors: (
-  'primary': $primary,
-  'secondary': $secondary,
-  'success': $success,
-  'info': $info,
-  'warning': $warning,
-  'danger': $danger,
-  'light': $light,
-  'dark': $dark,
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
 );
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-  'Liberation Mono', 'Courier New', monospace !default;
+  "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family-sans-serif !default;
 
 // 字体大小
@@ -97,7 +99,8 @@ $h6-font-size: $font-size-base !default;
 // 链接
 $link-color: $primary !default;
 $link-decoration: none !default;
-$link-hover-color: darken($link-color, 15%) !default;
+// $link-hover-color: darken($link-color, 15%) !default;
+$link-hover-color: color.adjust($link-color, $lightness: -15%) !default;
 $link-hover-decoration: underline !default;
 
 // body
@@ -303,7 +306,8 @@ $input-border-radius-lg: $border-radius-lg !default;
 $input-border-radius-sm: $border-radius-sm !default;
 
 $input-focus-bg: $input-bg !default;
-$input-focus-border-color: lighten($primary, 25%) !default;
+// $input-focus-border-color: lighten($primary, 25%) !default;
+$input-focus-border-color: color.adjust($primary, $lightness: 25%) !default;
 $input-focus-width: 0.2rem !default;
 $input-focus-color: $input-color !default;
 $input-focus-shadow-color: rgba($primary, 0.25) !default;

@@ -1,5 +1,5 @@
 /** item组件
- * @author 夏小宅
+ * @author cpagejs
  */
 import { defineComponent } from "vue";
 import { itemProps } from "./types";
@@ -17,9 +17,17 @@ export default defineComponent({
 
     return () => {
       return (
-        <div class="c-cell-item" onClick={onClickFn}>
+        <div
+          class="c-cell-item"
+          onClick={onClickFn}
+        >
           <div class="cell-left">
-            {props.avatar && <img src={props.avatar} class="cell-left-icon" />}
+            {props.avatar && (
+              <img
+                src={props.avatar}
+                class="cell-left-icon"
+              />
+            )}
             <div class="cell-left-info">
               <div class="cell-left-title">{props.title}</div>
               {props.description && (

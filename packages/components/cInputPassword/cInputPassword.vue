@@ -1,4 +1,4 @@
-/** 密码输入框 * @author 夏小宅 */
+/** 密码输入框 * @author cpagejs */
 <template>
   <div class="c-input-password">
     <span>{{ label }}</span>
@@ -37,44 +37,44 @@
 </template>
 
 <script>
-import { inputPwdProps } from "./types";
-const props = inputPwdProps();
-export default {
-  name: "cInputPassword",
-  props: props,
-  data() {
-    return {
-      showPwd: {
-        type: Boolean,
-        default: true,
+  import { inputPwdProps } from "./types";
+  const props = inputPwdProps();
+  export default {
+    name: "cInputPassword",
+    props: props,
+    data() {
+      return {
+        showPwd: {
+          type: Boolean,
+          default: true,
+        },
+        invisible: false,
+      };
+    },
+    methods: {
+      _input() {
+        this.$emit("onInput", this.$refs.input.value);
       },
-      invisible: false,
-    };
-  },
-  methods: {
-    _input() {
-      this.$emit("onInput", this.$refs.input.value);
+      _blur() {
+        this.$emit("onBlur", this.$refs.input.value);
+      },
+      focus() {
+        this.$refs.input.focus();
+      },
+      val() {
+        return this.$refs.input.value;
+      },
+      toggle() {
+        const val = this.$refs.input.value;
+        this.showPwd = !this.showPwd;
+        this.invisible = !this.invisible;
+        setTimeout(() => {
+          this.$refs.input.value = val;
+        }, 0);
+      },
     },
-    _blur() {
-      this.$emit("onBlur", this.$refs.input.value);
-    },
-    focus() {
-      this.$refs.input.focus();
-    },
-    val() {
-      return this.$refs.input.value;
-    },
-    toggle() {
-      const val = this.$refs.input.value;
-      this.showPwd = !this.showPwd;
-      this.invisible = !this.invisible;
-      setTimeout(() => {
-        this.$refs.input.value = val;
-      }, 0);
-    },
-  },
-};
+  };
 </script>
 <style lang="scss">
-@import "./index";
+  @use "./index" as *;
 </style>

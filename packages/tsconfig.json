@@ -11,25 +11,15 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": [
-      "webpack-env",
-      "jest"
-    ],
+    // "types": ["webpack-env"],
     "noImplicitAny": false,
     "paths": {
-      "@/*": [
-        "packages/*"
-      ]
+      "@/*": ["packages/*"]
     },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ],
-    "declaration": true, 
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "declaration": true,
     "emitDeclarationOnly": true,
-    "declarationDir": "../typings",
+    "declarationDir": "../typings"
   },
   "include": [
     "../packages/**/*.ts",
@@ -37,5 +27,5 @@
     "../packages/**/*.vue",
     "../packages/**/*.ts",
     "../packages/**/*.tsx"
-  ],
+  ]
 }

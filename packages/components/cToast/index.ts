@@ -1,4 +1,4 @@
-import { App, createVNode, render } from "vue";
+import { App, createVNode, nextTick, render } from "vue";
 import { SFCWithInstall } from "../utils/types";
 import cToast from "./cToast";
 
@@ -17,7 +17,20 @@ export function useToast({msg, delay, showMask=false, onEnd}: IToastConfig) {
   const container = document.createElement("div");
   render(vm, container);
   document.body.append(container);
-  vm.component?.exposed?.open();
+
+  nextTick(() => {
+    vm.component?.exposed?.open();
+
+    setTimeout(() => {
+      vm.component?.exposed?.close();
+      onEnd && onEnd();
+
+      setTimeout(() => {
+        document.body.removeChild(container);
+      }, 300);
+    }, delay);
+  });
+  
 
   return vm;
 }

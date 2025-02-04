@@ -1,5 +1,5 @@
 /** 圆环倒计时组件
- * @author 夏小宅
+ * @author cpagejs
  */
 import { defineComponent, ref, onMounted } from "vue";
 import { timeCircleProps } from "./types";
@@ -42,7 +42,9 @@ export default defineComponent({
             ></div>
             <div class={["percent right", { wth0: wth0.value }]}></div>
           </div>
-          <div class="num"><span v-show={props.showNum}>{time.value}s</span></div>
+          <div class="num">
+            <span v-show={props.showNum}>{time.value}s</span>
+          </div>
         </div>
       );
     };

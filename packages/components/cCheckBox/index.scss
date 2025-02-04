@@ -1,4 +1,4 @@
-@import '../../assets/styles/variable.scss';
+@use "../../assets/styles/variable.scss" as *;
 
 .#{$c-pre}checkbox {
   display: inline-block;
@@ -17,7 +17,7 @@
     border-radius: 2px;
     border-collapse: initial;
     &:after {
-      content: ' ';
+      content: " ";
       position: absolute;
       top: 50%;
       left: 50%;
@@ -47,7 +47,7 @@
       margin: 0;
       transform: translate(-50%, -50%);
       opacity: 1;
-      content: ' ';
+      content: " ";
     }
   }
   &.checked {
@@ -68,7 +68,7 @@
       // &:after {
       //   background-color: $primary-color;
       // }
-      background: rgba($color: #000000, $alpha: 0.5)
+      background: rgba($color: #000000, $alpha: 0.5);
     }
   }
 }

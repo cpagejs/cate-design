@@ -1,5 +1,5 @@
 /** 侧滑组件
- * @author 夏小宅
+ * @author cpagejs
  */
 import { defineComponent } from "vue";
 import { loadingProps } from "./types";
@@ -18,13 +18,27 @@ export default defineComponent({
 
     return () => {
       return (
-        <section class="c-drawer-container" v-show={props.isShow}>
+        <section
+          class="c-drawer-container"
+          v-show={props.isShow}
+        >
           <div
-            class={["drawer-inner", { "drawer-inner_left": props.position === 'left', "drawer-inner_right": props.position === 'right' }]}
+            class={[
+              "drawer-inner",
+              {
+                "drawer-inner_left": props.position === "left",
+                "drawer-inner_right": props.position === "right",
+              },
+            ]}
           >
             {ctx.slots.default?.()}
           </div>
-          {props.showMask && <div class="drawer-mask" onClick={hide}></div>}
+          {props.showMask && (
+            <div
+              class="drawer-mask"
+              onClick={hide}
+            ></div>
+          )}
         </section>
       );
     };

@@ -1,10 +1,11 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from "@storybook/blocks";
 
 <Meta title="简介" />
 
-# cate-design 一个基于 Vue3+TypeScript 的前端UI框架，简单易用
+# cate-design 一个基于 Vue3+TypeScript 的前端 UI 框架，简单易用
 
 ## 安装
+
 ```js
 # 选择一个你喜欢的包管理器
 
@@ -19,16 +20,16 @@ pnpm install cate-design
 ```
 
 ## 注册
+
 ```js
-import { createApp } from 'vue';
+import { createApp } from "vue";
 // 然后全局引入css
-import 'cate-design/dist/index.css';
+import "cate-design/dist/index.css";
 
 // 可以全局注入组件
-import cateDesign from 'cate-design';
+import cateDesign from "cate-design";
 
 const app = createApp(App);
 app.use(cateDesign);
-app.mount('#app');
+app.mount("#app");
 ```
-

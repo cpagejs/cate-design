@@ -1,10 +1,10 @@
-import { PropType } from "vue";
+import type { PropType } from "vue";
 
-type ButtonSize = "lg" | "sm" | "default";
+export type ButtonSize = "lg" | "sm" | "default";
 
-type ButtonType = "primary" | "info" | "danger" | "link";
+export type ButtonType = "primary" | "info" | "danger" | "link";
 
-const buttonProps = () => ({
+export const buttonProps = () => ({
   text: String,
   backgroundColor: String,
   textColor: String,
@@ -22,4 +22,4 @@ const buttonProps = () => ({
   },
   href: String,
 });
-export { ButtonType, ButtonSize, buttonProps };
+// export { ButtonType, ButtonSize, buttonProps };
