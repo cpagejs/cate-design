@@ -1,5 +1,5 @@
 import { PropType } from "vue";
-declare type InputSize = "lg" | "sm";
+type InputSize = "lg" | "sm";
 declare const inputProps: () => {
     disabled: BooleanConstructor;
     size: {

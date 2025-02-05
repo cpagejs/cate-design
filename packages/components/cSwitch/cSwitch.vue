@@ -1,9 +1,9 @@
 /**开关组件 * @author cpagejs */
 <template>
   <label
-    class="c-switch-wrap"
+    className="c-switch-wrap"
     @click.prevent="toggle"
-    :class="[{ 'c-switch-disabled': disabled }]"
+    :className="[{ 'c-switch-disabled': disabled }]"
   >
     <input
       type="checkbox"
@@ -11,11 +11,11 @@
       :checked="on"
     />
     <span
-      class="c-switch-box"
-      :class="[{ on: on }]"
+      className="c-switch-box"
+      :className="[{ on: on }]"
       :style="colorStyle"
     >
-      <small class="switcher"></small>
+      <small className="switcher"></small>
     </span>
   </label>
 </template>

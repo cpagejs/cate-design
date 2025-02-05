@@ -245,8 +245,8 @@ export default defineComponent({
 
     return () => {
       return (
-        <div class="c-tree-wrap">
-          <div class="c-tree">{renderChildren()}</div>
+        <div className="c-tree-wrap">
+          <div className="c-tree">{renderChildren()}</div>
         </div>
       );
     };

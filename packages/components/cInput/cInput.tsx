@@ -30,17 +30,20 @@ export default defineComponent({
       const { prepend, disabled, append, style, ...restProps } = props;
 
       return (
-        <div style={style} class={classes.value}>
-          {prepend && <div class="c-input-group-prepend">{prepend}</div>}
+        <div
+          style={style}
+          className={classes.value}
+        >
+          {prepend && <div className="c-input-group-prepend">{prepend}</div>}
           <input
             {...restProps}
             {...attrs}
             value={props.modelValue}
             onInput={handleChange}
-            class="c-input-inner"
+            className="c-input-inner"
             disabled={disabled}
           ></input>
-          {append && <div class="c-input-group-append"> {append}</div>}
+          {append && <div className="c-input-group-append"> {append}</div>}
         </div>
       );
     };

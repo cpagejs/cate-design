@@ -18,26 +18,26 @@ export default defineComponent({
     return () => {
       return (
         <div
-          class="c-cell-item"
+          className="c-cell-item"
           onClick={onClickFn}
         >
-          <div class="cell-left">
+          <div className="cell-left">
             {props.avatar && (
               <img
                 src={props.avatar}
-                class="cell-left-icon"
+                className="cell-left-icon"
               />
             )}
-            <div class="cell-left-info">
-              <div class="cell-left-title">{props.title}</div>
+            <div className="cell-left-info">
+              <div className="cell-left-title">{props.title}</div>
               {props.description && (
-                <div class="cell-left-desc">{props.description}</div>
+                <div className="cell-left-desc">{props.description}</div>
               )}
             </div>
           </div>
-          <div class="cell-right">
-            <span class="right-text">{props.rightText}</span>
-            {props.rightArrowShow && <em class="icon"></em>}
+          <div className="cell-right">
+            <span className="right-text">{props.rightText}</span>
+            {props.rightArrowShow && <em className="icon"></em>}
           </div>
         </div>
       );

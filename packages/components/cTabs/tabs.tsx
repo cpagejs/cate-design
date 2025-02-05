@@ -31,7 +31,7 @@ export default defineComponent({
           (item.props as any).name === currentTabName.value ? "active" : "";
         return (
           <div
-            class={"c-tab-item " + extraCls}
+            className={"c-tab-item " + extraCls}
             onClick={clickTab.bind(null, (item.props as any).name)}
           >
             {(item.children as any).title
@@ -41,11 +41,11 @@ export default defineComponent({
         );
       });
     };
-    
+
     return () => {
       return (
-        <div class="c-tabs">
-          <div class="navs">{renderNavs()}</div>
+        <div className="c-tabs">
+          <div className="navs">{renderNavs()}</div>
           {slots.default!()}
         </div>
       );

@@ -63,7 +63,7 @@ export default defineComponent({
     });
 
     return () => {
-      return <div class="c-form">{slots.default!()}</div>;
+      return <div className="c-form">{slots.default!()}</div>;
     };
   },
 });

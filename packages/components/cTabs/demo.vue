@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div className="main">
     <c-tabs v-model="currentTabName">
       <tab-pane name="tab1">
         <template #title>
@@ -14,19 +14,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
-import cTabs from "./index";
-export default defineComponent({
-  name: "App",
-  components: {
-    cTabs,
-  },
-  setup() {
-    const currentTabName = ref("tab1");
-    return {
-      currentTabName,
-    };
-  },
-});
+  import { defineComponent, ref } from "vue";
+  import cTabs from "./index";
+  export default defineComponent({
+    name: "App",
+    components: {
+      cTabs,
+    },
+    setup() {
+      const currentTabName = ref("tab1");
+      return {
+        currentTabName,
+      };
+    },
+  });
 </script>
 <style lang="scss"></style>

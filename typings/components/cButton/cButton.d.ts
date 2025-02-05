@@ -1,5 +1,5 @@
 import "./index.scss";
-declare const _default: import("vue").DefineComponent<{
+declare const _default: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
     text: StringConstructor;
     backgroundColor: StringConstructor;
     textColor: StringConstructor;
@@ -16,7 +16,7 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
     href: StringConstructor;
-}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "onClick"[], "onClick", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}>, () => import("react").JSX.Element, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "onClick"[], "onClick", import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     text: StringConstructor;
     backgroundColor: StringConstructor;
     textColor: StringConstructor;
@@ -33,11 +33,11 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
     href: StringConstructor;
-}>> & {
+}>> & Readonly<{
     onOnClick?: ((...args: any[]) => any) | undefined;
-}, {
+}>, {
     type: import("./types").ButtonType;
-    disabled: boolean;
     size: import("./types").ButtonSize;
-}>;
+    disabled: boolean;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 export default _default;

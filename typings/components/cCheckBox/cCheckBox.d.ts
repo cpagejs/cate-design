@@ -1,5 +1,5 @@
 import "./index.scss";
-declare const _default: import("vue").DefineComponent<{
+declare const _default: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
     modelValue: {
         type: BooleanConstructor;
         default: boolean;
@@ -25,7 +25,7 @@ declare const _default: import("vue").DefineComponent<{
         default: boolean;
     };
     onChange: import("../cTree/types").CustomEventFuncType<boolean>;
-}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "onChange")[], "onChange" | "update:modelValue", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}>, () => import("react").JSX.Element, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "onChange")[], "update:modelValue" | "onChange", import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     modelValue: {
         type: BooleanConstructor;
         default: boolean;
@@ -51,15 +51,15 @@ declare const _default: import("vue").DefineComponent<{
         default: boolean;
     };
     onChange: import("../cTree/types").CustomEventFuncType<boolean>;
-}>> & {
+}>> & Readonly<{
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
     onOnChange?: ((...args: any[]) => any) | undefined;
-}, {
+}>, {
     disabled: boolean;
     modelValue: boolean;
     halfChecked: boolean;
     bgColor: string;
     borderColor: string;
     round: boolean;
-}>;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 export default _default;

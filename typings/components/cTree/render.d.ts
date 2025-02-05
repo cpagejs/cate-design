@@ -1,20 +1,20 @@
-declare const _default: import("vue").DefineComponent<{
+declare const _default: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
     node: {
-        type: import("vue").PropType<Required<import("./types").TreeNodeOptions>>;
+        type: import("vue").PropType<import("./types").RequiredTreeNodeOptions>;
         required: boolean;
     };
     render: {
-        type: import("./types").renderFunc<Required<import("./types").TreeNodeOptions>>;
+        type: import("./types").renderFunc<import("./types").RequiredTreeNodeOptions>;
         required: boolean;
     };
-}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}>, () => any, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     node: {
-        type: import("vue").PropType<Required<import("./types").TreeNodeOptions>>;
+        type: import("vue").PropType<import("./types").RequiredTreeNodeOptions>;
         required: boolean;
     };
     render: {
-        type: import("./types").renderFunc<Required<import("./types").TreeNodeOptions>>;
+        type: import("./types").renderFunc<import("./types").RequiredTreeNodeOptions>;
         required: boolean;
     };
-}>>, {}>;
+}>> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 export default _default;

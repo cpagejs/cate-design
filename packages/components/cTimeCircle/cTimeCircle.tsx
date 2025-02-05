@@ -2,6 +2,7 @@
  * @author cpagejs
  */
 import { defineComponent, ref, onMounted } from "vue";
+import classNames from "classnames";
 import { timeCircleProps } from "./types";
 import "./index.scss";
 
@@ -15,6 +16,10 @@ export default defineComponent({
     const wth0 = ref(true);
     const rotate = ref(0);
     const time = ref(props.timer);
+    const circle = classNames("circle", {
+      "clip-auto": clipAuto.value,
+    });
+    const percentRight = classNames("percent right", { wth0: wth0.value });
 
     onMounted(() => {
       const loading = setInterval(() => {
@@ -34,15 +39,15 @@ export default defineComponent({
 
     return () => {
       return (
-        <div class="c-time-circle">
-          <div class={["circle", { "clip-auto": clipAuto.value }]}>
+        <div className="c-time-circle">
+          <div className={circle}>
             <div
-              class="percent left"
+              className="percent left"
               style={{ transform: "rotate(" + (360 - rotate.value) + "deg)" }}
             ></div>
-            <div class={["percent right", { wth0: wth0.value }]}></div>
+            <div className={percentRight}></div>
           </div>
-          <div class="num">
+          <div className="num">
             <span v-show={props.showNum}>{time.value}s</span>
           </div>
         </div>

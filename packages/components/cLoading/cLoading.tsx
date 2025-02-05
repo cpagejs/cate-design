@@ -20,67 +20,67 @@ export default defineComponent({
         <>
           {props.type === "dot" && (
             <div
-              class="c-loading"
+              className="c-loading"
               style={props.styleLoading}
             >
-              <div class="loading-container container1">
+              <div className="loading-container container1">
                 <div
-                  class="circle1"
+                  className="circle1"
                   style={colorStyle}
                 ></div>
                 <div
-                  class="circle2"
+                  className="circle2"
                   style={colorStyle}
                 ></div>
                 <div
-                  class="circle3"
+                  className="circle3"
                   style={colorStyle}
                 ></div>
                 <div
-                  class="circle4"
-                  style={colorStyle}
-                ></div>
-              </div>
-              <div class="loading-container container2">
-                <div
-                  class="circle1"
-                  style={colorStyle}
-                ></div>
-                <div
-                  class="circle2"
-                  style={colorStyle}
-                ></div>
-                <div
-                  class="circle3"
-                  style={colorStyle}
-                ></div>
-                <div
-                  class="circle4"
+                  className="circle4"
                   style={colorStyle}
                 ></div>
               </div>
-              <div class="loading-container container3">
+              <div className="loading-container container2">
                 <div
-                  class="circle1"
+                  className="circle1"
                   style={colorStyle}
                 ></div>
                 <div
-                  class="circle2"
+                  className="circle2"
                   style={colorStyle}
                 ></div>
                 <div
-                  class="circle3"
+                  className="circle3"
                   style={colorStyle}
                 ></div>
                 <div
-                  class="circle4"
+                  className="circle4"
+                  style={colorStyle}
+                ></div>
+              </div>
+              <div className="loading-container container3">
+                <div
+                  className="circle1"
+                  style={colorStyle}
+                ></div>
+                <div
+                  className="circle2"
+                  style={colorStyle}
+                ></div>
+                <div
+                  className="circle3"
+                  style={colorStyle}
+                ></div>
+                <div
+                  className="circle4"
                   style={colorStyle}
                 ></div>
               </div>
             </div>
           )}
           {props.type === "huan" && (
-            <div class="c-loading c-loading-huan">
+            <div className="c-loading c-loading-huan">
               <div style={borderStyle}></div>
               <div style={borderStyle}></div>
               <div style={borderStyle}></div>

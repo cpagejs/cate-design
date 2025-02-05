@@ -1,7 +1,7 @@
-import { PropType } from "vue";
-declare type ButtonSize = "lg" | "sm" | "default";
-declare type ButtonType = "primary" | "info" | "danger" | "link";
-declare const buttonProps: () => {
+import type { PropType } from "vue";
+export type ButtonSize = "lg" | "sm" | "default";
+export type ButtonType = "primary" | "info" | "danger" | "link";
+export declare const buttonProps: () => {
     text: StringConstructor;
     backgroundColor: StringConstructor;
     textColor: StringConstructor;
@@ -19,4 +19,3 @@ declare const buttonProps: () => {
     };
     href: StringConstructor;
 };
-export { ButtonType, ButtonSize, buttonProps };

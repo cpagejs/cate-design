@@ -1,6 +1,6 @@
 import { PropType, Slot } from "vue";
-declare type nodeKey = string | number;
-declare type CustomEventFuncType<T> = PropType<(arg: T) => void>;
+type nodeKey = string | number;
+type CustomEventFuncType<T> = PropType<(arg: T) => void>;
 interface TreeNodeOptions {
     nodeKey: nodeKey;
     name: string;
@@ -14,8 +14,8 @@ interface TreeNodeOptions {
     children?: TreeNodeOptions[];
     parentKey?: nodeKey | null;
 }
-declare type RequiredTreeNodeOptions = Required<TreeNodeOptions>;
-export declare type renderFunc<T> = PropType<(node: T) => JSX.Element>;
+type RequiredTreeNodeOptions = Required<TreeNodeOptions>;
+export type renderFunc<T> = PropType<(node: T) => any>;
 interface TreeNodeInstance {
     node: RequiredTreeNodeOptions;
     halfChecked: () => boolean;
@@ -38,12 +38,12 @@ declare const TreeProps: () => {
         type: BooleanConstructor;
         default: boolean;
     };
-    render: renderFunc<Required<TreeNodeOptions>>;
+    render: renderFunc<RequiredTreeNodeOptions>;
     lazyLoad: PropType<(node: RequiredTreeNodeOptions, callback: (children: TreeNodeOptions[]) => void) => void>;
 };
 declare const TreeNodePorps: () => {
     node: {
-        type: PropType<Required<TreeNodeOptions>>;
+        type: PropType<RequiredTreeNodeOptions>;
         required: boolean;
     };
     showCheckbox: {
@@ -54,19 +54,19 @@ declare const TreeNodePorps: () => {
         type: BooleanConstructor;
         default: boolean;
     };
-    onCheckChange: CustomEventFuncType<[boolean, Required<TreeNodeOptions>]>;
+    onCheckChange: CustomEventFuncType<[boolean, RequiredTreeNodeOptions]>;
     iconSlot: PropType<Slot>;
-    render: renderFunc<Required<TreeNodeOptions>>;
-    onSelectChange: CustomEventFuncType<Required<TreeNodeOptions>>;
-    onToggleExpand: CustomEventFuncType<Required<TreeNodeOptions>>;
+    render: renderFunc<RequiredTreeNodeOptions>;
+    onSelectChange: CustomEventFuncType<RequiredTreeNodeOptions>;
+    onToggleExpand: CustomEventFuncType<RequiredTreeNodeOptions>;
 };
 declare const renderNodeProps: () => {
     node: {
-        type: PropType<Required<TreeNodeOptions>>;
+        type: PropType<RequiredTreeNodeOptions>;
         required: boolean;
     };
     render: {
-        type: renderFunc<Required<TreeNodeOptions>>;
+        type: renderFunc<RequiredTreeNodeOptions>;
         required: boolean;
     };
 };

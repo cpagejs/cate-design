@@ -1,4 +1,4 @@
-declare const MenuItem: import("vue").DefineComponent<{
+declare const MenuItem: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
     index: {
         type: StringConstructor;
         required: boolean;
@@ -7,7 +7,7 @@ declare const MenuItem: import("vue").DefineComponent<{
         type: BooleanConstructor;
         default: boolean;
     };
-}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}>, () => import("react").JSX.Element, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     index: {
         type: StringConstructor;
         required: boolean;
@@ -16,7 +16,7 @@ declare const MenuItem: import("vue").DefineComponent<{
         type: BooleanConstructor;
         default: boolean;
     };
-}>>, {
+}>> & Readonly<{}>, {
     disabled: boolean;
-}>;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 export default MenuItem;

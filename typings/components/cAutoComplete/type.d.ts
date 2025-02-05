@@ -2,7 +2,7 @@ import { PropType, VNodeTypes } from "vue";
 interface DataSourceObject {
     value: string;
 }
-export declare type DataSourceType<T = {}> = T & DataSourceObject;
+export type DataSourceType<T = {}> = T & DataSourceObject;
 declare const AutoCompleteProps: () => {
     fetchSuggestions: {
         type: PropType<(str: string) => DataSourceType[] | Promise<DataSourceObject[]>>;

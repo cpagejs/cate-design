@@ -1,8 +1,8 @@
 {
   "name": "cate-design",
-  "version": "2.2.0",
+  "version": "2.2.31",
   "publish": true,
-  "main": "dist/index.common.js",
+  "main": "dist",
   "type": "module",
   "types": "index.d.ts",
   "files": [
@@ -13,12 +13,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
+    "build:types": "tsc --project packages/tsconfig.json",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
     "@types/node": "^22.13.1",
+    "cate-design": "^2.2.3",
     "classnames": "^2.5.1",
     "project-libs": "^1.1.8",
     "vee-validate": "^4.15.0",

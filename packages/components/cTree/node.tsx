@@ -46,14 +46,16 @@ export default defineComponent({
       };
       const renderArrow = () => {
         return (
-          <div class={["node-arrow", props.node?.expanded ? "expanded" : ""]}>
+          <div
+            className={["node-arrow", props.node?.expanded ? "expanded" : ""]}
+          >
             {node!.hasChildren ? (
               iconSlot ? (
                 iconSlot(node?.loading)
               ) : node?.loading ? (
-                <i class="iconfont iconloading ico-loading"></i>
+                <i className="iconfont iconloading ico-loading"></i>
               ) : (
-                <i class="iconfont iconExpand"></i>
+                <i className="iconfont iconExpand"></i>
               )
             ) : null}
           </div>
@@ -74,9 +76,12 @@ export default defineComponent({
       };
       const sameContent = () => {
         return render ? (
-          <RenderNode render={render} node={node}></RenderNode>
+          <RenderNode
+            render={render}
+            node={node}
+          ></RenderNode>
         ) : (
-          <div class={titleClasses}>{node!.name}</div>
+          <div className={titleClasses}>{node!.name}</div>
         );
       };
       const renderContent = () => {
@@ -87,7 +92,7 @@ export default defineComponent({
               modelValue={node?.checked}
               halfChecked={halfChecked.value}
               onChange={handleCheckChange}
-              class="node-content node-checkbox"
+              className="node-content node-checkbox"
             >
               {sameContent()}
             </c-Checkbox>
@@ -95,7 +100,10 @@ export default defineComponent({
         }
 
         return (
-          <div onClick={handleSelect} class="node-content node-text">
+          <div
+            onClick={handleSelect}
+            className="node-content node-text"
+          >
             {sameContent()}
           </div>
         );
@@ -103,7 +111,7 @@ export default defineComponent({
 
       return (
         <div
-          class="c-tree-node"
+          className="c-tree-node"
           style={{ paddingLeft: node!.level * 18 + "px" }}
           key={node!.nodeKey}
           onClick={handleExpand}

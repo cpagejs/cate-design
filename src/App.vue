@@ -1,14 +1,13 @@
-<script setup lang="ts">
-  import cTimeCircle from "../packages/components/cTimeCircle/cTimeCircle.tsx";
-  // import cButton from "../packages/components/cButton/cButton.tsx";
-</script>
-
 <template>
   <div>
     <cTimeCircle :time="60" />
-    <!-- <cButton text="按钮测试按钮"></cButton> -->
+    <cButton text="按钮测试按钮"></cButton>
   </div>
 </template>
+<script setup lang="ts">
+  import "cate-design/dist/index.css";
+  import { cButton, cTimeCircle } from "cate-design";
+</script>
 
 <style scoped>
   .logo {

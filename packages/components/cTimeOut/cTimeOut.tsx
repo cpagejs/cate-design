@@ -73,32 +73,32 @@ export default defineComponent({
 
     return () => {
       return (
-        <section class="c-time-count">
+        <section className="c-time-count">
           {props.type === 1 && (
-            <div class="type1">
+            <div className="type1">
               <span
-                class="timer"
+                className="timer"
                 style={styles.value}
               >
                 {timeData.value.day}天
               </span>
-              <span class="dot"> : </span>
+              <span className="dot"> : </span>
               <span
-                class="timer"
+                className="timer"
                 style={styles.value}
               >
                 {timeData.value.hour}时
               </span>
-              <span class="dot"> : </span>
+              <span className="dot"> : </span>
               <span
-                class="timer"
+                className="timer"
                 style={styles.value}
               >
                 {timeData.value.minute}分
               </span>
-              <span class="dot"> : </span>
+              <span className="dot"> : </span>
               <span
-                class="timer"
+                className="timer"
                 style={styles.value}
               >
                 {timeData.value.second}秒
@@ -106,35 +106,35 @@ export default defineComponent({
             </div>
           )}
           {props.type === 2 && (
-            <div class="type2">
+            <div className="type2">
               <span
-                class="timer"
+                className="timer"
                 style={styles.value}
               >
                 {timeData.value.day}
               </span>
-              <span class="dot">天</span>
+              <span className="dot">天</span>
               <span
-                class="timer"
+                className="timer"
                 style={styles.value}
               >
                 {timeData.value.hour}
               </span>
-              <span class="dot">时</span>
+              <span className="dot">时</span>
               <span
-                class="timer"
+                className="timer"
                 style={styles.value}
               >
                 {timeData.value.minute}
               </span>
-              <span class="dot">分</span>
+              <span className="dot">分</span>
               <span
-                class="timer"
+                className="timer"
                 style={styles.value}
               >
                 {timeData.value.second}
               </span>
-              <span class="dot">秒</span>
+              <span className="dot">秒</span>
             </div>
           )}
         </section>

@@ -1,6 +1,6 @@
 /** 密码输入框 * @author cpagejs */
 <template>
-  <div class="c-input-password">
+  <div className="c-input-password">
     <span>{{ label }}</span>
     <input
       type="password"
@@ -11,7 +11,7 @@
       :length="length"
       :placeholder="placeholder"
       autocapitalize="off"
-      :class="{ 'c-input-password_disabled': disabled }"
+      :className="{ 'c-input-password_disabled': disabled }"
       v-if="showPwd"
     />
     <input
@@ -23,12 +23,12 @@
       :length="length"
       :placeholder="placeholder"
       autocapitalize="off"
-      :class="{ 'c-input-password_disabled': disabled }"
+      :className="{ 'c-input-password_disabled': disabled }"
       v-if="!showPwd"
     />
     <em
-      class="pwd-eye"
-      :class="{ invisible: invisible }"
+      className="pwd-eye"
+      :className="{ invisible: invisible }"
       v-if="showToggle"
       @click="toggle"
     >

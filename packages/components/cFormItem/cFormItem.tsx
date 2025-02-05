@@ -108,18 +108,21 @@ export default defineComponent({
       return slots.label ? (
         slots.label()
       ) : (
-        <label class="item-label">{props.label}</label>
+        <label className="item-label">{props.label}</label>
       );
     };
 
     return () => {
       return (
-        <div class="c-form-item">
+        <div className="c-form-item">
           {renderLabel()}
-          {/* <label class="item-label">{props.label}：</label> */}
-          <div class="item-content">
-            <div class="item-control-wrap">{slots.default!()}</div>
-            <p class="item-error" v-show={errMsg}>
+          {/* <label className="item-label">{props.label}：</label> */}
+          <div className="item-content">
+            <div className="item-control-wrap">{slots.default!()}</div>
+            <p
+              className="item-error"
+              v-show={errMsg}
+            >
               {errMsg.value}
             </p>
           </div>

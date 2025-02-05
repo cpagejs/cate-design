@@ -17,12 +17,12 @@ export default defineComponent({
 
     return () => {
       return (
-        <header class="c-header-back">
+        <header className="c-header-back">
           <i
-            class="icon_left"
+            className="icon_left"
             onClick={handleClickBack}
           ></i>
-          <div class="ellipsis">{props.title}</div>
+          <div className="ellipsis">{props.title}</div>
         </header>
       );
     };

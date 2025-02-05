@@ -3,16 +3,21 @@ import { SFCWithInstall } from "../utils/types";
 import cToast from "./cToast";
 
 cToast.install = (app: App) => {
-  app.component(cToast.name, cToast);
+  app.component(cToast.name as string, cToast);
 };
 
 interface IToastConfig {
-  msg: string,
-  delay?: number,
-  showMask?: boolean,
-  onEnd?: () => void
+  msg: string;
+  delay?: number;
+  showMask?: boolean;
+  onEnd?: () => void;
 }
-export function useToast({msg, delay, showMask=false, onEnd}: IToastConfig) {
+export function useToast({
+  msg,
+  delay,
+  showMask = false,
+  onEnd,
+}: IToastConfig) {
   const vm = createVNode(cToast, { msg, delay, showMask, onEnd });
   const container = document.createElement("div");
   render(vm, container);
@@ -30,7 +35,6 @@ export function useToast({msg, delay, showMask=false, onEnd}: IToastConfig) {
       }, 300);
     }, delay);
   });
-  
 
   return vm;
 }

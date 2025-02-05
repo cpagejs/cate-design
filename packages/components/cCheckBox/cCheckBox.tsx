@@ -40,9 +40,15 @@ export default defineComponent({
 
     return () => {
       return (
-        <div class={rootCls.value} onClick={handleClick}>
-          <div class="inner" style={innerStyle.value} />
-          <div class="content">{slots.default?.()}</div>
+        <div
+          className={rootCls.value}
+          onClick={handleClick}
+        >
+          <div
+            className="inner"
+            style={innerStyle.value}
+          />
+          <div className="content">{slots.default?.()}</div>
         </div>
       );
     };

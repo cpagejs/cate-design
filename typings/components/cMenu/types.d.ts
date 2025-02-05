@@ -1,7 +1,7 @@
 import { PropType } from "vue";
 declare const MenuKey = "menuKey";
-declare type SelectFunc = (selectedIndex: string) => void;
-declare type MenuMode = "horizontal" | "vertical";
+type SelectFunc = (selectedIndex: string) => void;
+type MenuMode = "horizontal" | "vertical";
 declare const MenuProps: () => {
     defaultIndex: {
         type: StringConstructor;

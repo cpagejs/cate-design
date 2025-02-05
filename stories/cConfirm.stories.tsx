@@ -1,6 +1,6 @@
 import cConfirm from "../packages/components/cConfirm/cConfirm.vue";
-import { Meta, StoryFn } from '@storybook/vue3';
-import { ref, onMounted } from 'vue';
+import { Meta, StoryFn } from "@storybook/vue3";
+import { ref, onMounted } from "vue";
 import cCard from "../packages/components/cCard/cCard";
 import cButton from "../packages/components/cButton/cButton";
 
@@ -10,11 +10,11 @@ export default {
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
     isShow: {
-      control: "boolean"
+      control: "boolean",
     },
     type: { control: "number" },
-    confirmText: {  },
-    cancelText: { },
+    confirmText: {},
+    cancelText: {},
   },
 } as Meta<typeof cConfirm>;
 
@@ -26,7 +26,7 @@ const Template: StoryFn<typeof cConfirm> = (args) => ({
     const isShow2 = ref(false);
     const ctype = ref(1);
     onMounted(() => {
-      console.log(myConfirm.value)
+      console.log(myConfirm.value);
     });
 
     const btnClick = () => {
@@ -75,6 +75,5 @@ export const 示例 = Template.bind({});
   isShow: false,
   type: 1,
   showMask: true,
-  showBtn: true
+  showBtn: true,
 };
-

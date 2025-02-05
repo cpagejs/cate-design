@@ -1,5 +1,5 @@
 import "./index.scss";
-declare const _default: import("vue").DefineComponent<{
+declare const _default: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
     disabled: BooleanConstructor;
     size: {
         type: import("vue").PropType<"lg" | "sm">;
@@ -18,7 +18,7 @@ declare const _default: import("vue").DefineComponent<{
     onKeydown: {
         type: import("vue").PropType<(e: KeyboardEvent) => void>;
     };
-}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "change" | "keydown")[], "update:modelValue" | "change" | "keydown", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}>, () => import("react").JSX.Element, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "change" | "keydown")[], "update:modelValue" | "change" | "keydown", import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     disabled: BooleanConstructor;
     size: {
         type: import("vue").PropType<"lg" | "sm">;
@@ -37,13 +37,13 @@ declare const _default: import("vue").DefineComponent<{
     onKeydown: {
         type: import("vue").PropType<(e: KeyboardEvent) => void>;
     };
-}>> & {
+}>> & Readonly<{
     onChange?: ((...args: any[]) => any) | undefined;
     onKeydown?: ((...args: any[]) => any) | undefined;
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
-}, {
-    disabled: boolean;
+}>, {
     size: "lg" | "sm";
+    disabled: boolean;
     modelValue: string;
-}>;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 export default _default;

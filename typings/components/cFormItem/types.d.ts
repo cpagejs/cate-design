@@ -1,7 +1,7 @@
 import * as yup from "yup";
 declare const FormItemKey = "formItemkey";
 declare const FormKey = "formKey";
-declare type ValidateFunc = (calllback: (valid: boolean) => void) => boolean;
+type ValidateFunc = (calllback: (valid: boolean) => void) => boolean;
 interface cFormContext {
     model: Record<string, any>;
     rules: FormRules;
@@ -16,7 +16,7 @@ interface FormItemContext {
     handleInputChange(value: string): void;
     handleInputBlur(value: string): void;
 }
-declare type triggerType = "input" | "blur";
+type triggerType = "input" | "blur";
 interface NewStringSchema {
     validateFunc: yup.StringSchema;
     trigger: triggerType;

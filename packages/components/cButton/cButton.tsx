@@ -9,7 +9,7 @@ export default defineComponent({
   name: "cButton",
   props: props,
   emits: ["onClick"],
-  setup(props, { emit, slots, attrs }) {
+  setup(props, { emit }) {
     const classes = classNames("c-btn", {
       [`c-btn-${props.type}`]: props.type,
       [`c-btn-${props.size}`]: props.size,
@@ -29,13 +29,21 @@ export default defineComponent({
       const { href, text } = props;
       if (href) {
         return (
-          <a href={href} class={classes} style={styles}>
+          <a
+            href={href}
+            className={classes}
+            style={styles}
+          >
             {text || ""}
           </a>
         );
       } else {
         return (
-          <div class={classes} style={styles} onClick={buttonClick}>
+          <div
+            className={classes}
+            style={styles}
+            onClick={buttonClick}
+          >
             {text || ""}
           </div>
         );

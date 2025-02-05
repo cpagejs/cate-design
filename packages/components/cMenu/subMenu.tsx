@@ -63,17 +63,26 @@ export default defineComponent({
           }
         });
 
-        return <ul class={subClass}>{items}</ul>;
+        return <ul className={subClass}>{items}</ul>;
       };
 
       const { index, title } = props;
       const classes = classNames("menu-item submenu-item", {
-        "is-active": parentCtx!.index.split('-')[0] === index,
+        "is-active": parentCtx!.index.split("-")[0] === index,
       });
-      
+
       return (
-        <li {...attrs} key={index} class={classes} {...hoverEvents}>
-          <div class="submenu-title" {...clickEvents} onClick={handleClick}>
+        <li
+          {...attrs}
+          key={index}
+          className={classes}
+          {...hoverEvents}
+        >
+          <div
+            className="submenu-title"
+            {...clickEvents}
+            onClick={handleClick}
+          >
             {title}
           </div>
 

@@ -1,7 +1,7 @@
 import { PropType } from "vue";
 import "./index.scss";
 import { NewStringSchema } from "./types";
-declare const _default: import("vue").DefineComponent<{
+declare const _default: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
     label: {
         type: StringConstructor;
         default: string;
@@ -13,7 +13,7 @@ declare const _default: import("vue").DefineComponent<{
     rules: {
         type: PropType<NewStringSchema | NewStringSchema[]>;
     };
-}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}>, () => import("react").JSX.Element, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     label: {
         type: StringConstructor;
         default: string;
@@ -25,8 +25,8 @@ declare const _default: import("vue").DefineComponent<{
     rules: {
         type: PropType<NewStringSchema | NewStringSchema[]>;
     };
-}>>, {
-    label: string;
+}>> & Readonly<{}>, {
     prop: string;
-}>;
+    label: string;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 export default _default;

@@ -1,5 +1,12 @@
 import classNames from "classnames";
-import { cloneVNode, computed, defineComponent, provide, reactive, ref } from "vue";
+import {
+  cloneVNode,
+  computed,
+  defineComponent,
+  provide,
+  reactive,
+  ref,
+} from "vue";
 import { ItemType, MenuContext, MenuKey, MenuProps } from "./types";
 import "./index.scss";
 
@@ -22,7 +29,7 @@ export default defineComponent({
     });
     provide<MenuContext>(MenuKey, passedContext.value);
     provide("changeIndex", (index) => {
-      console.log('changeIndex', index);
+      console.log("changeIndex", index);
       passedContext.value.index = index;
     });
 
@@ -32,7 +39,7 @@ export default defineComponent({
           (item.type as ItemType).name === "cMenuItem" ||
           (item.type as ItemType).name === "cSubMenu"
         ) {
-          return cloneVNode(item, { index: index.toString()});
+          return cloneVNode(item, { index: index.toString() });
         } else {
           console.error("Warning:Menu's child must be cMenuItem or cSubMenu");
         }
@@ -47,7 +54,10 @@ export default defineComponent({
       });
 
       return (
-        <ul {...attrs} class={classes}>
+        <ul
+          {...attrs}
+          className={classes}
+        >
           {renderChildren()}
         </ul>
       );

@@ -2,39 +2,39 @@
 <template>
   <transition name="c-confirm">
     <div
-      class="c-confirm-container"
+      className="c-confirm-container"
       v-if="isShow"
     >
       <div
-        class="screen-fixed confirm-wrapper"
+        className="screen-fixed confirm-wrapper"
         @click.prevent="closeConfirm($event)"
       >
         <!-- 普通类型 -->
         <div
-          class="confirm-content"
+          className="confirm-content"
           v-if="type == 1"
         >
-          <div class="confirm-inner">
+          <div className="confirm-inner">
             <div
-              class="confirm-content-body"
+              className="confirm-content-body"
               :style="innerStyle"
             >
               <slot name="inner"></slot>
             </div>
             <div
-              class="confirm-content-footer"
+              className="confirm-content-footer"
               v-if="showBtn"
             >
               <div
                 @click="cancel"
-                class="operate-btn left"
+                className="operate-btn left"
                 v-if="showCancelBtn"
               >
                 {{ cancelText }}
               </div>
               <div
                 @click="confirm"
-                class="operate-btn"
+                className="operate-btn"
               >
                 {{ confirmText }}
               </div>
@@ -46,26 +46,26 @@
         </div>
         <!-- 支持顶部背景图，按钮组有空隙 -->
         <div
-          class="confirm-content confirm-content2"
+          className="confirm-content confirm-content2"
           v-if="type == 2"
         >
-          <div class="confirm-header">
+          <div className="confirm-header">
             <slot name="header"></slot>
           </div>
           <div
-            class="confirm-inner"
+            className="confirm-inner"
             :style="innerStyle"
           >
-            <div class="confirm-content-body">
+            <div className="confirm-content-body">
               <slot name="inner"></slot>
             </div>
             <div
-              class="confirm-content-footer2"
+              className="confirm-content-footer2"
               v-if="showBtn"
             >
               <div
                 @click="cancel"
-                class="operate-btn left"
+                className="operate-btn left"
                 :style="cancelBtnStyle"
                 v-if="showCancelBtn"
               >
@@ -73,7 +73,7 @@
               </div>
               <div
                 @click="confirm"
-                class="operate-btn right"
+                className="operate-btn right"
                 :style="confirmBtnStyle"
               >
                 {{ confirmText }}
@@ -86,16 +86,16 @@
         </div>
         <!-- 底部取消按钮，大背景图 -->
         <div
-          class="confirm-content confirm-content3"
+          className="confirm-content confirm-content3"
           v-if="type == 3"
         >
           <div
-            class="confirm-inner"
+            className="confirm-inner"
             :style="innerStyle"
           >
             <slot name="inner"></slot>
           </div>
-          <div class="confirm-close">
+          <div className="confirm-close">
             <img
               :src="closeImg"
               alt=""
@@ -105,7 +105,7 @@
         </div>
       </div>
       <div
-        class="screen-fixed c-confirm-mask"
+        className="screen-fixed c-confirm-mask"
         v-if="showMask && isShow"
         :style="{ backgroundColor: maskColor }"
       ></div>
@@ -114,6 +114,7 @@
 </template>
 
 <script>
+  // const closeImg = require("./close.png");
   export default {
     name: "cConfirm",
     props: {
@@ -171,7 +172,7 @@
     data() {
       return {
         openConfirm: false,
-        closeImg: require("./close.png"),
+        closeImg: "closeImg",
       };
     },
     created() {

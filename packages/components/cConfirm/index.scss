@@ -43,7 +43,7 @@
             flex: 1;
             line-height: 30px;
             padding: 10px 0;
-
+            cursor: pointer;
             &.left {
               border-right: 1px solid #e0e0e0;
             }
@@ -70,7 +70,7 @@
             background: $orange;
             margin-right: 20px;
             border-radius: 10px;
-
+            cursor: pointer;
             &:last-child {
               margin-right: 0;
             }
@@ -89,13 +89,15 @@
       }
       .confirm-close {
         text-align: center;
-
-        img {
-          width: 60px;
-          height: 60px;
-          text-align: center;
-          margin-top: 30px;
-        }
+        width: 60px;
+        height: 60px;
+        background: url("./close.png");
+        // img {
+        //   width: 60px;
+        //   height: 60px;
+        //   text-align: center;
+        //   margin-top: 30px;
+        // }
       }
     }
   }

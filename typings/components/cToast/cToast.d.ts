@@ -1,5 +1,5 @@
 import "./index.scss";
-declare const _default: import("vue").DefineComponent<{
+declare const _default: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
     msg: {
         type: StringConstructor;
         default: string;
@@ -10,13 +10,12 @@ declare const _default: import("vue").DefineComponent<{
     };
     onEnd: {
         type: FunctionConstructor;
-        default: () => void;
     };
     showMask: {
         type: BooleanConstructor;
         default: boolean;
     };
-}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}>, () => import("react").JSX.Element, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     msg: {
         type: StringConstructor;
         default: string;
@@ -27,16 +26,14 @@ declare const _default: import("vue").DefineComponent<{
     };
     onEnd: {
         type: FunctionConstructor;
-        default: () => void;
     };
     showMask: {
         type: BooleanConstructor;
         default: boolean;
     };
-}>>, {
+}>> & Readonly<{}>, {
     showMask: boolean;
-    onEnd: Function;
     msg: string;
     delay: number;
-}>;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 export default _default;

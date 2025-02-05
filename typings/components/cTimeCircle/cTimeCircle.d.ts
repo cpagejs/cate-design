@@ -1,5 +1,5 @@
 import "./index.scss";
-declare const _default: import("vue").DefineComponent<{
+declare const _default: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
     timer: {
         type: NumberConstructor;
         default: number;
@@ -8,7 +8,7 @@ declare const _default: import("vue").DefineComponent<{
         type: BooleanConstructor;
         default: boolean;
     };
-}, () => JSX.Element, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "onEnd"[], "onEnd", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}>, () => import("react").JSX.Element, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "onEnd"[], "onEnd", import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     timer: {
         type: NumberConstructor;
         default: number;
@@ -17,10 +17,10 @@ declare const _default: import("vue").DefineComponent<{
         type: BooleanConstructor;
         default: boolean;
     };
-}>> & {
+}>> & Readonly<{
     onOnEnd?: ((...args: any[]) => any) | undefined;
-}, {
+}>, {
     timer: number;
     showNum: boolean;
-}>;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 export default _default;

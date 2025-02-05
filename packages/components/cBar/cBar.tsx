@@ -19,7 +19,7 @@ export default defineComponent({
 
     return () => {
       return (
-        <div class="c-progress-bar">
+        <div className="c-progress-bar">
           <span
             style={{ width: percentData.value, backgroundColor: props.color }}
           ></span>

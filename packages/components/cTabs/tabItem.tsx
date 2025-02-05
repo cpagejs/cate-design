@@ -11,7 +11,10 @@ export default defineComponent({
       const show = parentNode?.props?.modelValue === props.name;
 
       return (
-        <div class="pane" v-show={show}>
+        <div
+          className="pane"
+          v-show={show}
+        >
           {slots.default!()}
         </div>
       );

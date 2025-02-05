@@ -1,7 +1,7 @@
 /**@author cpagejs
  * toast
  */
-import { defineComponent, ref, Transition, computed } from "vue";
+import { defineComponent, ref, Transition } from "vue";
 import "./index.scss";
 
 export default defineComponent({
@@ -45,12 +45,12 @@ export default defineComponent({
       return (
         <Transition name="c-toast">
           <div
-            class={["c-toast"]}
+            className="c-toast"
             v-show={isShow.value}
           >
-            <div class="c-toast-msg">{props.msg}</div>
+            <div className="c-toast-msg">{props.msg}</div>
             <div
-              class="c-toast-mask"
+              className="c-toast-mask"
               v-show={props.showMask}
             ></div>
           </div>

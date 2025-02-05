@@ -41,12 +41,12 @@ export default defineComponent({
 
     return () => {
       return (
-        <div class="c-circle">
+        <div className="c-circle">
           {showProcess.value && (
-            <div class="c-circle-process">
-              <div class={["circle", { "clip-auto": clipAuto }]}>
+            <div className="c-circle-process">
+              <div className={["circle", { "clip-auto": clipAuto }]}>
                 <div
-                  class="percent left"
+                  className="percent left"
                   style={{
                     transform:
                       "rotate(" +
@@ -54,17 +54,17 @@ export default defineComponent({
                       "deg)",
                   }}
                 ></div>
-                <div class={["percent right", { width0: width0 }]}></div>
+                <div className={["percent right", { width0: width0 }]}></div>
               </div>
-              <div class="num">
+              <div className="num">
                 <span>{number.value}</span>%
               </div>
             </div>
           )}
           {!showProcess.value && (
-            <div class="c-circle-status">
-              <div class="circle"></div>
-              <div class="num">{numText.value}</div>
+            <div className="c-circle-status">
+              <div className="circle"></div>
+              <div className="num">{numText.value}</div>
             </div>
           )}
         </div>

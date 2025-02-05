@@ -1,4 +1,4 @@
-import { defineComponent, onMounted, ref, watch } from "vue";
+import { defineComponent, ref, watch } from "vue";
 import { AutoCompleteProps, DataSourceType } from "./type";
 import cInput from "../cInput/cInput";
 import "./index.scss";
@@ -88,7 +88,7 @@ export default defineComponent({
 
     const generateDropdown = () => {
       return (
-        <ul class="c-suggestion-list">
+        <ul className="c-suggestion-list">
           {suggestions.value.map((item, index) => {
             const cnames = classNames("suggestion-item", {
               "is-active": index === highlightIndex.value,
@@ -97,7 +97,7 @@ export default defineComponent({
             return (
               <li
                 key={index}
-                class={cnames}
+                className={cnames}
                 onClick={handleSelect.bind(null, item)}
               >
                 {renderTemplate(item)}
@@ -144,7 +144,7 @@ export default defineComponent({
 
       return (
         <div
-          class="c-auto-complete"
+          className="c-auto-complete"
           style={style}
           ref={componentRef}
         >
@@ -156,7 +156,7 @@ export default defineComponent({
           ></c-Input>
           {isLoading.value && (
             <ul>
-              <span class="iconfont icon-loading spinner"></span>
+              <span className="iconfont icon-loading spinner"></span>
             </ul>
           )}
           {suggestions.value.length > 0 && generateDropdown()}

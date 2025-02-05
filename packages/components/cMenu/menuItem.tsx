@@ -10,8 +10,7 @@ const MenuItem = defineComponent({
   setup(props, { emit, slots, attrs }) {
     const parentContext = inject<MenuContext>(MenuKey);
     const changeIndex = inject<any>("changeIndex");
-    
-    
+
     return () => {
       const { index, disabled } = props;
       const handleClick = () => {
@@ -20,12 +19,19 @@ const MenuItem = defineComponent({
           parentContext?.onSelect && parentContext.onSelect(index!);
         }
       };
-      
+
       return (
-        <li {...attrs} class={["menu-item", {
-          "is-disabled": disabled,
-          "is-active": parentContext?.index == index,
-        }]} onClick={handleClick}>
+        <li
+          {...attrs}
+          className={[
+            "menu-item",
+            {
+              "is-disabled": disabled,
+              "is-active": parentContext?.index == index,
+            },
+          ]}
+          onClick={handleClick}
+        >
           {slots.default!()}
         </li>
       );

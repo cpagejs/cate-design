@@ -19,11 +19,11 @@ export default defineComponent({
     return () => {
       return (
         <section
-          class="c-drawer-container"
+          className="c-drawer-container"
           v-show={props.isShow}
         >
           <div
-            class={[
+            className={[
               "drawer-inner",
               {
                 "drawer-inner_left": props.position === "left",
@@ -35,7 +35,7 @@ export default defineComponent({
           </div>
           {props.showMask && (
             <div
-              class="drawer-mask"
+              className="drawer-mask"
               onClick={hide}
             ></div>
           )}

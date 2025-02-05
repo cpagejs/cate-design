@@ -25,7 +25,11 @@ export default defineComponent({
 
     return () => {
       return (
-        <h1 class={classes} style={styles} onClick={btnClick}>
+        <h1
+          className={classes}
+          style={styles}
+          onClick={btnClick}
+        >
           {props.text}
         </h1>
       );

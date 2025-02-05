@@ -6,15 +6,15 @@ export default defineComponent({
   props: {
     height: {
       type: String,
-      default: "20px"
+      default: "20px",
     },
     showLine: {
       type: Boolean,
-      default: false
+      default: false,
     },
     bgColor: {
       type: String,
-      default: "#fff"
+      default: "#fff",
     },
   },
   setup(props, ctx) {
@@ -22,12 +22,15 @@ export default defineComponent({
       const { height, bgColor, showLine } = props;
       const styles = computed(() => ({
         height,
-        background: bgColor
+        background: bgColor,
       }));
 
       return (
-        <div class="c-space" style={styles.value}>
-          {showLine && <div class="c-space_line"></div>}
+        <div
+          className="c-space"
+          style={styles.value}
+        >
+          {showLine && <div className="c-space_line"></div>}
         </div>
       );
     };

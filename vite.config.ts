@@ -18,20 +18,20 @@ export default defineConfig({
     },
   },
   build: {
+    assetsInlineLimit: 100000,
+    outDir: "dist", //输出文件目录
+    lib: {
+      entry: path.resolve(__dirname, "packages/index.ts"), //指定组件编译入口文件
+      name: "index",
+      fileName: "index",
+    },
     rollupOptions: {
-      input: {
-        // 指定入口文件，可以是一个对象，键是入口名称，值是入口文件的路径
-        main: path.resolve(__dirname, "packages/index.ts"),
-      },
+      external: ["vue"], // 确保外部化处理那些不想打包进库的依赖
       output: {
-        // 指定输出文件名
-        entryFileNames: "index.js",
-        // 指定输出目录
-        dir: "dist",
-        // 代码分割文件名格式
-        chunkFileNames: "[name].js",
-        // 静态资源输出文件名
-        assetFileNames: "[name].[ext]",
+        globals: {
+          // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
+          vue: "Vue",
+        },
       },
     },
   },
